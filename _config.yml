@@ -1,0 +1,22 @@
+title: 中高生Rubyプログラミングコンテスト2026
+description: 中高生Rubyプログラミングコンテスト2026
+baseurl: ""
+url: "https://www.ruby-procon.net"
+
+plugins:
+  - jekyll-feed
+
+include:
+  - .well-known
+
+collections:
+  articles:
+    output: true
+    permalink: /articles/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: articles
+    values:
+      layout: article

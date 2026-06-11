@@ -1,0 +1,31 @@
+---
+layout: page
+title: 審査委員紹介
+permalink: /judges/
+---
+
+<ul class="l--judges space-y-10 list-none">
+  {% for judge in site.data.judges %}
+  <li>
+    <article class="a--judge-card flex flex-col sm:flex-row gap-8 p-8 bg-white rounded-2xl border border-gray-200">
+      {% if judge.photo %}
+      <img src="{{ "/assets/images/judges/" | append: judge.photo | relative_url }}"
+           alt="{{ judge.name }}"
+           class="a--judge-avatar w-32 h-32 rounded-full object-cover shrink-0 mx-auto sm:mx-0">
+      {% else %}
+      <div class="a--judge-avatar w-32 h-32 rounded-full bg-grape text-white flex items-center justify-center text-3xl font-black shrink-0 mx-auto sm:mx-0" aria-hidden="true">
+        {{ judge.name | slice: 0 }}
+      </div>
+      {% endif %}
+      <div class="a--judge-info flex-1 min-w-0">
+        <h2 class="a--judge-name text-3xl font-black text-gray-900">{{ judge.name }}</h2>
+        <p class="a--judge-title text-grape font-semibold text-base mt-1 mb-4">{{ judge.title }}</p>
+        <p class="a--judge-bio text-gray-600 text-base leading-relaxed mb-5">{{ judge.bio }}</p>
+        <blockquote class="a--judge-message border-l-4 border-grape pl-4 text-gray-700 leading-relaxed">
+          「{{ judge.message }}」
+        </blockquote>
+      </div>
+    </article>
+  </li>
+  {% endfor %}
+</ul>

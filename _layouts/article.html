@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<div class="l--article-hero relative overflow-hidden border-b border-gray-200 bg-cover bg-center" style="background-image: url('{{ "/assets/images/common/background.webp" | relative_url }}');">
+  <div class="a--article-hero-overlay absolute inset-0" aria-hidden="true" style="background: linear-gradient(90deg, rgb(75 64 164 / 85%) 0%, rgb(75 64 164 / 50%) 55%, rgba(0, 0, 0, 0) 80%);"></div>
+  <div class="l--page-hero-inner max-w-5xl mx-auto px-6 py-10 relative">
+    <p class="a--article-label text-[#f8d7e8] text-xs font-bold tracking-widest uppercase mb-3">NEWS</p>
+    <h1 class="a--article-page-title text-4xl md:text-5xl font-black text-white" style="text-shadow: 0 2px 12px rgba(0,0,0,0.3);">お知らせ</h1>
+    <div class="w-12 h-1 bg-white rounded mt-5" aria-hidden="true"></div>
+  </div>
+</div>
+
+<div class="l--article-body bg-gray-50">
+  <div class="max-w-3xl mx-auto px-6 py-16">
+    <article class="l--article-content bg-white border border-gray-200 rounded-2xl p-6 sm:p-10 md:p-12 max-w-none">
+      <header class="a--article-head border-b border-gray-200 pb-6 mb-8">
+        <p class="a--article-meta text-gray-500 text-sm mb-2">
+          <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y年%-m月%-d日" }}</time>
+          {% if page.author %}<span class="mx-2">·</span><span>{{ page.author }}</span>{% endif %}
+        </p>
+        <h2 class="a--article-title text-2xl md:text-3xl font-black text-gray-900 leading-snug">{{ page.title }}</h2>
+      </header>
+      <div class="prose prose-lg prose-gray max-w-none">
+        {{ content }}
+      </div>
+    </article>
+
+    <div class="mt-10">
+      <a href="{{ "/articles/" | relative_url }}" class="a--article-back inline-flex items-center gap-2 text-gray-700 font-semibold border border-gray-300 rounded-full px-6 py-2.5 hover:border-grape hover:text-grape transition-colors">
+        ← 記事一覧に戻る
+      </a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,101 @@
+---
+layout: page
+title: 最終審査結果
+permalink: /results/
+published: false
+---
+
+<figure class="mb-10">
+  <img src="{{ "/assets/images/results/results.webp" | relative_url }}" alt="最終審査結果 授賞式の様子" class="a--results-hero-image w-full rounded-2xl object-cover">
+</figure>
+
+<div class="a--results-summary mb-16 space-y-4 text-gray-700 leading-relaxed">
+  <p><time datetime="2025-11-29">2025年11月29日（土）</time>「中高生Rubyプログラミングコンテスト2025」の最終審査会が行われました。多くの方に会場にご来場いただき、リアル開催ならではの和やかな雰囲気の中、熱のこもった審査が行われました。<br>
+  今年は実行委員会および事務局機能を有志が引き継ぎ、形態を少し変更しての開催となりました。</p>
+  <p>応募総数94作品の中から最終審査に残ったのは、ゲーム部門4作品、Webアプリ・IoT部門6作品の計10作品。当日は、発表者のプレゼンテーションと質疑応答等をもとに、Rubyの生みの親であるまつもとゆきひろさんを審査委員長とする7名の審査委員によって最終審査が行われ、最優秀賞、優秀賞、審査員特別賞等の各賞が決定しました。</p>
+  <p>今回の最終審査会の模様はこちらの中高生RubyプログラミングコンテストYouTubeの公式チャンネルでも後日公開予定です。<br>
+  2026年には、第16回大会を開催予定です。</p>
+</div>
+
+<div class="l--results space-y-16">
+  {% for group in site.data.results %}
+  <section class="a--result-category">
+
+    <!-- カテゴリ見出し -->
+    <div class="a--category-heading flex items-center gap-4 mb-8">
+      <h2 class="a--category-name text-3xl font-black text-gray-900 whitespace-nowrap">{{ group.category }}</h2>
+      <div class="flex-1 h-px bg-gray-200" aria-hidden="true"></div>
+    </div>
+
+    <ul class="l--award-list space-y-4 list-none">
+      {% for entry in group.entries %}
+
+      <!-- 最優秀賞 -->
+      {% if entry.award == "最優秀賞" %}
+      <li>
+        <article class="a--award-grand relative bg-grape text-white rounded-2xl px-8 py-5 overflow-hidden">
+          <div class="absolute top-0 right-0 w-48 h-48 opacity-10" aria-hidden="true"
+               style="background: radial-gradient(circle, white, transparent);">
+          </div>
+          <div class="relative">
+            <span class="a--award-badge inline-block bg-white text-grape text-xs font-black tracking-widest uppercase px-3 py-1 rounded-full mb-4">
+              🏆 {{ entry.award }}
+            </span>
+            <h3 class="a--award-work text-3xl font-black mb-1">{{ entry.work }}</h3>
+            <p class="a--award-name text-xl text-red-200 mb-1">{{ entry.name }}</p>
+            {% if entry.school %}
+            <p class="a--award-school text-red-200/70 text-sm">{{ entry.school }}</p>
+            {% endif %}
+          </div>
+        </article>
+      </li>
+
+      <!-- 優秀賞 -->
+      {% elsif entry.award == "優秀賞" %}
+      <li>
+        <article class="a--award-excellent relative bg-gray-700 text-white rounded-2xl px-8 py-5 overflow-hidden">
+          <div class="absolute top-0 right-0 w-48 h-48 opacity-10" aria-hidden="true"
+               style="background: radial-gradient(circle, white, transparent);">
+          </div>
+          <div class="relative">
+            <span class="a--award-badge inline-block bg-white text-gray-700 text-xs font-black tracking-widest uppercase px-3 py-1 rounded-full mb-4">{{ entry.award }}</span>
+            <h3 class="a--award-work text-3xl font-black mb-1">{{ entry.work }}</h3>
+            <p class="a--award-name text-xl text-gray-300 mb-1">{{ entry.name }}</p>
+            {% if entry.school %}
+            <p class="a--award-school text-gray-300/70 text-sm">{{ entry.school }}</p>
+            {% endif %}
+          </div>
+        </article>
+      </li>
+
+      <!-- その他 -->
+      {% else %}
+      <li>
+        <article class="a--award-other {% if entry.logo or entry.award == "審査員特別賞" %}bg-gray-50{% else %}bg-white{% endif %} border border-gray-200 rounded-2xl p-6 {% if entry.logo %}flex gap-6 items-center{% endif %}">
+          {% if entry.logo %}
+          <img src="{{ "/assets/images/sponsors/" | append: entry.logo | relative_url }}" alt="{{ entry.award }}" class="a--award-logo w-24 h-24 object-contain rounded-lg shrink-0">
+          <div>
+            <span class="a--award-badge inline-block bg-gray-700 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">{{ entry.award }}</span>
+            <h3 class="a--award-work text-xl font-bold text-gray-900">{{ entry.work }}</h3>
+            <p class="a--award-name text-gray-800 font-semibold">{{ entry.name }}</p>
+            {% if entry.school %}
+            <p class="a--award-school text-gray-500 text-sm mt-1">{{ entry.school }}</p>
+            {% endif %}
+          </div>
+          {% else %}
+          <span class="a--award-badge inline-block {% if entry.award == "審査員特別賞" %}bg-gray-700 text-white{% else %}bg-gray-100 text-gray-600{% endif %} text-xs font-bold px-3 py-1 rounded-full mb-3">{{ entry.award }}</span>
+          <h3 class="a--award-work text-xl font-bold text-gray-900">{{ entry.work }}</h3>
+          <p class="a--award-name text-gray-800 font-semibold">{{ entry.name }}</p>
+          {% if entry.school %}
+          <p class="a--award-school text-gray-500 text-sm mt-1">{{ entry.school }}</p>
+          {% endif %}
+          {% endif %}
+        </article>
+      </li>
+      {% endif %}
+
+      {% endfor %}
+    </ul>
+  </section>
+  {% endfor %}
+</div>

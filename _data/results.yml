@@ -1,0 +1,73 @@
+- category: ゲーム部門
+  entries:
+    - award: 最優秀賞
+      name: チーム「笠間乗務ユニット」
+      school: 茨城県立ＩＴ未来高等学校
+      work: train drive EXPerience
+    - award: 優秀賞
+      name: 山室 優雅
+      school: 愛媛県立松山工業高等学校
+      work: Code Alpha
+    - award: 審査員特別賞
+      name: 石角 壮
+      school: 滝沢市立滝沢第二中学校
+      work: THE SUPERMAN
+    - award: 審査員特別賞
+      name: 入江 大輝
+      school: 芝浦工業大学附属中学校
+      work: ビードロ〜変則的三目並べ〜
+
+- category: Webアプリ・IoT部門
+  entries:
+    - award: 最優秀賞
+      name: 奥野 真那
+      school:
+      work: Awardify
+    - award: 優秀賞
+      name: チーム「OGT」
+      school: 茨城県立ＩＴ未来高等学校
+      work: カラス撃退装置
+    - award: 審査員特別賞
+      name: 額賀 涼
+      school: 茨城県立ＩＴ未来高等学校
+      work: play music jenga
+    - award: 審査員特別賞
+      name: チーム「RubyLoveTech」
+      school: 茨城県立ＩＴ未来高等学校
+      work: RubyTech
+    - award: 審査員特別賞
+      name: 柳 潤星
+      school:
+      work: アイデア実現さーいと
+    - award: 審査員特別賞
+      name: 俵 恵太
+      school:
+      work: ecoPay
+
+- category: スポンサー賞
+  entries:
+    - award: ソニックガーデン賞
+      name: 額賀 涼
+      school: 茨城県立ＩＴ未来高等学校
+      work: play music jenga
+      logo: sonic-garden.webp
+    - award: SmartHR賞
+      name: チーム「OGT」
+      school: 茨城県立ＩＴ未来高等学校
+      work: カラス撃退装置
+      logo: smart-hr.webp
+    - award: 永和賞
+      name: 山室 優雅
+      school: 愛媛県立松山工業高等学校
+      work: Code Alpha
+      logo: esm.webp
+    - award: ピクシブ賞
+      name: 奥野 真那
+      school:
+      work: Awardify
+      logo: pixiv.webp
+    - award: STORES賞
+      name: チーム「RubyLoveTech」
+      school: 茨城県立ＩＴ未来高等学校
+      work: RubyTech
+      logo: stores.webp

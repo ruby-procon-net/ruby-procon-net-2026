@@ -1,0 +1,38 @@
+---
+layout: page
+title: 協賛企業
+permalink: /sponsors/
+published: false
+---
+
+<div class="l--sponsors space-y-16">
+  {% for group in site.data.sponsors %}
+  <section class="a--sponsor-tier">
+    <div class="a--tier-heading flex items-center gap-4 mb-8">
+      <h2 class="a--tier-name text-3xl font-black text-gray-900">{{ group.tier }}</h2>
+      <div class="flex-1 h-px bg-gray-200"></div>
+    </div>
+    <div>
+      <ul class="l--sponsor-grid grid {% if forloop.first %}md:grid-cols-1{% elsif forloop.index == 2 %}md:grid-cols-2{% elsif forloop.index == 3 %}md:grid-cols-4{% elsif forloop.index == 4 %}md:grid-cols-6{% else %}md:grid-cols-6{% endif %} gap-4">
+        {% for sponsor in group.sponsors %}
+        <li class="a--sponsor-card bg-white border border-gray-200 rounded-2xl {% if forloop.parentloop.index >= 4 %}p-3{% else %}p-6{% endif %} {% if forloop.parentloop.first or forloop.parentloop.index == 2 %}flex flex-row gap-8 items-center{% else %}flex flex-col{% endif %}">
+          {% if sponsor.logo %}
+          <a href="{{ sponsor.url }}" target="_blank" rel="noopener" class="{% if forloop.parentloop.first or forloop.parentloop.index == 2 %}w-1/2 shrink-0{% else %}w-full mb-4{% endif %}">
+            <img src="{{ "/assets/images/sponsors/" | append: sponsor.logo | relative_url }}"
+                 alt="{{ sponsor.name }}"
+                 class="a--sponsor-logo w-full aspect-square object-contain rounded-lg">
+          </a>
+          {% endif %}
+          <div class="{% if forloop.parentloop.first or forloop.parentloop.index == 2 %}w-1/2 flex flex-col justify-center{% endif %}">
+            <h3 class="a--sponsor-name {% if forloop.parentloop.first %}text-3xl font-black{% elsif forloop.parentloop.index == 2 %}text-xl font-black{% elsif forloop.parentloop.index >= 4 %}text-sm font-bold{% else %}font-bold{% endif %} text-gray-900 mb-2">
+              <a href="{{ sponsor.url }}" target="_blank" rel="noopener" class="hover:text-grape transition-colors">{{ sponsor.name }}</a>
+            </h3>
+            <p class="a--sponsor-message text-gray-500 {% if forloop.parentloop.index >= 4 %}text-sm{% elsif forloop.parentloop.first %}text-lg{% else %}text-base{% endif %} leading-relaxed">{{ sponsor.message }}</p>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+  {% endfor %}
+</div>

@@ -1,0 +1,60 @@
+<header class="l--header bg-white sticky top-0 z-50 border-b border-gray-100 shadow-sm">
+  <div class="l--header-inner max-w-6xl mx-auto px-6 flex items-center justify-between" style="height: 72px;">
+    <a href="{{ "/" | relative_url }}" class="a--logo">
+      <img src="{{ "/assets/images/common/logo.svg" | relative_url }}" alt="中高生Rubyプログラミングコンテスト2026" class="h-12 w-auto object-contain">
+    </a>
+
+    <!-- ハンバーガーボタン（スマホのみ） -->
+    <button class="a--hamburger md:hidden flex flex-col justify-center gap-1.5 w-8 h-8 relative" aria-label="メニューを開く">
+      <span class="a--hamburger-bar block w-full h-0.5 bg-gray-700 transition-all origin-center"></span>
+      <span class="a--hamburger-bar block w-full h-0.5 bg-gray-700 transition-all"></span>
+      <span class="a--hamburger-bar block w-full h-0.5 bg-gray-700 transition-all origin-center"></span>
+    </button>
+
+    <!-- ナビゲーション（PC） -->
+    <nav class="l--nav hidden md:flex items-center gap-6 text-sm font-medium">
+      <a href="{{ "/" | relative_url }}" class="a--nav-link text-gray-600 hover:text-grape transition-colors">トップ</a>
+      <a href="{{ "/entry/" | relative_url }}" class="a--nav-link text-gray-600 hover:text-grape transition-colors">応募要項</a>
+      <a href="{{ "/judges/" | relative_url }}" class="a--nav-link text-gray-600 hover:text-grape transition-colors">審査委員</a>
+      {% comment %} 協賛企業・最終審査会・最終審査結果ページ非公開のため一時コメントアウト
+      <a href="{{ "/sponsors/" | relative_url }}" class="a--nav-link text-gray-600 hover:text-grape transition-colors">協賛企業</a>
+      <a href="{{ "/final/" | relative_url }}" class="a--nav-link text-gray-600 hover:text-grape transition-colors">最終審査会</a>
+      <a href="{{ "/results/" | relative_url }}" class="a--nav-link text-gray-600 hover:text-grape transition-colors">最終審査結果</a>
+      {% endcomment %}
+      <a href="{{ "/articles/" | relative_url }}" class="a--nav-link text-gray-600 hover:text-grape transition-colors">お知らせ</a>
+      <a href="{{ "/entry/" | relative_url }}" class="a--nav-cta a--btn-ruby hidden lg:inline-block text-white font-bold px-5 py-2 rounded-full">応募する</a>
+    </nav>
+  </div>
+
+  <!-- モバイルメニュー -->
+  <div class="l--mobile-menu hidden md:hidden border-t border-gray-100 bg-white">
+    <nav class="flex flex-col px-6 py-4 gap-4 text-sm font-medium">
+      <a href="{{ "/" | relative_url }}" class="a--nav-link text-gray-600 hover:text-grape transition-colors">トップ</a>
+      <a href="{{ "/entry/" | relative_url }}" class="a--nav-link text-gray-600 hover:text-grape transition-colors">応募要項</a>
+      <a href="{{ "/judges/" | relative_url }}" class="a--nav-link text-gray-600 hover:text-grape transition-colors">審査委員</a>
+      {% comment %} 協賛企業・最終審査会・最終審査結果ページ非公開のため一時コメントアウト
+      <a href="{{ "/sponsors/" | relative_url }}" class="a--nav-link text-gray-600 hover:text-grape transition-colors">協賛企業</a>
+      <a href="{{ "/final/" | relative_url }}" class="a--nav-link text-gray-600 hover:text-grape transition-colors">最終審査会</a>
+      <a href="{{ "/results/" | relative_url }}" class="a--nav-link text-gray-600 hover:text-grape transition-colors">最終審査結果</a>
+      {% endcomment %}
+      <a href="{{ "/articles/" | relative_url }}" class="a--nav-link text-gray-600 hover:text-grape transition-colors">お知らせ</a>
+      <a href="{{ "/entry/" | relative_url }}" class="a--nav-cta a--btn-ruby text-white font-bold px-5 py-2.5 rounded-full text-center mt-2">応募する</a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  document.querySelector('.a--hamburger').addEventListener('click', function() {
+    const isOpen = document.querySelector('.l--mobile-menu').classList.toggle('hidden') === false;
+    const bars = this.querySelectorAll('.a--hamburger-bar');
+    if (isOpen) {
+      bars[0].style.cssText = 'transform: translateY(8px) rotate(45deg)';
+      bars[1].style.cssText = 'opacity: 0';
+      bars[2].style.cssText = 'transform: translateY(-8px) rotate(-45deg)';
+    } else {
+      bars[0].style.cssText = '';
+      bars[1].style.cssText = '';
+      bars[2].style.cssText = '';
+    }
+  });
+</script>

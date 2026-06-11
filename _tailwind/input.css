@@ -1,0 +1,122 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@source "../_layouts/**/*.html";
+@source "../_includes/**/*.html";
+@source "../*.html";
+
+@theme {
+  --color-ruby: #db0672;
+  --color-ruby-dark: #b00559;
+  --color-ruby-light: #ec4f9b;
+  /* メインビジュアル由来の紫（全体のアクセント基調） */
+  --color-grape: #4b40a4;
+  --color-grape-dark: #3a3180;
+  --color-grape-light: #6f64c9;
+
+  /* グレーをほんの少しグレープ寄りに（明度Lは既定のまま、色相をグレープ≒285°へ・彩度をわずかに付与） */
+  --color-gray-50:  oklch(0.985 0.006 285);
+  --color-gray-100: oklch(0.967 0.008 285);
+  --color-gray-200: oklch(0.928 0.012 285);
+  --color-gray-300: oklch(0.872 0.016 285);
+  --color-gray-400: oklch(0.707 0.024 285);
+  --color-gray-500: oklch(0.551 0.030 285);
+  --color-gray-600: oklch(0.446 0.034 285);
+  --color-gray-700: oklch(0.373 0.036 285);
+  --color-gray-800: oklch(0.278 0.034 285);
+  --color-gray-900: oklch(0.260 0.034 285);
+  --color-gray-950: oklch(0.130 0.030 285);
+
+  --font-sans: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+}
+
+/* ページ内アンカー移動を滑らかに（sticky ヘッダー分のオフセットも確保） */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
+}
+
+/* キーボード操作時のフォーカスを必ず見えるように */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-grape);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Ruby色の主要ボタン：さりげないグラデ背景 */
+.a--btn-ruby {
+  background-image: linear-gradient(135deg, var(--color-ruby-light) 0%, var(--color-ruby) 45%, var(--color-ruby-dark) 100%);
+  transition: all 0.2s ease;
+}
+.a--btn-ruby:hover {
+  filter: brightness(0.92);
+}
+
+/* グローバルナビ：下線が左から伸びるアニメーション */
+.a--nav-link {
+  position: relative;
+}
+.a--nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-grape);
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.a--nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+/* font-black（既定 900）を 700 に */
+.font-black {
+  font-weight: 700;
+}
+
+/* 記事本文（prose）のトーンをサイトに合わせる */
+.prose {
+  --tw-prose-links: var(--color-grape);
+  --tw-prose-bullets: var(--color-grape);
+  --tw-prose-quote-borders: var(--color-grape);
+}
+.prose img {
+  border-radius: 0.75rem;
+}
+
+/* 表をサイトのカード基調に合わせる（横スクロール対応） */
+.prose table {
+  display: block;
+  overflow-x: auto;
+  width: 100%;
+  border: 1px solid #e5e7eb;          /* gray-200 */
+  border-radius: 0.75rem;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.925em;
+}
+.prose thead {
+  background-color: #f9fafb;          /* gray-50 */
+  border-bottom: 1px solid #e5e7eb;
+}
+.prose thead th {
+  color: #111827;                     /* gray-900 */
+  font-weight: 700;
+}
+.prose th,
+.prose td {
+  padding: 0.7em 1em;
+  border-bottom: 1px solid #f3f4f6;   /* gray-100 */
+  vertical-align: top;
+}
+.prose tbody tr:last-child td {
+  border-bottom: 0;
+}
+.prose tbody tr:nth-child(even) {
+  background-color: #fafafa;          /* 薄いゼブラ */
+}

@@ -1,0 +1,2 @@
+---
+BUNDLE_EXCLUDE_GEMS: "em-websocket eventmachine sass-embedded jekyll-sass-converter"

@@ -1,0 +1,229 @@
+---
+layout: default
+---
+
+<!-- Hero -->
+<section class="l--hero overflow-hidden relative bg-cover" style="background-image: url('{{ "/assets/images/home/key-visual.webp" | relative_url }}'); aspect-ratio: 14 / 6; max-height: 70vh; min-height: 460px; width: 100%; background-position: center center;">
+  <!-- 写真の上の文字を読みやすくするオーバーレイ -->
+  <div class="a--hero-overlay absolute inset-0" aria-hidden="true" style="background: linear-gradient(90deg, rgb(75 64 164 / 85%) 0%, rgb(75 64 164 / 50%) 55%, rgba(0, 0, 0, 0) 80%);"></div>
+  <div class="l--hero-inner max-w-5xl mx-auto px-6 h-full flex items-center relative">
+    <div class="a--hero-content max-w-xl text-white">
+      <p class="a--hero-eyebrow text-sm font-bold tracking-widest mb-4 text-white">第16回 中高生Rubyプログラミングコンテスト 2026</p>
+      <h1 class="a--hero-title text-4xl sm:text-5xl lg:text-6xl font-black leading-tight mb-5" style="text-shadow: 0 2px 12px rgba(0,0,0,0.4);">
+        つくりたい！が<br>世界を変えていく。
+      </h1>
+      <p class="a--hero-lead text-lg font-semibold text-gray-100 leading-relaxed mb-8" style="text-shadow: 0 1px 8px rgba(0,0,0,0.5);">
+        Rubyで作った「自分の作品」を、全国の仲間と審査委員に。中学生・高校生のための、つくる楽しさを発表する舞台です。
+      </p>
+      <div class="a--hero-actions flex flex-col sm:flex-row gap-4">
+        <a href="{{ "/entry/" | relative_url }}"
+           class="a--cta-primary a--btn-ruby text-white font-bold px-9 py-4 rounded-full text-lg hover:-translate-y-0.5 text-center"
+           style="box-shadow: 0 0 70px #ffffff;">
+          応募する →
+        </a>
+        {% comment %} 最終審査結果ページ非公開のため一時コメントアウト
+        <a href="{{ "/results/" | relative_url }}"
+           class="a--cta-secondary bg-white/10 backdrop-blur-sm border border-white/40 hover:bg-white hover:text-grape text-white font-semibold px-9 py-4 rounded-full transition-all text-lg text-center">
+          前回の結果を見る
+        </a>
+        {% endcomment %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- コンテストについて -->
+<section class="l--about max-w-5xl mx-auto px-6 py-20">
+  <div class="a--section-header text-center mb-14">
+    <span class="text-ruby font-bold text-sm tracking-widest uppercase mb-3 block">About</span>
+    <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">第16回 中高生Rubyプログラミングコンテスト 2026</h2>
+  </div>
+  <div class="l--about-inner grid md:grid-cols-2 gap-16 items-center">
+    <div class="a--about-text">
+      <div class="text-gray-600 text-lg leading-relaxed space-y-4">
+        <p>中高生Rubyプログラミングコンテスト2026は、これまで15回の開催を数えた「中高生国際Rubyプログラミングコンテスト in Mitaka」を引き継ぐ、第16回目の開催です。中高生を対象に、Rubyによって作成されたアプリケーションを募り、特に優秀な作品を顕彰します。</p>
+        <p>子どもたちがプログラミング体験を通して新しい世界への興味や関心を呼び起こし、将来への夢を育むことを目的に開催します。若年層に広くプログラミングの挑戦機会を提供し、Rubyによるプログラミングの楽しさを広めることで、コンピューターの力を子どもたちが未来へ向かう力へと変えるきっかけとなることを目指します。</p>
+      </div>
+    </div>
+    <div class="a--about-image">
+      <img src="{{ "/assets/images/home/about.webp" | relative_url }}" alt="中高生Rubyプログラミングコンテストの様子" class="w-full rounded-2xl object-cover aspect-[4/3]">
+      <a href="https://www.ruby-procon.net/docs/2025112800018/" target="_blank" rel="noopener" class="a--about-report inline-flex items-center gap-1.5 mt-4 text-grape font-semibold hover:text-grape-dark transition-colors">
+        大会レポート2025
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H9M17 7v8"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 募集部門 -->
+<section class="l--categories bg-gray-50 py-20">
+  <div class="l--categories-inner max-w-5xl mx-auto px-6">
+    <div class="a--section-header text-center mb-14">
+      <span class="text-ruby font-bold text-sm tracking-widest uppercase mb-3 block">Categories</span>
+      <h2 class="text-5xl font-black text-gray-900">募集部門</h2>
+    </div>
+    <div class="l--categories-grid grid md:grid-cols-3 gap-6">
+      <div class="a--category-card bg-white rounded-2xl p-6 border border-gray-200">
+        <img src="{{ "/assets/images/common/game.webp" | relative_url }}" alt="" aria-hidden="true" class="w-28 h-28 mb-6 object-contain mx-auto rounded-2xl">
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">ゲーム部門</h3>
+        <p class="text-gray-500 leading-relaxed">Rubyで作成したゲーム作品。発想力と技術力を駆使したオリジナルゲームを募集します。</p>
+      </div>
+      <div class="a--category-card bg-white rounded-2xl p-6 border border-gray-200">
+        <img src="{{ "/assets/images/common/application.webp" | relative_url }}" alt="" aria-hidden="true" class="w-28 h-28 mb-6 object-contain mx-auto rounded-2xl">
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">アプリ部門</h3>
+        <p class="text-gray-500 leading-relaxed">ゲーム以外のアプリケーション作品。Webアプリ（Rails / Sinatra 等）、mruby を使った組込み、AI用MCPサーバーなど。</p>
+      </div>
+      <div class="a--category-card bg-white rounded-2xl p-6 border border-gray-200">
+        <img src="{{ "/assets/images/common/creative-coding.webp" | relative_url }}" alt="" aria-hidden="true" class="w-28 h-28 mb-6 object-contain mx-auto rounded-2xl">
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">クリエイティブコーディング部門</h3>
+        <p class="text-gray-500 leading-relaxed">2026年新設。p5.rb（rbcanvas）を使ったビジュアル作品。今年度のテーマは「ルビー」。</p>
+      </div>
+    </div>
+    <div class="text-center mt-10">
+      <a href="{{ "/entry/" | relative_url }}" class="inline-block a--btn-ruby text-white font-bold px-8 py-3 rounded-full">募集要項を見る →</a>
+    </div>
+  </div>
+</section>
+
+<!-- スポンサー募集（協賛企業ページ非公開のため一時コメントアウト） -->
+{% comment %}
+<section class="l--sponsor-cta max-w-5xl mx-auto px-6 py-20">
+  <div class="a--sponsor-cta-inner rounded-3xl border border-gray-200 bg-gray-50 p-10 md:p-16 text-center">
+    <span class="text-ruby font-bold text-sm tracking-widest uppercase mb-3 block">For Sponsors</span>
+    <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">協賛企業を募集しています</h2>
+    <p class="text-gray-600 text-lg leading-relaxed max-w-2xl mx-auto mb-8">次世代のつくり手を、企業のみなさまと一緒に応援しませんか。協賛企業として、中高生のチャレンジを支えてくださるパートナーを募集しています。</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="mailto:jr-procon@ruby.or.jp" class="inline-block bg-grape text-white font-bold px-8 py-3 rounded-full hover:bg-grape-dark transition-colors">協賛について問い合わせる →</a>
+      <a href="{{ "/sponsors/" | relative_url }}" class="inline-block border border-gray-300 text-gray-700 font-semibold px-8 py-3 rounded-full hover:border-grape hover:text-grape transition-colors">これまでの協賛企業を見る</a>
+    </div>
+  </div>
+</section>
+{% endcomment %}
+
+<!-- 審査委員 -->
+<section class="l--judges-home max-w-5xl mx-auto px-6 py-20">
+  <div class="a--section-header text-center mb-14">
+    <span class="text-ruby font-bold text-sm tracking-widest uppercase mb-3 block">Judges</span>
+    <h2 class="text-5xl font-black text-gray-900">審査委員</h2>
+  </div>
+  <ul class="l--judges-grid grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8 list-none">
+    {% for judge in site.data.judges %}
+    <li class="a--judge-thumb text-center">
+      {% if judge.photo %}
+      <img src="{{ "/assets/images/judges/" | append: judge.photo | relative_url }}"
+           alt="{{ judge.name }}"
+           class="w-28 h-28 rounded-full object-cover mx-auto mb-4">
+      {% else %}
+      <div class="w-28 h-28 rounded-full bg-grape text-white flex items-center justify-center text-3xl font-black mx-auto mb-4" aria-hidden="true">{{ judge.name | slice: 0 }}</div>
+      {% endif %}
+      <p class="a--judge-thumb-name font-bold text-gray-900">{{ judge.name }}</p>
+      <p class="a--judge-thumb-title text-gray-500 text-xs mt-1 leading-relaxed">{{ judge.title }}</p>
+    </li>
+    {% endfor %}
+  </ul>
+  <div class="text-center mt-12">
+    <a href="{{ "/judges/" | relative_url }}" class="inline-block border border-gray-300 text-gray-700 font-semibold px-8 py-3 rounded-full hover:border-grape hover:text-grape transition-colors">審査委員の詳細を見る →</a>
+  </div>
+</section>
+
+<!-- 新着記事 -->
+{% assign latest_articles = site.articles | sort: "date" | reverse %}
+{% if latest_articles.size > 0 %}
+<section class="l--latest-articles bg-gray-50 py-20">
+  <div class="l--latest-articles-inner max-w-5xl mx-auto px-6">
+    <div class="a--section-header text-center mb-14">
+      <span class="text-ruby font-bold text-sm tracking-widest uppercase mb-3 block">News</span>
+      <h2 class="text-5xl font-black text-gray-900">新着記事</h2>
+    </div>
+    <ul class="l--latest-grid grid md:grid-cols-3 gap-6 list-none">
+      {% for article in latest_articles limit: 3 %}
+      <li>
+        <a href="{{ article.url | relative_url }}" class="a--article-card block h-full bg-white border border-gray-200 rounded-2xl overflow-hidden hover:border-grape hover:shadow-md transition">
+          <img src="{{ article.thumbnail | relative_url }}" alt="" class="a--article-card-thumb w-full aspect-video object-cover">
+          <div class="p-6">
+            <p class="a--article-card-meta text-gray-500 text-xs font-bold tracking-widest uppercase mb-2">
+              <time datetime="{{ article.date | date_to_xmlschema }}">{{ article.date | date: "%Y年%-m月%-d日" }}</time>
+              {% if article.author %}<span class="mx-2">·</span><span>{{ article.author }}</span>{% endif %}
+            </p>
+            <h3 class="a--article-card-title text-lg font-bold text-gray-900 mb-2">{{ article.title }}</h3>
+            {% if article.excerpt %}
+            <p class="a--article-card-excerpt text-gray-500 text-sm leading-relaxed">{{ article.excerpt | strip_html | truncate: 80 }}</p>
+            {% endif %}
+          </div>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+    <div class="text-center mt-10">
+      <a href="{{ "/articles/" | relative_url }}" class="inline-block border border-gray-300 text-gray-700 font-semibold px-8 py-3 rounded-full hover:border-grape hover:text-grape transition-colors">記事一覧を見る →</a>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- 協賛企業ロゴ（協賛企業ページ非公開のため一時コメントアウト） -->
+{% comment %}
+<section class="l--sponsor-logos bg-white border-t border-gray-200">
+  <div class="l--sponsor-logos-inner max-w-5xl mx-auto px-6 py-12">
+    <h2 class="text-sm font-bold text-gray-500 tracking-widest uppercase mb-8">協賛企業</h2>
+    {% for group in site.data.sponsors %}
+    <div class="mb-8">
+      <p class="text-xs font-bold text-gray-500 tracking-widest uppercase mb-4">{{ group.tier }}</p>
+      <ul class="flex flex-wrap items-center gap-4 list-none">
+        {% for sponsor in group.sponsors %}
+        {% if sponsor.logo %}
+        <li>
+          <a href="{{ sponsor.url }}" target="_blank" rel="noopener">
+            <img src="{{ "/assets/images/sponsors/" | append: sponsor.logo | relative_url }}"
+                 alt="{{ sponsor.name }}"
+                 class="object-contain {% if forloop.parentloop.first %}h-48{% elsif forloop.parentloop.index == 2 %}h-36{% elsif forloop.parentloop.index == 3 %}h-28{% else %}h-20{% endif %}">
+          </a>
+        </li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+    <div class="text-center mt-4">
+      <a href="{{ "/sponsors/" | relative_url }}" class="inline-block border-2 border-grape text-grape font-bold px-8 py-3 rounded-full hover:bg-grape hover:text-white transition-colors">協賛企業一覧を見る →</a>
+    </div>
+  </div>
+</section>
+{% endcomment %}
+
+<!-- 後援 -->
+<section class="l--endorsements bg-white border-t border-gray-200">
+  <div class="l--endorsements-inner max-w-5xl mx-auto px-6 py-12">
+    <h2 class="a--endorsements-title text-sm font-bold text-gray-500 tracking-widest uppercase mb-4">後援</h2>
+    <ul class="a--endorsements-list flex flex-wrap gap-x-0 gap-y-1 text-gray-500 text-sm list-none">
+      {% assign endorsers = "経済産業省|https://www.meti.go.jp/,文部科学省|https://www.mext.go.jp/,総務省|https://www.soumu.go.jp/,デジタル庁|https://www.digital.go.jp/,独立行政法人情報処理推進機構（IPA）|https://www.ipa.go.jp/,一般財団法人Rubyアソシエーション|https://www.ruby.or.jp/,株式会社まちづくり三鷹|https://www.mitaka.ne.jp/,Rubyプログラミング教育を実施する地域の自治体、公的機関、大学等|" | split: "," %}
+      {% for item in endorsers %}
+        {% assign parts = item | split: "|" %}
+        <li class="flex items-center">
+          {% if parts[1] %}
+          <a href="{{ parts[1] }}" target="_blank" rel="noopener" class="hover:text-grape transition-colors">{{ parts[0] }}</a>
+          {% else %}
+          <span>{{ parts[0] }}</span>
+          {% endif %}
+          {% unless forloop.last %}<span class="mx-2 text-gray-300" aria-hidden="true">／</span>{% endunless %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<!-- 関連リンク -->
+<section class="l--related-links bg-white border-t border-gray-100">
+  <div class="l--related-links-inner max-w-5xl mx-auto px-6 py-12">
+    <h2 class="a--related-links-title text-sm font-bold text-gray-500 tracking-widest uppercase mb-4">関連リンク</h2>
+    <ul class="a--related-links-list flex flex-wrap items-center gap-6 list-none">
+      <li><a href="http://www.u22procon.com/" target="_blank" rel="noopener"><img src="{{ "/assets/images/related-links/u22.webp" | relative_url }}" alt="U-22 プログラミング・コンテスト2025" class="h-12 w-auto object-contain"></a></li>
+      <li><a href="https://pckoshien.u-aizu.ac.jp/" target="_blank" rel="noopener"><img src="{{ "/assets/images/related-links/pckoshien.webp" | relative_url }}" alt="パソコン甲子園2025" class="h-12 w-auto object-contain"></a></li>
+      <li><a href="https://www.gp-award.jp" target="_blank" rel="noopener"><img src="{{ "/assets/images/related-links/gpa.webp" | relative_url }}" alt="ぐんまプログラミングアワード2024" class="h-12 w-auto object-contain"></a></li>
+      <li><a href="https://products.sint.co.jp/pg_battle" target="_blank" rel="noopener"><img src="{{ "/assets/images/related-links/pg-battle.webp" | relative_url }}" alt="PG BATTLE" class="h-12 w-auto object-contain"></a></li>
+      <li><a href="https://jr.mitou.org/" target="_blank" rel="noopener"><img src="{{ "/assets/images/related-links/mitou-junior.webp" | relative_url }}" alt="未踏ジュニア" class="h-12 w-auto object-contain"></a></li>
+      <li><a href="https://showebcon.com/" target="_blank" rel="noopener"><img src="{{ "/assets/images/related-links/showebcon_2024.webp" | relative_url }}" alt="全国商業高校Webアプリコンテスト" class="h-12 w-auto object-contain"></a></li>
+      <li><a href="https://smalruby-koshien.netlab.jp/index.html" target="_blank" rel="noopener"><img src="{{ "/assets/images/related-links/SmalrubyKoshien.webp" | relative_url }}" alt="スモウルビープログラミング甲子園" class="h-12 w-auto object-contain"></a></li>
+    </ul>
+  </div>
+</section>

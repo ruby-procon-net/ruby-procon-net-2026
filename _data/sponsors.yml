@@ -1,0 +1,154 @@
+- tier: Ruby PARTNER
+  sponsors:
+    - name: 株式会社ソニックガーデン
+      logo: sonic-garden.webp
+      url: https://www.sonicgarden.jp/
+      message: プログラミングは楽しい！弊社ソニックガーデンはそんなプログラミング好きの大人がたくさん集まっている会社です。
+
+- tier: Platinum PARTNER
+  sponsors:
+    - name: 株式会社セールスフォース・ジャパン
+      logo: salesforce.webp
+      url: https://www.salesforce.com/jp/
+      message: 柔軟な発想力を活かして、常識を打ち破るコードで新しい世界を築くことを期待しています！
+    - name: 株式会社SmartHR
+      logo: smart-hr.webp
+      url: https://smarthr.co.jp/
+      message: みなさんがRubyの「楽しさ」とともにプログラミングを通じて新しい世界を切りひらき、自分らしく可能性を広げていくことを、心から応援しています。
+
+- tier: Gold PARTNER
+  sponsors:
+    - name: 株式会社永和システムマネジメント
+      logo: esm.webp
+      url: https://agile.esm.co.jp/
+      message: プログラミングを楽しくするRubyを通じて実現される、みなさんの作品を楽しみにしています！
+    - name: STORES株式会社
+      logo: stores.webp
+      url: https://jobs.st.inc/
+      message: 皆さんの生み出すコードが、未来をどう変えていくのか。その可能性に私たちは胸を膨らませています。
+    - name: ピクシブ株式会社
+      logo: pixiv.webp
+      url: https://www.pixiv.co.jp/
+      message: 創意工夫に満ちた素敵な作品に出会えることを楽しみにしています。
+    - name: セコム株式会社
+      logo: secom.webp
+      url: https://www.secom.co.jp/
+      message: 皆さんが自身の可能性に挑戦した素晴らしい作品に出会えることを楽しみにしています！
+    - name: サイトブリッジ株式会社
+      logo: site-bridge.webp
+      url: https://www.sitebridge.co.jp/
+      message: 自由で可能性に満ちた、プログラムによる表現の世界を感じてもらえればと思います。
+    - name: フィヨルドブートキャンプ
+      logo: fbc.webp
+      url: https://bootcamp.fjord.jp/
+      message: みなさんがRubyを楽しんで形にしたアイデアに出会えることを、心から楽しみにしています。
+    - name: 一般社団法人日本Rubyの会
+      logo: rubynokai.webp
+      url: https://ruby-no-kai.org/
+      message:
+    - name: 株式会社エス・エム・エス
+      logo: sms.webp
+      url: https://www.bm-sms.co.jp
+      message:
+
+- tier: Silver PARTNER
+  sponsors:
+    - name: 一畑電気鉄道株式会社
+      logo: ichibata.webp
+      url: https://www.ichibata.co.jp/
+      message: このコンテストでの経験が皆さんの将来に繋がっていく事を願っています！
+    - name: 株式会社ウィルド
+      logo: wyrd.webp
+      url: https://wyrd.co.jp/
+      message: 皆さんの豊富なアイデアと無限の発想力で私達大人を驚かせてください！
+    - name: 株式会社ウィルネット
+      logo: willnet.webp
+      url: https://willnet.jp
+      message: みなさんの成果を見るのを楽しみにしています。
+    - name: 株式会社エクシード
+      logo: exceed.webp
+      url: https://www.exceed-net.co.jp/
+      message: 作成時の苦労、動いた時の感動体験は確実に中高生の皆さんの将来に繋がっていくと思います。
+    - name: 合同会社esa
+      logo: esa.webp
+      url: https://esa.io/
+      message: 皆様のわくわくするような問題解決を、esaは応援しています！
+    - name: ガーネットテック373株式会社
+      logo: gaenet-tech.webp
+      url: https://www.garnettech373.com
+      message: みなさんもぜひプログラミングの時間をたのしんでください。
+    - name: 株式会社コードタクト
+      logo: code-takt.webp
+      url: https://codetakt.com/
+      message:
+    - name: 株式会社コミクリ
+      logo: comcre.webp
+      url: https://www.comcre.co.jp/
+      message: チャレンジ、待ってます！
+    - name: 多摩信用金庫
+      logo: tamashin.webp
+      url: http://www.tamashin.jp/
+      message:
+    - name: naptime
+      logo: naptime.webp
+      url: https://naptime.jp/
+      message:
+    - name: NCD株式会社
+      logo: ncd.webp
+      url: https://www.ncd.co.jp/
+      message: 皆様の新しい発想とユニークな作品に出合えることを楽しみにしております！
+    - name: 株式会社ネットワーク応用通信研究所
+      logo: nacl.webp
+      url: https://www.netlab.jp/
+      message: みなさんのプログラミングへの情熱がRubyを活用することにより、熱くそしてこれからも燃え続けることを願っております。
+    - name: 株式会社フィルイン
+      logo: fillin.webp
+      url: https://www.fillin-inc.com/
+      message:
+    - name: 株式会社まちづくり三鷹
+      logo: mitaka.webp
+      url: https://www.mitaka.ne.jp/
+      message: 皆さんの自由な発想から生まれた作品を楽しみにお待ちしています。
+    - name: 株式会社万葉
+      logo: ever-leaf.webp
+      url: https://everyleaf.com/
+      message: 今年もみなさんがたのしくプログラミングされた作品をたのしみにしています！
+    - name: 合同会社もなみ屋
+      logo: monami.webp
+      url: https://www.monami-ya.jp/
+      message:
+    - name: Ruby on Railsチュートリアル
+      logo: rails-tutorial.webp
+      url: https://railstutorial.jp/
+      message: 解説動画やテキスト、AIサポートや問題集が、使われ続ける良いものの開発に役立てば嬉しいです。
+    - name: 株式会社ラック
+      logo: lac.webp
+      url: https://www.lac.co.jp/
+      message:
+    - name: 路地ラボ
+      logo: logi-labo.webp
+      url: https://sakahukamaki.github.io/portfolio/
+      message: 自分のやってみたいことをたくさん形にしてください！
+
+- tier: メディアスポンサー
+  sponsors:
+    - name: EdTechZine
+      logo: edtechzine.webp
+      url: https://edtechzine.jp/
+      message:
+    - name: Qiita
+      logo: qiita.webp
+      url: https://qiita.com/
+      message:
+    - name: 技術評論社
+      logo: gihyou.webp
+      url: https://gihyo.jp/
+      message:
+    - name: 子供の科学
+      logo: kodomonokagaku.webp
+      url: https://www.kodomonokagaku.com/
+      message:
+    - name: J:COM武蔵野・三鷹
+      logo: jcom.webp
+      url: http://www.jcom.co.jp/
+      message:

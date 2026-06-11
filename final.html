@@ -1,0 +1,138 @@
+---
+layout: page
+title: 最終審査会
+permalink: /final/
+published: false
+---
+
+<div class="l--final space-y-12">
+
+  <!-- 開催概要 -->
+  <section class="l--final-overview">
+    <dl class="a--overview-info flex flex-col sm:flex-row bg-white border border-gray-200 rounded-2xl overflow-hidden">
+      <div class="a--overview-date flex-1 p-8 sm:border-r border-gray-200">
+        <dt class="text-grape text-xs font-bold tracking-widest uppercase mb-3">Date & Time</dt>
+        <dd class="a--date text-3xl font-black text-gray-900 leading-tight">
+          <time datetime="2025-11-29">2025年11月29日（土）</time>
+        </dd>
+        <dd class="a--time text-gray-500 mt-2"><time datetime="12:00">12:00</time> 〜 <time datetime="17:00">17:00</time> 予定</dd>
+      </div>
+      <div class="a--overview-venue flex-1 p-8">
+        <dt class="text-grape text-xs font-bold tracking-widest uppercase mb-3">Venue</dt>
+        <dd class="a--venue-name text-3xl font-black text-gray-900 leading-tight">三鷹産業プラザ</dd>
+
+        <dd class="mt-3">
+          <a href="https://maps.google.com/?q=三鷹産業プラザ" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-grape text-sm font-semibold hover:underline">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            Google マップで見る
+          </a>
+        </dd>
+      </div>
+    </dl>
+  </section>
+
+  <!-- タイムテーブル -->
+  <section class="l--timetable">
+    <h2 class="text-3xl font-black text-gray-900 mb-6">タイムテーブル</h2>
+    <ol class="l--timeline space-y-0 list-none">
+      {% assign schedule = "12:00〜|開会・配信開始,12:20〜|応募者によるプレゼンテーション,14:45〜|最終審査（スポンサー賞企業によるミニ講演会も実施）,15:45〜|審査結果発表・表彰式,16:30〜|審査委員長による講評,17:00|閉会" | split: "," %}
+      {% for item in schedule %}
+        {% assign parts = item | split: "|" %}
+        <li class="a--timeline-item flex items-stretch gap-0 group">
+          <div class="a--timeline-time w-24 shrink-0 py-5 pr-6 text-right">
+            <span class="text-grape font-black text-sm">{{ parts[0] }}</span>
+          </div>
+          <div class="a--timeline-track flex flex-col items-center">
+            <div class="a--timeline-dot w-3 h-3 rounded-full bg-grape mt-6 shrink-0 ring-4 ring-grape/10 group-first:ring-grape/30"></div>
+            {% unless forloop.last %}
+            <div class="a--timeline-line w-0.5 bg-gray-200 flex-1"></div>
+            {% endunless %}
+          </div>
+          <div class="a--timeline-content flex-1 py-5 pl-6">
+            <p class="text-gray-800 font-medium">{{ parts[1] }}</p>
+          </div>
+        </li>
+      {% endfor %}
+    </ol>
+  </section>
+
+<!-- 最終審査会進出作品 -->
+  <section class="l--finalists">
+    <h2 class="text-3xl font-black text-gray-900 mb-8">最終審査会進出作品</h2>
+
+    <div class="space-y-10">
+
+      <!-- ゲーム部門 -->
+      <section class="a--finalist-category">
+        <div class="flex items-center gap-4 mb-4">
+          <h3 class="text-2xl font-black text-gray-900 whitespace-nowrap"><span aria-hidden="true">🎮</span> ゲーム部門</h3>
+          <div class="flex-1 h-px bg-gray-200"></div>
+        </div>
+        <ul class="grid md:grid-cols-2 gap-3 list-none">
+          <li><article class="a--finalist-card bg-white border border-gray-200 rounded-2xl p-5">
+            <h4 class="a--finalist-work font-bold text-gray-900 mb-1">ビードロ 〜変則的三目並べ〜</h4>
+            <p class="a--finalist-name text-gray-600 text-base">入江大輝</p>
+            <p class="a--finalist-school text-gray-500 text-sm mt-1">芝浦工業大学附属中学校（東京）</p>
+          </article></li>
+          <li><article class="a--finalist-card bg-white border border-gray-200 rounded-2xl p-5">
+            <h4 class="a--finalist-work font-bold text-gray-900 mb-1">THE SUPERMAN</h4>
+            <p class="a--finalist-name text-gray-600 text-base">石角壮</p>
+            <p class="a--finalist-school text-gray-500 text-sm mt-1">滝沢市立滝沢第二中学校（岩手）</p>
+          </article></li>
+          <li><article class="a--finalist-card bg-white border border-gray-200 rounded-2xl p-5">
+            <h4 class="a--finalist-work font-bold text-gray-900 mb-1">Code Alpha</h4>
+            <p class="a--finalist-name text-gray-600 text-base">山室優雅</p>
+            <p class="a--finalist-school text-gray-500 text-sm mt-1">愛媛県立松山工業高等学校（愛媛）</p>
+          </article></li>
+          <li><article class="a--finalist-card bg-white border border-gray-200 rounded-2xl p-5">
+            <h4 class="a--finalist-work font-bold text-gray-900 mb-1">train drive EXPerience</h4>
+            <p class="a--finalist-name text-gray-600 text-base">チーム笠間乗務ユニット</p>
+            <p class="a--finalist-school text-gray-500 text-sm mt-1">茨城県立IT未来高等学校（茨城）</p>
+          </article></li>
+        </ul>
+      </section>
+
+      <!-- Webアプリ・IoT部門 -->
+      <section class="a--finalist-category">
+        <div class="flex items-center gap-4 mb-4">
+          <h3 class="text-2xl font-black text-gray-900 whitespace-nowrap"><span aria-hidden="true">🌐</span> Webアプリ・IoT部門</h3>
+          <div class="flex-1 h-px bg-gray-200"></div>
+        </div>
+        <ul class="grid md:grid-cols-2 gap-3 list-none">
+          <li><article class="a--finalist-card bg-white border border-gray-200 rounded-2xl p-5">
+            <h4 class="a--finalist-work font-bold text-gray-900 mb-1">カラス撃退装置</h4>
+            <p class="a--finalist-name text-gray-600 text-base">チーム OGT</p>
+            <p class="a--finalist-school text-gray-500 text-sm mt-1">茨城県立IT未来高等学校（茨城）</p>
+          </article></li>
+          <li><article class="a--finalist-card bg-white border border-gray-200 rounded-2xl p-5">
+            <h4 class="a--finalist-work font-bold text-gray-900 mb-1">play music jenga</h4>
+            <p class="a--finalist-name text-gray-600 text-base">額賀涼</p>
+            <p class="a--finalist-school text-gray-500 text-sm mt-1">茨城県立IT未来高等学校（茨城）</p>
+          </article></li>
+          <li><article class="a--finalist-card bg-white border border-gray-200 rounded-2xl p-5">
+            <h4 class="a--finalist-work font-bold text-gray-900 mb-1">RubyTech</h4>
+            <p class="a--finalist-name text-gray-600 text-base">チーム RubyLoveTech</p>
+            <p class="a--finalist-school text-gray-500 text-sm mt-1">茨城県立IT未来高等学校（茨城）</p>
+          </article></li>
+          <li><article class="a--finalist-card bg-white border border-gray-200 rounded-2xl p-5">
+            <h4 class="a--finalist-work font-bold text-gray-900 mb-1">ecoPay</h4>
+            <p class="a--finalist-name text-gray-600 text-base">俵恵太</p>
+            <p class="a--finalist-school text-gray-500 text-sm mt-1">島根</p>
+          </article></li>
+          <li><article class="a--finalist-card bg-white border border-gray-200 rounded-2xl p-5">
+            <h4 class="a--finalist-work font-bold text-gray-900 mb-1">アイデア実現さーいと</h4>
+            <p class="a--finalist-name text-gray-600 text-base">柳潤星</p>
+            <p class="a--finalist-school text-gray-500 text-sm mt-1">神奈川</p>
+          </article></li>
+          <li><article class="a--finalist-card bg-white border border-gray-200 rounded-2xl p-5">
+            <h4 class="a--finalist-work font-bold text-gray-900 mb-1">Awardify</h4>
+            <p class="a--finalist-name text-gray-600 text-base">奥野真那</p>
+            <p class="a--finalist-school text-gray-500 text-sm mt-1">東京</p>
+          </article></li>
+        </ul>
+      </section>
+
+    </div>
+  </section>
+
+</div>

@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<div class="l--page-hero relative overflow-hidden border-b border-gray-200 bg-cover bg-center" style="background-image: url('{{ "/assets/images/common/background.webp" | relative_url }}');">
+  <div class="a--page-hero-overlay absolute inset-0" aria-hidden="true" style="background: linear-gradient(90deg, rgb(75 64 164 / 85%) 0%, rgb(75 64 164 / 50%) 55%, rgba(0, 0, 0, 0) 80%);"></div>
+  <div class="l--page-hero-inner max-w-5xl mx-auto px-6 py-10 relative">
+    <p class="a--page-label text-[#f8d7e8] text-xs font-bold tracking-widest uppercase mb-3">{{ page.permalink | remove: "/" | upcase }}</p>
+    <h1 class="a--page-title text-4xl md:text-5xl font-black text-white" style="text-shadow: 0 2px 12px rgba(0,0,0,0.3);">{{ page.title }}</h1>
+    <div class="w-12 h-1 bg-white rounded mt-5" aria-hidden="true"></div>
+  </div>
+</div>
+
+<div class="l--page-content max-w-5xl mx-auto px-6 py-16">
+  {{ content }}
+</div>
