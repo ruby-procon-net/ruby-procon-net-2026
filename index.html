@@ -4,6 +4,68 @@ layout: default
 
 <!-- Hero -->
 <section class="l--hero overflow-hidden relative bg-cover" style="background-image: url('{{ "/assets/images/home/key-visual.webp" | relative_url }}'); aspect-ratio: 14 / 6; max-height: 70vh; min-height: 460px; width: 100%; background-position: center center;">
+  <div class="a--hero-cyber-glow absolute inset-0" aria-hidden="true">
+    <svg class="a--hero-cyber-svg" viewBox="0 0 1440 620" preserveAspectRatio="none" focusable="false">
+      <g class="a--cyber-geometry">
+        <path d="M-40 118 L184 118 L324 226 L574 226 L742 118 L1038 118 L1194 42 L1480 42" />
+        <path d="M-60 402 L196 312 L428 342 L642 252 L906 286 L1114 214 L1488 252" />
+        <path d="M120 604 L340 486 L594 520 L798 410 L1042 460 L1264 340 L1500 360" />
+        <path d="M58 42 L236 174 L224 312 L402 438 L388 570" />
+      </g>
+      <g class="a--cyber-secondary">
+        <path d="M-80 248 C160 178 330 192 514 274 S880 390 1090 294 S1328 158 1520 184" />
+        <path d="M270 -28 C420 126 522 180 690 164 S982 58 1138 132 S1320 356 1510 438" />
+        <path d="M-20 540 C214 486 382 420 530 456 S792 614 1036 554 S1268 486 1490 586" />
+      </g>
+      <g class="a--cyber-mesh">
+        <path d="M86 92 H264 L354 246 L266 398 H88 L-2 244 Z" />
+        <path d="M486 36 H704 L812 224 L704 412 H486 L378 224 Z" />
+        <path d="M884 70 H1120 L1238 274 L1120 478 H884 L766 274 Z" />
+        <path d="M1184 186 H1390 L1494 366 L1390 546 H1184 L1080 366 Z" />
+      </g>
+      <g class="a--cyber-rings">
+        <circle cx="322" cy="220" r="88" />
+        <circle cx="322" cy="220" r="132" />
+        <circle cx="1038" cy="290" r="124" />
+        <circle cx="1038" cy="290" r="178" />
+      </g>
+      <g class="a--cyber-ticks">
+        <path d="M312 70 L312 118 M354 72 L338 116 M396 88 L366 128 M430 118 L388 146" />
+        <path d="M912 128 L956 154 M992 110 L1008 160 M1084 118 L1066 166 M1162 160 L1120 184" />
+        <path d="M1012 438 L956 472 M1088 444 L1088 498 M1166 420 L1214 462" />
+      </g>
+      <g class="a--cyber-panels">
+        <polygon points="720,94 1012,132 908,300 610,254" />
+        <polygon points="980,324 1308,278 1448,444 1116,522" />
+        <polygon points="210,222 444,178 558,346 306,396" />
+      </g>
+      <g class="a--cyber-flows">
+        <path class="a--cyber-flow a--cyber-flow-1" d="M-40 118 L184 118 L324 226 L574 226 L742 118 L1038 118 L1194 42 L1480 42" />
+        <path class="a--cyber-flow a--cyber-flow-2" d="M-60 402 L196 312 L428 342 L642 252 L906 286 L1114 214 L1488 252" />
+        <path class="a--cyber-flow a--cyber-flow-3" d="M120 604 L340 486 L594 520 L798 410 L1042 460 L1264 340 L1500 360" />
+        <path class="a--cyber-flow a--cyber-flow-4" d="M58 42 L236 174 L224 312 L402 438 L388 570" />
+      </g>
+      <g class="a--cyber-arc-flows">
+        <path class="a--cyber-arc-flow a--cyber-arc-flow-1" d="M-80 248 C160 178 330 192 514 274 S880 390 1090 294 S1328 158 1520 184" />
+        <path class="a--cyber-arc-flow a--cyber-arc-flow-2" d="M270 -28 C420 126 522 180 690 164 S982 58 1138 132 S1320 356 1510 438" />
+        <path class="a--cyber-arc-flow a--cyber-arc-flow-3" d="M-20 540 C214 486 382 420 530 456 S792 614 1036 554 S1268 486 1490 586" />
+      </g>
+      <g class="a--cyber-ring-flows">
+        <circle class="a--cyber-ring-flow a--cyber-ring-flow-1" cx="322" cy="220" r="132" />
+        <circle class="a--cyber-ring-flow a--cyber-ring-flow-2" cx="1038" cy="290" r="178" />
+      </g>
+      <g class="a--cyber-nodes">
+        <circle cx="324" cy="226" r="4" />
+        <circle cx="742" cy="118" r="5" />
+        <circle cx="1194" cy="42" r="4" />
+        <circle cx="428" cy="342" r="4" />
+        <circle cx="906" cy="286" r="5" />
+        <circle cx="1264" cy="340" r="4" />
+        <circle cx="236" cy="174" r="4" />
+        <circle cx="402" cy="438" r="5" />
+      </g>
+    </svg>
+  </div>
   <!-- 写真の上の文字を読みやすくするオーバーレイ -->
   <div class="a--hero-overlay absolute inset-0" aria-hidden="true" style="background: linear-gradient(90deg, rgb(75 64 164 / 85%) 0%, rgb(75 64 164 / 50%) 55%, rgba(0, 0, 0, 0) 80%);"></div>
   <div class="l--hero-inner max-w-5xl mx-auto px-6 h-full flex items-center relative">
@@ -196,7 +258,7 @@ layout: default
   <div class="l--endorsements-inner max-w-5xl mx-auto px-6 py-12">
     <h2 class="a--endorsements-title text-sm font-bold text-gray-500 tracking-widest uppercase mb-4">後援</h2>
     <ul class="a--endorsements-list flex flex-wrap gap-x-0 gap-y-1 text-gray-500 text-sm list-none">
-      {% assign endorsers = "経済産業省|https://www.meti.go.jp/,文部科学省|https://www.mext.go.jp/,総務省|https://www.soumu.go.jp/,デジタル庁|https://www.digital.go.jp/,独立行政法人情報処理推進機構（IPA）|https://www.ipa.go.jp/,一般財団法人Rubyアソシエーション|https://www.ruby.or.jp/,株式会社まちづくり三鷹|https://www.mitaka.ne.jp/,Rubyプログラミング教育を実施する地域の自治体、公的機関、大学等|" | split: "," %}
+      {% assign endorsers = "経済産業省|https://www.meti.go.jp/,文部科学省|https://www.mext.go.jp/,総務省|https://www.soumu.go.jp/,デジタル庁|https://www.digital.go.jp/,独立行政法人情報処理推進機構（IPA）|https://www.ipa.go.jp/,株式会社まちづくり三鷹|https://www.mitaka.ne.jp/,Rubyプログラミング教育を実施する地域の自治体、公的機関、大学等|" | split: "," %}
       {% for item in endorsers %}
         {% assign parts = item | split: "|" %}
         <li class="flex items-center">
