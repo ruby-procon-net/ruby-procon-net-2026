@@ -28,4 +28,20 @@ permalink: /judges/
     </article>
   </li>
   {% endfor %}
+  {% if site.data.judges.size <= 1 %}
+  <li>
+    <article class="a--judge-card flex flex-col sm:flex-row gap-8 p-8 bg-white rounded-2xl border border-gray-200">
+      <div class="a--judge-avatar w-32 h-32 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center shrink-0 mx-auto sm:mx-0" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-14 h-14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg>
+      </div>
+      <div class="a--judge-info flex-1 min-w-0 flex items-center">
+        <div>
+          <h2 class="a--judge-name text-3xl font-black text-gray-900">審査委員</h2>
+          <p class="a--judge-title text-grape font-semibold text-base mt-1">調整中</p>
+          <p class="a--judge-bio text-gray-600 text-base leading-relaxed mt-4">審査委員は現在調整中です。確定次第、こちらでご紹介します。</p>
+        </div>
+      </div>
+    </article>
+  </li>
+  {% endif %}
 </ul>

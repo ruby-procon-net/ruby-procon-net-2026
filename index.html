@@ -120,6 +120,15 @@ layout: default
       <p class="a--judge-thumb-title text-gray-500 text-xs mt-1 leading-relaxed">{{ judge.title }}</p>
     </li>
     {% endfor %}
+    {% if site.data.judges.size <= 1 %}
+    <li class="a--judge-thumb text-center">
+      <div class="w-28 h-28 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center mx-auto mb-4" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg>
+      </div>
+      <p class="a--judge-thumb-name font-bold text-gray-900">調整中</p>
+      <p class="a--judge-thumb-title text-gray-500 text-xs mt-1 leading-relaxed">審査委員は調整中です</p>
+    </li>
+    {% endif %}
   </ul>
   <div class="text-center mt-12">
     <a href="{{ "/judges/" | relative_url }}" class="inline-block border border-gray-300 text-gray-700 font-semibold px-8 py-3 rounded-full hover:border-grape hover:text-grape transition-colors">審査委員の詳細を見る →</a>
