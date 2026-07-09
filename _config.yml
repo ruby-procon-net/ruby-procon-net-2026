@@ -1,7 +1,7 @@
 title: 中高生Rubyプログラミングコンテスト2026
 description: 中高生Rubyプログラミングコンテスト2026
 baseurl: ""
-url: "https://www.ruby-procon.net"
+url: "https://2026.ruby-procon.net"
 
 plugins:
   - jekyll-feed
