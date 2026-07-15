@@ -6,6 +6,15 @@ url: "https://2026.ruby-procon.net"
 plugins:
   - jekyll-feed
 
+# jekyll-feed の既定対象は _posts だが、このサイトの記事は articles コレクション。
+# posts用フィードはgem側で常に生成され無効化できないため、慣例的な /feed.xml を
+# articles に割り当て、空になるposts用は /feed/posts.xml へ退避させる。
+feed:
+  path: /feed/posts.xml
+  collections:
+    articles:
+      path: /feed.xml
+
 include:
   - .well-known
 
