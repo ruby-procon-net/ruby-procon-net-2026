@@ -82,7 +82,7 @@ RPC2026/
 │   └── main.css          # ビルド済みCSS（Tailwind 出力）
 ├── index.html
 ├── judges.html           # 審査委員紹介 /judges/
-├── entry.html            # 応募要項 /entry/
+├── entry.html            # 募集要項 /entry/
 ├── sponsors.html         # 協賛企業 /sponsors/
 ├── final.html            # 最終審査会 /final/
 ├── 404.html
