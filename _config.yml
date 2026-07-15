@@ -15,9 +15,6 @@ feed:
     articles:
       path: /feed.xml
 
-include:
-  - .well-known
-
 # exclude を指定するとJekyllの既定値が上書きされるため、既定分も明示する
 exclude:
   - Gemfile
