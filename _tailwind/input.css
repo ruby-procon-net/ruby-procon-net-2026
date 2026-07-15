@@ -1,9 +1,14 @@
-@import "tailwindcss";
+/* source(none) で自動コンテンツ検出を無効化している。無効化しないと @source に
+   加えてプロジェクト全体が走査され、テンプレート以外のファイル（例: workflowの
+   permissions: contents: read）の単語をクラス名として拾ってしまうため。
+   走査対象を増やす場合は下の @source に明示的に追加すること。 */
+@import "tailwindcss" source(none);
 @plugin "@tailwindcss/typography";
 
 @source "../_layouts/**/*.html";
 @source "../_includes/**/*.html";
 @source "../*.html";
+@source "../_articles/**/*.md";
 
 @theme {
   --color-ruby: #db0672;
