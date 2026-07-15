@@ -9,6 +9,21 @@ plugins:
 include:
   - .well-known
 
+# exclude を指定するとJekyllの既定値が上書きされるため、既定分も明示する
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+  - .sass-cache/
+  - .jekyll-cache/
+  - package.json
+  - package-lock.json
+  - Procfile
+  - README.md
+  - scripts/
+  - _tailwind/
+
 collections:
   articles:
     output: true
