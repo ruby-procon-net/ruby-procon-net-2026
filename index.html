@@ -200,24 +200,38 @@ layout: default
 </section>
 {% endcomment %}
 
-<!-- 後援 -->
-<section class="l--endorsements bg-white border-t border-gray-200">
-  <div class="l--endorsements-inner max-w-5xl mx-auto px-6 py-12">
-    <h2 class="a--endorsements-title text-sm font-bold text-gray-500 tracking-widest uppercase mb-4">後援</h2>
-    <ul class="a--endorsements-list flex flex-wrap gap-x-0 gap-y-1 text-gray-500 text-sm list-none">
-      {% assign endorsers = "経済産業省|https://www.meti.go.jp/,文部科学省|https://www.mext.go.jp/,総務省|https://www.soumu.go.jp/,デジタル庁|https://www.digital.go.jp/,独立行政法人情報処理推進機構（IPA）|https://www.ipa.go.jp/,株式会社まちづくり三鷹|https://www.mitaka.ne.jp/,Rubyプログラミング教育を実施する地域の自治体、公的機関、大学等|" | split: "," %}
-      {% for item in endorsers %}
-        {% assign parts = item | split: "|" %}
-        <li class="flex items-center">
-          {% if parts[1] %}
-          <a href="{{ parts[1] }}" target="_blank" rel="noopener" class="hover:text-grape transition-colors">{{ parts[0] }}</a>
-          {% else %}
-          <span>{{ parts[0] }}</span>
-          {% endif %}
-          {% unless forloop.last %}<span class="mx-2 text-gray-300" aria-hidden="true">／</span>{% endunless %}
-        </li>
-      {% endfor %}
-    </ul>
+<!-- 主催・共催・後援 -->
+<section class="l--organizers bg-white border-t border-gray-200">
+  <div class="l--organizers-inner max-w-5xl mx-auto px-6 py-12 space-y-8">
+    <div class="a--organizers-group">
+      <h2 class="a--organizers-title text-sm font-bold text-gray-500 tracking-widest uppercase mb-4">主催</h2>
+      <p class="a--organizers-name text-gray-500 text-sm">中高生Rubyプログラミングコンテスト実行委員会</p>
+    </div>
+
+    <div class="a--organizers-group">
+      <h2 class="a--organizers-title text-sm font-bold text-gray-500 tracking-widest uppercase mb-4">共催</h2>
+      <p class="a--organizers-name text-gray-500 text-sm">
+        <a href="https://www.ruby.or.jp/" target="_blank" rel="noopener" class="hover:text-grape transition-colors">一般財団法人Rubyアソシエーション</a>
+      </p>
+    </div>
+
+    <div class="a--organizers-group">
+      <h2 class="a--endorsements-title text-sm font-bold text-gray-500 tracking-widest uppercase mb-4">後援</h2>
+      <ul class="a--endorsements-list flex flex-wrap gap-x-0 gap-y-1 text-gray-500 text-sm list-none">
+        {% assign endorsers = "経済産業省|https://www.meti.go.jp/,文部科学省|https://www.mext.go.jp/,総務省|https://www.soumu.go.jp/,デジタル庁|https://www.digital.go.jp/,独立行政法人情報処理推進機構（IPA）|https://www.ipa.go.jp/,株式会社まちづくり三鷹|https://www.mitaka.ne.jp/,Rubyプログラミング教育を実施する地域の自治体、公的機関、大学等|" | split: "," %}
+        {% for item in endorsers %}
+          {% assign parts = item | split: "|" %}
+          <li class="flex items-center">
+            {% if parts[1] %}
+            <a href="{{ parts[1] }}" target="_blank" rel="noopener" class="hover:text-grape transition-colors">{{ parts[0] }}</a>
+            {% else %}
+            <span>{{ parts[0] }}</span>
+            {% endif %}
+            {% unless forloop.last %}<span class="mx-2 text-gray-300" aria-hidden="true">／</span>{% endunless %}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
   </div>
 </section>
 
