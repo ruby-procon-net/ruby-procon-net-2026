@@ -5,6 +5,9 @@ permalink: /judges/
 content_width: max-w-4xl
 ---
 
+<!-- ゲーム部門・アプリ部門 -->
+<h2 class="a--judges-dept text-xl font-black text-grape mb-6 pb-2 border-b border-grape/20">ゲーム部門・アプリ部門</h2>
+
 <ul class="l--judges space-y-10 list-none">
   {% for judge in site.data.judges %}
   <li>
@@ -19,7 +22,7 @@ content_width: max-w-4xl
       </div>
       {% endif %}
       <div class="a--judge-info flex-1 min-w-0">
-        <h2 class="a--judge-name text-3xl font-black text-gray-900">{{ judge.name }}</h2>
+        <h3 class="a--judge-name text-3xl font-black text-gray-900">{{ judge.name }}</h3>
         <p class="a--judge-title text-grape font-semibold text-base mt-1 mb-4">{{ judge.title }}</p>
         <p class="a--judge-bio text-gray-600 text-base leading-relaxed mb-5">{{ judge.bio }}</p>
         <blockquote class="a--judge-message border-l-4 border-grape pl-4 text-gray-700 leading-relaxed">
@@ -29,7 +32,7 @@ content_width: max-w-4xl
     </article>
   </li>
   {% endfor %}
-  {% if site.data.judges.size <= 1 %}
+  {% if site.data.judges.size == 0 %}
   <li>
     <article class="a--judge-card flex flex-col sm:flex-row gap-8 p-8 bg-white rounded-2xl border border-gray-200">
       <div class="a--judge-avatar w-32 h-32 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center shrink-0 mx-auto sm:mx-0" aria-hidden="true">
@@ -37,7 +40,7 @@ content_width: max-w-4xl
       </div>
       <div class="a--judge-info flex-1 min-w-0 flex items-center">
         <div>
-          <h2 class="a--judge-name text-3xl font-black text-gray-900">審査委員</h2>
+          <h3 class="a--judge-name text-3xl font-black text-gray-900">審査委員</h3>
           <p class="a--judge-title text-grape font-semibold text-base mt-1">調整中</p>
           <p class="a--judge-bio text-gray-600 text-base leading-relaxed mt-4">審査委員は現在調整中です。確定次第、こちらでご紹介します。</p>
         </div>
@@ -46,3 +49,19 @@ content_width: max-w-4xl
   </li>
   {% endif %}
 </ul>
+
+<!-- クリエイティブコーディング部門 -->
+<h2 class="a--judges-dept text-xl font-black text-grape mt-16 mb-6 pb-2 border-b border-grape/20">クリエイティブコーディング部門</h2>
+
+<article class="a--judge-card flex flex-col sm:flex-row gap-8 p-8 bg-white rounded-2xl border border-gray-200">
+  <div class="a--judge-avatar w-32 h-32 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center shrink-0 mx-auto sm:mx-0" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-14 h-14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg>
+  </div>
+  <div class="a--judge-info flex-1 min-w-0 flex items-center">
+    <div>
+      <h3 class="a--judge-name text-3xl font-black text-gray-900">審査委員</h3>
+      <p class="a--judge-title text-grape font-semibold text-base mt-1">調整中</p>
+      <p class="a--judge-bio text-gray-600 text-base leading-relaxed mt-4">クリエイティブコーディング部門の審査委員は現在調整中です。確定次第、こちらでご紹介します。</p>
+    </div>
+  </div>
+</article>

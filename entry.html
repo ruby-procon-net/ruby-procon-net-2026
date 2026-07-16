@@ -252,6 +252,9 @@ content_width: max-w-4xl
       <h2 class="text-3xl font-black text-gray-900">審査委員</h2>
     </div>
     <p class="text-gray-500 text-sm mb-6">敬称略・順不同</p>
+
+    <!-- ゲーム部門・アプリ部門 -->
+    <h3 class="text-xl font-black text-grape mb-4 pb-2 border-b border-grape/20">ゲーム部門・アプリ部門</h3>
     {% assign chair = site.data.judges | first %}
     <div class="bg-white border border-gray-200 rounded-2xl p-6 mb-4 flex items-center gap-5">
       {% if chair.photo %}
@@ -293,6 +296,19 @@ content_width: max-w-4xl
       {% endunless %}{% endfor %}
     </div>
     {% endif %}
+
+    <!-- クリエイティブコーディング部門 -->
+    <h3 class="text-xl font-black text-grape mt-12 mb-4 pb-2 border-b border-grape/20">クリエイティブコーディング部門</h3>
+    <div class="bg-white border border-gray-200 rounded-2xl p-6 flex items-center gap-4">
+      <div class="w-16 h-16 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center shrink-0" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg>
+      </div>
+      <div class="min-w-0">
+        <p class="text-grape text-xs font-bold tracking-widest uppercase mb-1">審査委員</p>
+        <p class="text-gray-900 font-bold">調整中</p>
+        <p class="text-gray-500 text-sm mt-1">確定次第、こちらでご紹介します。</p>
+      </div>
+    </div>
   </section>
 
   <!-- 7. 表彰 -->
