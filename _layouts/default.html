@@ -3,9 +3,9 @@
   <head>
     {% include head.html %}
   </head>
-  <body class="bg-white text-gray-800 font-sans antialiased text-base">
+  <body class="bg-white text-gray-800 font-sans antialiased text-base min-h-screen flex flex-col">
     {% include header.html %}
-    <main>
+    <main class="grow">
       {{ content }}
     </main>
     {% include footer.html %}
