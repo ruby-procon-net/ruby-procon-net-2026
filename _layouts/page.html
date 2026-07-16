@@ -11,6 +11,6 @@ layout: default
   </div>
 </div>
 
-<div class="l--page-content max-w-5xl mx-auto px-6 py-16">
+<div class="l--page-content {{ page.content_width | default: "max-w-5xl" }} mx-auto px-6 py-16">
   {{ content }}
 </div>
