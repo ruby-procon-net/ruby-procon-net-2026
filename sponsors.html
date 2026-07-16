@@ -6,33 +6,281 @@ published: false
 ---
 
 <div class="l--sponsors space-y-16">
-  {% for group in site.data.sponsors %}
-  <section class="a--sponsor-tier">
-    <div class="a--tier-heading flex items-center gap-4 mb-8">
-      <h2 class="a--tier-name text-3xl font-black text-gray-900">{{ group.tier }}</h2>
-      <div class="flex-1 h-px bg-gray-200"></div>
+
+  <!-- 1. 協賛のお願い -->
+  <section class="a--entry-section">
+    <div class="a--section-heading flex items-center gap-4 mb-6">
+      <span class="a--section-number border border-grape bg-[#d5d2ec] text-grape text-sm font-black w-8 h-8 rounded-full flex items-center justify-center shrink-0">1</span>
+      <h2 class="text-3xl font-black text-gray-900">協賛のお願い</h2>
     </div>
-    <div>
-      <ul class="l--sponsor-grid grid {% if forloop.first %}md:grid-cols-1{% elsif forloop.index == 2 %}md:grid-cols-2{% elsif forloop.index == 3 %}md:grid-cols-4{% elsif forloop.index == 4 %}md:grid-cols-6{% else %}md:grid-cols-6{% endif %} gap-4">
-        {% for sponsor in group.sponsors %}
-        <li class="a--sponsor-card bg-white border border-gray-200 rounded-2xl {% if forloop.parentloop.index >= 4 %}p-3{% else %}p-6{% endif %} {% if forloop.parentloop.first or forloop.parentloop.index == 2 %}flex flex-row gap-8 items-center{% else %}flex flex-col{% endif %}">
-          {% if sponsor.logo %}
-          <a href="{{ sponsor.url }}" target="_blank" rel="noopener" class="{% if forloop.parentloop.first or forloop.parentloop.index == 2 %}w-1/2 shrink-0{% else %}w-full mb-4{% endif %}">
-            <img src="{{ "/assets/images/sponsors/" | append: sponsor.logo | relative_url }}"
-                 alt="{{ sponsor.name }}"
-                 class="a--sponsor-logo w-full aspect-square object-contain rounded-lg">
-          </a>
-          {% endif %}
-          <div class="{% if forloop.parentloop.first or forloop.parentloop.index == 2 %}w-1/2 flex flex-col justify-center{% endif %}">
-            <h3 class="a--sponsor-name {% if forloop.parentloop.first %}text-3xl font-black{% elsif forloop.parentloop.index == 2 %}text-xl font-black{% elsif forloop.parentloop.index >= 4 %}text-sm font-bold{% else %}font-bold{% endif %} text-gray-900 mb-2">
-              <a href="{{ sponsor.url }}" target="_blank" rel="noopener" class="hover:text-grape transition-colors">{{ sponsor.name }}</a>
-            </h3>
-            <p class="a--sponsor-message text-gray-500 {% if forloop.parentloop.index >= 4 %}text-sm{% elsif forloop.parentloop.first %}text-lg{% else %}text-base{% endif %} leading-relaxed">{{ sponsor.message }}</p>
+    <div class="text-gray-700 text-base leading-relaxed space-y-4 mb-10">
+      <p>中高生Rubyプログラミングコンテストは、開催16回を数え、「つくりたい！が世界を変えていく！」をテーマに開催しています。2026年度は「クリエイティブコーディング部門」の新設と、「ウェブアプリ・IoT部門」の「アプリ部門」への改名を予定しています。</p>
+      <p>本コンテストの事務局は有志運営のため、企業・団体のみなさまからの協賛・後援が大きな支えとなっています。中高生の挑戦を応援いただける協賛企業を募集しています。</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-4 mb-10">
+      <div class="bg-white border border-gray-200 rounded-2xl p-6">
+        <h3 class="text-lg font-bold text-gray-900 mb-3">開催概要</h3>
+        <dl class="space-y-2 text-sm">
+          <div class="flex gap-3">
+            <dt class="text-gray-500 w-24 shrink-0">募集締切</dt>
+            <dd class="text-gray-700">2026年9月末日予定</dd>
           </div>
-        </li>
-        {% endfor %}
-      </ul>
+          <div class="flex gap-3">
+            <dt class="text-gray-500 w-24 shrink-0">最終審査会</dt>
+            <dd class="text-gray-700">2026年11月28日（土）　三鷹産業プラザ</dd>
+          </div>
+        </dl>
+      </div>
+      <div class="bg-white border border-gray-200 rounded-2xl p-6">
+        <h3 class="text-lg font-bold text-gray-900 mb-3">昨年開催実績</h3>
+        <dl class="space-y-2 text-sm">
+          <div class="flex gap-3">
+            <dt class="text-gray-500 w-24 shrink-0">応募作品数</dt>
+            <dd class="text-gray-700">94作品（ゲーム部門76作品、ウェブアプリ・IoT部門18作品）</dd>
+          </div>
+          <div class="flex gap-3">
+            <dt class="text-gray-500 w-24 shrink-0">掲載メディア</dt>
+            <dd class="text-gray-700">Findy、EdTechZine、gihyo.jp、Qiita Zine 等</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="flex justify-center">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfuHqHLAcVGAHVMvjrrQAUI1DVC2tCwS5mwm5cGaDDWeRwR4g/viewform?usp=dialog" target="_blank" rel="noopener" class="a--nav-cta a--btn-ruby text-white font-bold px-8 py-3 rounded-full">協賛のお申し込みはこちら</a>
     </div>
   </section>
-  {% endfor %}
+
+  <!-- 2. スポンサーランクについて -->
+  <section class="a--entry-section">
+    <div class="a--section-heading flex items-center gap-4 mb-6">
+      <span class="a--section-number border border-grape bg-[#d5d2ec] text-grape text-sm font-black w-8 h-8 rounded-full flex items-center justify-center shrink-0">2</span>
+      <h2 class="text-3xl font-black text-gray-900">スポンサーランクについて</h2>
+    </div>
+
+    <h3 class="text-lg font-bold text-gray-900 mb-4">協賛金スポンサー</h3>
+    <div class="overflow-x-auto mb-12">
+      <table class="w-full text-sm border border-gray-200 rounded-2xl overflow-hidden">
+        <thead class="bg-gray-50">
+          <tr>
+            <th class="text-left font-bold text-gray-900 px-4 py-3">ランク</th>
+            <th class="text-left font-bold text-gray-900 px-4 py-3">協賛金</th>
+            <th class="text-left font-bold text-gray-900 px-4 py-3">ロゴサイズ</th>
+            <th class="text-left font-bold text-gray-900 px-4 py-3">スポンサー賞</th>
+            <th class="text-left font-bold text-gray-900 px-4 py-3">インタビュー</th>
+            <th class="text-left font-bold text-gray-900 px-4 py-3">フィードバック</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200 bg-white">
+          <tr>
+            <td class="px-4 py-3 font-bold text-gray-900">Ruby</td>
+            <td class="px-4 py-3 text-gray-700">50万円</td>
+            <td class="px-4 py-3 text-gray-700">特大</td>
+            <td class="px-4 py-3 text-gray-700">あり</td>
+            <td class="px-4 py-3 text-gray-700">あり</td>
+            <td class="px-4 py-3 text-gray-700">あり</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-3 font-bold text-gray-900">Platinum</td>
+            <td class="px-4 py-3 text-gray-700">30万円</td>
+            <td class="px-4 py-3 text-gray-700">大</td>
+            <td class="px-4 py-3 text-gray-700">あり</td>
+            <td class="px-4 py-3 text-gray-700">あり</td>
+            <td class="px-4 py-3 text-gray-700">あり</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-3 font-bold text-gray-900">Gold</td>
+            <td class="px-4 py-3 text-gray-700">15万円</td>
+            <td class="px-4 py-3 text-gray-700">中</td>
+            <td class="px-4 py-3 text-gray-700">あり</td>
+            <td class="px-4 py-3 text-gray-700">あり</td>
+            <td class="px-4 py-3 text-gray-700">なし</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-3 font-bold text-gray-900">Silver</td>
+            <td class="px-4 py-3 text-gray-700">5万円</td>
+            <td class="px-4 py-3 text-gray-700">小</td>
+            <td class="px-4 py-3 text-gray-700">なし</td>
+            <td class="px-4 py-3 text-gray-700">なし</td>
+            <td class="px-4 py-3 text-gray-700">なし</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="text-lg font-bold text-gray-900 mb-4">運営協力スポンサー</h3>
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm border border-gray-200 rounded-2xl overflow-hidden">
+        <thead class="bg-gray-50">
+          <tr>
+            <th class="text-left font-bold text-gray-900 px-4 py-3">種類</th>
+            <th class="text-left font-bold text-gray-900 px-4 py-3">協力内容</th>
+            <th class="text-left font-bold text-gray-900 px-4 py-3">ロゴサイズ</th>
+            <th class="text-left font-bold text-gray-900 px-4 py-3">スポンサー賞権</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200 bg-white">
+          <tr>
+            <td class="px-4 py-3 font-bold text-gray-900">デザイン</td>
+            <td class="px-4 py-3 text-gray-700">Webサイト・チラシ・最終審査会ビジュアル等</td>
+            <td class="px-4 py-3 text-gray-700">中（Gold相当）</td>
+            <td class="px-4 py-3 text-gray-700">あり</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-3 font-bold text-gray-900">審査協力</td>
+            <td class="px-4 py-3 text-gray-700">最終審査会作品審査</td>
+            <td class="px-4 py-3 text-gray-700">応相談</td>
+            <td class="px-4 py-3 text-gray-700">応相談</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-3 font-bold text-gray-900">会場運営</td>
+            <td class="px-4 py-3 text-gray-700">最終審査会会場運営</td>
+            <td class="px-4 py-3 text-gray-700">応相談</td>
+            <td class="px-4 py-3 text-gray-700">応相談</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-3 font-bold text-gray-900">配信</td>
+            <td class="px-4 py-3 text-gray-700">最終審査会配信</td>
+            <td class="px-4 py-3 text-gray-700">中（Gold相当）</td>
+            <td class="px-4 py-3 text-gray-700">あり</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-3 font-bold text-gray-900">AI開発環境</td>
+            <td class="px-4 py-3 text-gray-700">AI開発環境提供</td>
+            <td class="px-4 py-3 text-gray-700">応相談</td>
+            <td class="px-4 py-3 text-gray-700">応相談</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 3. ロゴ掲載について -->
+  <section class="a--entry-section">
+    <div class="a--section-heading flex items-center gap-4 mb-6">
+      <span class="a--section-number border border-grape bg-[#d5d2ec] text-grape text-sm font-black w-8 h-8 rounded-full flex items-center justify-center shrink-0">3</span>
+      <h2 class="text-3xl font-black text-gray-900">ロゴ掲載について</h2>
+    </div>
+    <p class="text-gray-600 mb-4">協賛企業様のロゴは、以下の媒体に掲載予定です。</p>
+    <ul class="space-y-3 mb-4">
+      <li class="flex items-start gap-3"><span class="text-gray-900 font-black mt-0.5 shrink-0">•</span><span class="text-gray-700 text-base leading-relaxed">コンテストホームページ 協賛企業欄</span></li>
+      <li class="flex items-start gap-3"><span class="text-gray-900 font-black mt-0.5 shrink-0">•</span><span class="text-gray-700 text-base leading-relaxed">コンテスト告知チラシやポスター</span></li>
+      <li class="flex items-start gap-3"><span class="text-gray-900 font-black mt-0.5 shrink-0">•</span><span class="text-gray-700 text-base leading-relaxed">最終審査会会場（スポンサーボードなど）</span></li>
+      <li class="flex items-start gap-3"><span class="text-gray-900 font-black mt-0.5 shrink-0">•</span><span class="text-gray-700 text-base leading-relaxed">YouTube後日配信映像</span></li>
+    </ul>
+    <p class="text-gray-500 text-sm">※印刷物は応募時期によっては掲載できない場合があります。</p>
+  </section>
+
+  <!-- 4. スポンサー賞について -->
+  <section class="a--entry-section">
+    <div class="a--section-heading flex items-center gap-4 mb-6">
+      <span class="a--section-number border border-grape bg-[#d5d2ec] text-grape text-sm font-black w-8 h-8 rounded-full flex items-center justify-center shrink-0">4</span>
+      <h2 class="text-3xl font-black text-gray-900">スポンサー賞について</h2>
+    </div>
+    <p class="text-gray-600 mb-4">スポンサー賞をご検討いただく場合、以下の条件がございます。</p>
+    <ul class="space-y-3 mb-6">
+      <li class="flex items-start gap-3"><span class="text-gray-900 font-black mt-0.5 shrink-0">•</span><span class="text-gray-700 text-base leading-relaxed">協賛企業名を冠した賞であることをご了承いただけること</span></li>
+      <li class="flex items-start gap-3"><span class="text-gray-900 font-black mt-0.5 shrink-0">•</span><span class="text-gray-700 text-base leading-relaxed">スポンサーランクが Gold 以上であること</span></li>
+      <li class="flex items-start gap-3"><span class="text-gray-900 font-black mt-0.5 shrink-0">•</span><span class="text-gray-700 text-base leading-relaxed">協賛金以外に副賞をご準備いただけること</span></li>
+      <li class="flex items-start gap-3"><span class="text-gray-900 font-black mt-0.5 shrink-0">•</span><span class="text-gray-700 text-base leading-relaxed">11月28日の最終審査会にご参加いただき、表彰者を選定いただけること</span></li>
+    </ul>
+    <div class="bg-gray-50 border border-gray-200 rounded-2xl py-6 px-8 text-gray-700 text-base leading-relaxed">
+      <p>副賞は物品でなくても構いません。貴社エンジニアとの交流企画等もおすすめです。物品の場合は、原則10万円以下でお願いしております。</p>
+    </div>
+  </section>
+
+  <!-- 5. インタビュー記事の掲載 -->
+  <section class="a--entry-section">
+    <div class="a--section-heading flex items-center gap-4 mb-6">
+      <span class="a--section-number border border-grape bg-[#d5d2ec] text-grape text-sm font-black w-8 h-8 rounded-full flex items-center justify-center shrink-0">5</span>
+      <h2 class="text-3xl font-black text-gray-900">インタビュー記事の掲載</h2>
+    </div>
+    <p class="text-gray-700 text-base leading-relaxed">Gold 以上のスポンサー企業様には、実行委員会がインタビューを実施し、コンテスト公式ウェブサイトに掲載いたします。</p>
+  </section>
+
+  <!-- 6. フィードバックプレゼン -->
+  <section class="a--entry-section">
+    <div class="a--section-heading flex items-center gap-4 mb-6">
+      <span class="a--section-number border border-grape bg-[#d5d2ec] text-grape text-sm font-black w-8 h-8 rounded-full flex items-center justify-center shrink-0">6</span>
+      <h2 class="text-3xl font-black text-gray-900">フィードバックプレゼン</h2>
+    </div>
+    <p class="text-gray-700 text-base leading-relaxed">Platinum 以上のスポンサー企業様には、授賞式にて5分程度のフィードバックタイムをご用意いたします。</p>
+  </section>
+
+  <!-- 7. 関係者懇親会への参加 -->
+  <section class="a--entry-section">
+    <div class="a--section-heading flex items-center gap-4 mb-6">
+      <span class="a--section-number border border-grape bg-[#d5d2ec] text-grape text-sm font-black w-8 h-8 rounded-full flex items-center justify-center shrink-0">7</span>
+      <h2 class="text-3xl font-black text-gray-900">関係者懇親会への参加</h2>
+    </div>
+    <p class="text-gray-700 text-base leading-relaxed">すべてのスポンサー企業様にご参加いただけます。</p>
+  </section>
+
+  <!-- 8. 応援メッセージご提供のお願い -->
+  <section class="a--entry-section">
+    <div class="a--section-heading flex items-center gap-4 mb-6">
+      <span class="a--section-number border border-grape bg-[#d5d2ec] text-grape text-sm font-black w-8 h-8 rounded-full flex items-center justify-center shrink-0">8</span>
+      <h2 class="text-3xl font-black text-gray-900">応援メッセージご提供のお願い</h2>
+    </div>
+    <p class="text-gray-700 text-base leading-relaxed">中高生向けに100字程度の応援メッセージをご提供いただき、コンテスト公式ウェブサイトに掲載予定です（2026年7月上旬以降）。</p>
+  </section>
+
+  <!-- 9. 協賛企業一覧 -->
+  <section class="a--entry-section">
+    <div class="a--section-heading flex items-center gap-4 mb-6">
+      <span class="a--section-number border border-grape bg-[#d5d2ec] text-grape text-sm font-black w-8 h-8 rounded-full flex items-center justify-center shrink-0">9</span>
+      <h2 class="text-3xl font-black text-gray-900">協賛企業一覧</h2>
+    </div>
+    <div class="space-y-16">
+      {% for group in site.data.sponsors %}
+      <div class="a--sponsor-tier">
+        <div class="a--tier-heading flex items-center gap-4 mb-8">
+          <h3 class="a--tier-name text-2xl font-black text-gray-900">{{ group.tier }}</h3>
+          <div class="flex-1 h-px bg-gray-200"></div>
+        </div>
+        <ul class="l--sponsor-grid grid {% if forloop.first %}md:grid-cols-1{% elsif forloop.index == 2 %}md:grid-cols-2{% elsif forloop.index == 3 %}md:grid-cols-4{% elsif forloop.index == 4 %}md:grid-cols-6{% else %}md:grid-cols-6{% endif %} gap-4">
+          {% for sponsor in group.sponsors %}
+          <li class="a--sponsor-card bg-white border border-gray-200 rounded-2xl {% if forloop.parentloop.index >= 4 %}p-3{% else %}p-6{% endif %} {% if forloop.parentloop.first or forloop.parentloop.index == 2 %}flex flex-row gap-8 items-center{% else %}flex flex-col{% endif %}">
+            {% if sponsor.logo %}
+            <a href="{{ sponsor.url }}" target="_blank" rel="noopener" class="{% if forloop.parentloop.first or forloop.parentloop.index == 2 %}w-1/2 shrink-0{% else %}w-full mb-4{% endif %}">
+              <img src="{{ "/assets/images/sponsors/" | append: sponsor.logo | relative_url }}"
+                   alt="{{ sponsor.name }}"
+                   class="a--sponsor-logo w-full aspect-square object-contain rounded-lg">
+            </a>
+            {% endif %}
+            <div class="{% if forloop.parentloop.first or forloop.parentloop.index == 2 %}w-1/2 flex flex-col justify-center{% endif %}">
+              <h4 class="a--sponsor-name {% if forloop.parentloop.first %}text-3xl font-black{% elsif forloop.parentloop.index == 2 %}text-xl font-black{% elsif forloop.parentloop.index >= 4 %}text-sm font-bold{% else %}font-bold{% endif %} text-gray-900 mb-2">
+                <a href="{{ sponsor.url }}" target="_blank" rel="noopener" class="hover:text-grape transition-colors">{{ sponsor.name }}</a>
+              </h4>
+              <p class="a--sponsor-message text-gray-500 {% if forloop.parentloop.index >= 4 %}text-sm{% elsif forloop.parentloop.first %}text-lg{% else %}text-base{% endif %} leading-relaxed">{{ sponsor.message }}</p>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- 10. お問い合わせ・お申し込み -->
+  <section class="a--entry-section">
+    <div class="a--section-heading flex items-center gap-4 mb-6">
+      <span class="a--section-number border border-grape bg-[#d5d2ec] text-grape text-sm font-black w-8 h-8 rounded-full flex items-center justify-center shrink-0">10</span>
+      <h2 class="text-3xl font-black text-gray-900">お問い合わせ・お申し込み</h2>
+    </div>
+    <div class="bg-gray-50 border border-gray-200 rounded-2xl py-6 px-8 space-y-3 mb-8">
+      <p class="text-gray-900 font-bold">中高生Rubyプログラミングコンテスト実行委員会</p>
+      <p class="text-gray-700 text-sm">
+        メールアドレス：<a href="mailto:jr-procon@ruby.or.jp" class="text-grape font-semibold hover:text-grape-dark transition-colors">jr-procon@ruby.or.jp</a>
+      </p>
+      <p class="text-gray-700 text-sm">
+        公式サイト：<a href="https://www.ruby-procon.net/" target="_blank" rel="noopener" class="text-grape font-semibold hover:text-grape-dark transition-colors">https://www.ruby-procon.net/</a>
+      </p>
+    </div>
+    <div class="flex justify-center">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfuHqHLAcVGAHVMvjrrQAUI1DVC2tCwS5mwm5cGaDDWeRwR4g/viewform?usp=dialog" target="_blank" rel="noopener" class="a--nav-cta a--btn-ruby text-white font-bold px-8 py-3 rounded-full">協賛のお申し込みはこちら</a>
+    </div>
+  </section>
+
 </div>
