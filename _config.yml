@@ -3,6 +3,11 @@ description: 中高生Rubyプログラミングコンテスト2026
 baseurl: ""
 url: "https://2026.ruby-procon.net"
 
+# SNS共有時の既定画像。記事は front matter の thumbnail が優先される。
+# 1280x720（head.html が og:image:width/height でこの寸法を宣言している）。
+# WebPはX/Facebookのクローラーが扱えないことがあるためJPEGにしている。
+og_image: /assets/images/common/ogp.jpg
+
 plugins:
   - jekyll-feed
 

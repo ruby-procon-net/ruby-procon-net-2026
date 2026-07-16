@@ -4,7 +4,7 @@
 {% assign meta_title = page.title | append: " | " | append: site.title %}
 {% unless page.title %}{% assign meta_title = site.title %}{% endunless %}
 {% assign meta_description = page.description | default: page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 %}
-{% assign og_image = page.og_image | default: page.thumbnail %}
+{% assign og_image = page.og_image | default: page.thumbnail | default: site.og_image %}
 <title>{{ meta_title | escape }}</title>
 <meta name="description" content="{{ meta_description | escape }}">
 <meta property="og:site_name" content="{{ site.title | escape }}">
@@ -12,23 +12,13 @@
 <meta property="og:description" content="{{ meta_description | escape }}">
 <meta property="og:type" content="{% if page.collection == "articles" %}article{% else %}website{% endif %}">
 <meta property="og:url" content="{{ page.url | replace:'index.html','' | absolute_url }}">
-{% if og_image %}
 <meta property="og:image" content="{{ og_image | absolute_url }}">
 <meta property="og:image:width" content="1280">
 <meta property="og:image:height" content="720">
-{% else %}
-<!-- TODO: Add og_image to this page's front matter. -->
-<meta property="og:image" content="">
-{% endif %}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ meta_title | escape }}">
 <meta name="twitter:description" content="{{ meta_description | escape }}">
-{% if og_image %}
 <meta name="twitter:image" content="{{ og_image | absolute_url }}">
-{% else %}
-<!-- TODO: Add og_image to this page's front matter. -->
-<meta name="twitter:image" content="">
-{% endif %}
 <link rel="icon" href="{{ "/assets/images/common/favicon.svg" | relative_url }}" type="image/svg+xml">
 <link rel="icon" href="{{ "/assets/images/common/favicon-32.png" | relative_url }}" sizes="32x32" type="image/png">
 <link rel="icon" href="{{ "/assets/images/common/favicon-16.png" | relative_url }}" sizes="16x16" type="image/png">
