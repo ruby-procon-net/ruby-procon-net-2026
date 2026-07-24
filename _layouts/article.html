@@ -24,14 +24,14 @@ layout: default
       {% if page.thumbnail %}
       <img src="{{ page.thumbnail | relative_url }}" alt="" class="a--article-thumb w-full aspect-video object-cover bg-gray-50 rounded-xl mb-8">
       {% endif %}
-      <div class="prose prose-lg prose-gray max-w-none">
+      <div class="prose prose-gray max-w-none">
         {{ content }}
       </div>
     </article>
 
     <div class="mt-10">
       <a href="{{ "/articles/" | relative_url }}" class="a--article-back inline-flex items-center gap-2 text-gray-700 font-semibold border border-gray-300 rounded-full px-6 py-2.5 hover:border-grape hover:text-grape transition-colors">
-        ← 記事一覧に戻る
+        <span class="material-symbols-outlined text-xl" aria-hidden="true">chevron_left</span>記事一覧に戻る
       </a>
     </div>
   </div>
