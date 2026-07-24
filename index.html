@@ -17,9 +17,9 @@ layout: default
       </p>
       <div class="a--hero-actions flex flex-col sm:flex-row gap-4">
         <a href="{{ "/entry/" | relative_url }}"
-           class="a--cta-primary a--btn-ruby text-white font-bold px-9 py-4 rounded-full text-lg hover:-translate-y-0.5 text-center"
+           class="a--cta-primary a--btn-ruby inline-flex items-center justify-center gap-1 text-white font-bold px-9 py-4 rounded-full text-lg hover:-translate-y-0.5 text-center"
            style="box-shadow: 0 0 70px #ffffff;">
-          応募する →
+          応募する<span class="material-symbols-outlined text-xl" aria-hidden="true">chevron_right</span>
         </a>
         {% comment %} 最終審査結果ページ非公開のため一時コメントアウト
         <a href="{{ "/results/" | relative_url }}"
@@ -80,7 +80,7 @@ layout: default
       </div>
     </div>
     <div class="text-center mt-10">
-      <a href="{{ "/entry/" | relative_url }}" class="inline-block a--btn-ruby text-white font-bold px-8 py-3 rounded-full">募集要項を見る →</a>
+      <a href="{{ "/entry/" | relative_url }}" class="inline-flex items-center gap-1 a--btn-ruby text-white font-bold px-8 py-3 rounded-full">募集要項を見る<span class="material-symbols-outlined text-xl" aria-hidden="true">chevron_right</span></a>
     </div>
   </div>
 </section>
@@ -93,7 +93,7 @@ layout: default
     <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">協賛企業を募集しています</h2>
     <p class="text-gray-600 text-lg leading-relaxed max-w-2xl mx-auto mb-8">次世代のつくり手を、企業のみなさまと一緒に応援しませんか。協賛企業として、中高生のチャレンジを支えてくださるパートナーを募集しています。</p>
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <a href="mailto:jr-procon@ruby.or.jp" class="inline-block bg-grape text-white font-bold px-8 py-3 rounded-full hover:bg-grape-dark transition-colors">協賛について問い合わせる →</a>
+      <a href="mailto:jr-procon@ruby.or.jp" class="inline-flex items-center gap-1 bg-grape text-white font-bold px-8 py-3 rounded-full hover:bg-grape-dark transition-colors">協賛について問い合わせる<span class="material-symbols-outlined text-xl" aria-hidden="true">chevron_right</span></a>
       <a href="{{ "/sponsors/" | relative_url }}" class="inline-block border border-gray-300 text-gray-700 font-semibold px-8 py-3 rounded-full hover:border-grape hover:text-grape transition-colors">これまでの協賛企業を見る</a>
     </div>
   </div>
@@ -131,7 +131,7 @@ layout: default
     {% endif %}
   </ul>
   <div class="text-center mt-12">
-    <a href="{{ "/judges/" | relative_url }}" class="inline-block border border-gray-300 text-gray-700 font-semibold px-8 py-3 rounded-full hover:border-grape hover:text-grape transition-colors">審査委員の詳細を見る →</a>
+    <a href="{{ "/judges/" | relative_url }}" class="inline-flex items-center gap-1 border border-gray-300 text-gray-700 font-semibold px-8 py-3 rounded-full hover:border-grape hover:text-grape transition-colors">審査委員の詳細を見る<span class="material-symbols-outlined text-xl" aria-hidden="true">chevron_right</span></a>
   </div>
 </section>
 
@@ -164,7 +164,7 @@ layout: default
       {% endfor %}
     </ul>
     <div class="text-center mt-10">
-      <a href="{{ "/articles/" | relative_url }}" class="inline-block border border-gray-300 text-gray-700 font-semibold px-8 py-3 rounded-full hover:border-grape hover:text-grape transition-colors">記事一覧を見る →</a>
+      <a href="{{ "/articles/" | relative_url }}" class="inline-flex items-center gap-1 border border-gray-300 text-gray-700 font-semibold px-8 py-3 rounded-full hover:border-grape hover:text-grape transition-colors">記事一覧を見る<span class="material-symbols-outlined text-xl" aria-hidden="true">chevron_right</span></a>
     </div>
   </div>
 </section>
@@ -194,7 +194,7 @@ layout: default
     </div>
     {% endfor %}
     <div class="text-center mt-4">
-      <a href="{{ "/sponsors/" | relative_url }}" class="inline-block border-2 border-grape text-grape font-bold px-8 py-3 rounded-full hover:bg-grape hover:text-white transition-colors">協賛企業一覧を見る →</a>
+      <a href="{{ "/sponsors/" | relative_url }}" class="inline-flex items-center gap-1 border-2 border-grape text-grape font-bold px-8 py-3 rounded-full hover:bg-grape hover:text-white transition-colors">協賛企業一覧を見る<span class="material-symbols-outlined text-xl" aria-hidden="true">chevron_right</span></a>
     </div>
   </div>
 </section>

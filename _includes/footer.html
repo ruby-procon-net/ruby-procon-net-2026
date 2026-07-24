@@ -3,13 +3,20 @@
     <div class="l--footer-top flex flex-col md:flex-row justify-between items-start gap-8">
       <div class="a--footer-brand">
         <p class="font-black text-xl mb-2 text-gray-500">第16回 中高生Rubyプログラミングコンテスト 2026</p>
-
+        <address class="a--footer-contact text-sm not-italic">
+          <a href="mailto:jr-procon@ruby.or.jp" class="inline-flex items-center gap-2 text-grape hover:text-grape-dark transition-colors">
+            <span class="material-symbols-outlined text-xl" aria-hidden="true">mail</span>
+            <span>jr-procon@ruby.or.jp</span>
+          </a>
+        </address>
       </div>
       <div class="a--footer-info flex flex-col sm:flex-row gap-8 sm:gap-12">
-        <address class="a--footer-contact text-sm not-italic">
-          <h2 class="text-gray-700 font-semibold text-sm mb-2">お問い合わせ</h2>
-          <a href="mailto:jr-procon@ruby.or.jp" class="text-grape hover:text-grape-dark transition-colors">jr-procon@ruby.or.jp</a>
-        </address>
+        <nav class="a--footer-nav text-sm" aria-label="関連情報">
+          <h2 class="text-gray-700 font-semibold text-sm mb-2">関連情報</h2>
+          <ul class="space-y-2">
+            <li><a href="{{ "/ai-policy/" | relative_url }}" class="text-grape hover:text-grape-dark transition-colors">AI利用に関する私たちの立場</a></li>
+          </ul>
+        </nav>
         <nav class="a--footer-nav text-sm">
           <h2 class="text-gray-700 font-semibold text-sm mb-2">サイトポリシー</h2>
           <a href="{{ "/privacy/" | relative_url }}" class="text-grape hover:text-grape-dark transition-colors">個人情報保護方針</a>
