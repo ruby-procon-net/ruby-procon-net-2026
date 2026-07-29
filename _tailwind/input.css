@@ -93,7 +93,24 @@ button:focus-visible {
   --tw-prose-quote-borders: var(--color-grape);
 }
 .prose img {
-  border-radius: 0.75rem;
+  border-radius: 0.5rem;
+}
+
+/* 白背景の画像も本文との境界が分かるよう、お知らせ記事内だけ薄い枠を付ける */
+.l--article-content .prose img {
+  border: 1px solid var(--color-gray-200);
+  border-radius: 0.5rem;
+}
+
+/* クリエイティブコーディング案内の白背景画像にも境界を付ける */
+.l--creative-coding-guide img {
+  border: 1px solid var(--color-gray-200);
+}
+
+.l--creative-coding-guide .a--creative-coding-image-medium {
+  width: min(100%, 42rem);
+  margin-right: auto;
+  margin-left: auto;
 }
 
 /* 記事本文の見出しに区切りの罫線（記事タイトルのh2はproseの外なので影響しない） */

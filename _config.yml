@@ -34,6 +34,7 @@ exclude:
   - README.md
   - scripts/
   - _tailwind/
+  - creative-coding-images/
 
 collections:
   articles:
