@@ -14,8 +14,8 @@ npm install
 Jekyll と Tailwind をそれぞれ別のターミナルで起動します。
 
 ```bash
-bundle exec jekyll serve --livereload   # http://localhost:4000
-npm run tailwind                        # Tailwind ウォッチ
+bundle exec jekyll serve   # http://localhost:4000
+npm run tailwind           # Tailwind ウォッチ
 ```
 
 ブラウザで http://localhost:4000 を開きます。
@@ -139,9 +139,7 @@ RPC2026/
 
 | gem | 理由 |
 |-----|------|
-| `eventmachine` / `em-websocket` | 長期メンテナンス停止のため積極的には使わない方針 |
+| `eventmachine` / `em-websocket` | 長期メンテナンス停止。`--livereload` は使わない方針 |
 | `sass-embedded` / `jekyll-sass-converter` | SCSS を使わないため。Jekyll 本体の依存のため Gemfile.lock には残るが無効化 |
 
-`eventmachine` / `em-websocket` は除外設定に入っていますが、Gemfile.lock に残っており
-実際にはインストール済みのため、`bundle exec jekyll serve --livereload` は動作します
-（LiveReload は 35729 番で待ち受け、ページに `livereload.js` が注入されます）。
+`--livereload` は使いません。ブラウザは手動で再読み込みしてください。
