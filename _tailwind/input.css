@@ -60,6 +60,38 @@ button:focus-visible {
   filter: brightness(0.92);
 }
 
+/* トップページのヒーローは、スマホでは写真の明るい部分にも文字が重なる。
+   全体にオーバーレイをかけ、狭い画面でも本文とCTAの上下余白を確保する。 */
+@media (max-width: 639px) {
+  .l--hero {
+    min-height: 520px !important;
+    aspect-ratio: auto !important;
+    background-position: 62% center !important;
+  }
+
+  .a--hero-overlay {
+    background: linear-gradient(
+      90deg,
+      rgb(50 43 120 / 94%) 0%,
+      rgb(75 64 164 / 82%) 100%
+    ) !important;
+  }
+
+  .l--hero-inner {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .a--hero-title {
+    font-size: clamp(2rem, 10vw, 2.5rem);
+  }
+
+  .a--hero-lead {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+}
+
 /* グローバルナビ：下線が左から伸びるアニメーション */
 .a--nav-link {
   position: relative;
