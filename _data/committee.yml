@@ -1,0 +1,32 @@
+# 実行委員会・運営委員会の名簿。
+# role は肩書きが決まっている人だけに入れる（無ければ氏名と所属だけを出す）。
+# 審査委員は _data/judges.yml と judges.html が持っているため、ここには入れない。
+- section: 中高生Rubyプログラミングコンテスト 実行委員会
+  members:
+    - role: 実行委員長
+      name: 鳥井 雪
+      affiliation: NPO法人Waffle カリキュラム・マネージャー／株式会社万葉 フェロー
+    - role: 実行副委員長
+      name: 井上 浩
+      affiliation: OSS-Vision株式会社 代表取締役CEO
+    - name: まつもと ゆきひろ
+      affiliation: 一般財団法人Rubyアソシエーション 理事長
+    - role: 監事
+      name: 江森 真由美
+      affiliation: 株式会社ケーシーエスキャロット 執行役員
+    - name: 大川 毅
+      affiliation: 株式会社まちづくり三鷹
+    - name: 笹田 耕一
+      affiliation: 一般財団法人Rubyアソシエーション 理事
+
+- section: 中高生Rubyプログラミングコンテスト2026 運営委員会
+  members:
+    - role: 運営委員
+      name: 小芝 敏明
+      affiliation: 株式会社CARTA HOLDINGS スタッフエンジニア
+    - role: 運営委員
+      name: 坂田 憲昭
+      affiliation: 株式会社ケーシーエスキャロット クリエイティブマネージャー
+    - role: 運営委員
+      name: 町田 哲平
+      affiliation: 株式会社ロッカ 代表取締役
