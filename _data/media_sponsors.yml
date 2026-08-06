@@ -1,0 +1,21 @@
+# 2026年度のメディアスポンサー。後援を承諾いただいた社のみを載せる。
+# logo は assets/images/sponsors/ 配下のファイル名。未入手なら省略でき、
+# その場合は媒体名のテキストで表示される。
+- name: 株式会社技術評論社
+  media: gihyo.jp
+  url: https://gihyo.jp/
+  logo: gihyou.webp
+
+- name: 株式会社誠文堂新光社
+  media: 子供の科学（コカネット）
+  url: https://www.kodomonokagaku.com/
+  logo: kodomonokagaku.webp
+
+- name: Qiita株式会社
+  media: Qiita Zine
+  url: https://qiita.com/
+  logo: qiita.webp
+
+- name: 株式会社翔泳社
+  media: CodeZine
+  url: https://codezine.jp/
