@@ -113,6 +113,30 @@ button:focus-visible {
   transform: scaleX(1);
 }
 
+/* スマホでは下線アニメーションをやめ、タップした行に薄い背景色が付く
+   モバイルらしい挙動にする（行自体も指で押しやすい高さにする） */
+@media (max-width: 767px) {
+  .a--nav-link::after {
+    content: none;
+  }
+
+  .l--mobile-menu .a--nav-link {
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    /* 指を離したあとはゆっくり戻す */
+    transition: background-color 0.25s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* 押した瞬間は即座に色が付かないと反応が鈍く感じるため、
+     押下時だけトランジションを効かせない */
+  .l--mobile-menu .a--nav-link:active {
+    background-color: var(--color-gray-100);
+    color: var(--color-grape);
+    transition-duration: 0s;
+  }
+}
+
 /* font-black（既定 900）を 700 に */
 .font-black {
   font-weight: 700;
