@@ -1,0 +1,62 @@
+# 中高生Rubyプログラミングコンテストの掲載実績。
+# 媒体ごとに、その媒体が出したコンテストの記事を新しい順に並べる。
+# 掲載日は持たない（媒体によって表記がまちまちで、揃えるコストに見合わないため）。
+#
+# 記事URLを出せる媒体だけを載せる。以下は掲載があることは分かっているが載せていない。
+#   山陰中央新報・デジタル人材共創連盟（デジ連）… 個別記事のURLが未特定。判明したら足す
+#   EdTechZine … 2026年5月にサービス終了し、過去記事を参照できない
+- media: gihyo.jp
+  url: https://gihyo.jp/
+  articles:
+    - title: 「中高生Rubyプログラミングコンテスト2026」開催決定、作品募集開始〜2026年9月30日まで
+      url: https://gihyo.jp/article/2026/07/ruby-procon2026-07
+    - title: 「中高生Rubyプログラミングコンテスト2025」受賞者決定！
+      url: https://gihyo.jp/article/2025/12/ruby-procon2025-12
+    - title: 「中高生Rubyプログラミングコンテスト2025」の最終審査会進出者10組が決定、2025年11月29日三鷹で最終審査会を開催
+      url: https://gihyo.jp/article/2025/11/ruby-procon2025-11
+    - title: 「中高生国際Rubyプログラミングコンテスト2024 in Mitaka」受賞者決定！
+      url: https://gihyo.jp/article/2024/12/ruby-procon2024-12
+    - title: 「中高生国際Rubyプログラミングコンテスト2024 in Mitaka」の最終審査会進出者9組が決定、2024年11月30日三鷹で最終審査会を開催、Zoom配信も
+      url: https://gihyo.jp/article/2024/11/ruby-procon2024-11
+    - title: 「中高生国際Rubyプログラミングコンテスト2024 in Mitaka」開催決定、作品募集開始〜2024年9月30日まで
+      url: https://gihyo.jp/article/2024/07/ruby-procon2024-07
+    - title: 「中高生国際Rubyプログラミングコンテスト2023 in Mitaka」受賞者決定！
+      url: https://gihyo.jp/article/2023/12/ruby-procon2023-12
+    - title: 「中高生国際Rubyプログラミングコンテスト2023 in Mitaka」の最終審査会進出者11組が決定、2023年12月9日三鷹で最終審査会を開催、Zoom配信も
+      url: https://gihyo.jp/article/2023/11/ruby-procon2023-11
+
+- media: Qiita Zine
+  url: https://qiita.com/
+  articles:
+    - title: 「第16回 中高生Rubyプログラミングコンテスト 2026」作品募集開始！
+      url: https://qiita.com/official-columns/event/202607-ruby-procon-2026/
+    - title: 「中高生 Ruby プログラミングコンテスト 2025」受賞者が決定！
+      url: https://qiita.com/official-columns/event/202512-ruby-procon-2025/
+    - title: 「中高生 Ruby プログラミングコンテスト 2025」の最終審査会開催のお知らせ
+      url: https://qiita.com/official-columns/event/ruby-procon-2025/
+
+- media: 子供の科学（コカネット）
+  url: https://www.kodomonokagaku.com/
+  articles:
+    - title: 「中高生Rubyプログラミングコンテスト2025」受賞者決定！
+      url: https://www.kodomonokagaku.com/read/95015/
+    - title: 「中高生Rubyプログラミングコンテスト2025」作品募集スタート！【応募〆切9/30（火）】
+      url: https://www.kodomonokagaku.com/read/92124/
+    - title: 【11/30】「中高生Rubyプログラミングコンテスト2024 in Mitaka」最終審査会 観覧募集中！
+      url: https://www.kodomonokagaku.com/read/86714/
+    - title: 「中高生Rubyプログラミングコンテスト2021 in Mitaka」最終審査会をオンラインで開催！
+      url: https://www.kodomonokagaku.com/read/31943/
+
+- media: Findy
+  url: https://findy-code.io/
+  articles:
+    - title: 若きエンジニアの挑戦の場を途絶えさせない。中高生Rubyプログラミングコンテスト.restart!
+      url: https://findy-code.io/engineer-lab/ruby-procon
+    - title: “やらないこと”は、誰かの“やる”を開く
+      url: https://findy-code.io/media/articles/list-yotii23
+
+- media: ICT教育ニュース
+  url: https://ict-enews.net/
+  articles:
+    - title: 「中高生 Ruby プログラミングコンテスト 2025」作品募集を開始
+      url: https://ict-enews.net/2025/07/17ruby-procon-2/
