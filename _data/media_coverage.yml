@@ -1,7 +1,10 @@
 # 中高生Rubyプログラミングコンテストの掲載実績。
 # 媒体ごとに、その媒体が出したコンテストの記事を新しい順に並べる。
 # 掲載日は持たない（媒体によって表記がまちまちで、揃えるコストに見合わないため）。
-# articles が空の媒体は媒体名だけを出す。note があれば媒体名に添える。
+#
+# 記事URLを出せる媒体だけを載せる。以下は掲載があることは分かっているが載せていない。
+#   山陰中央新報・デジタル人材共創連盟（デジ連）… 個別記事のURLが未特定。判明したら足す
+#   EdTechZine … 2026年5月にサービス終了し、過去記事を参照できない
 - media: gihyo.jp
   url: https://gihyo.jp/
   articles:
@@ -57,15 +60,3 @@
   articles:
     - title: 「中高生 Ruby プログラミングコンテスト 2025」作品募集を開始
       url: https://ict-enews.net/2025/07/17ruby-procon-2/
-
-- media: 山陰中央新報
-  url: https://www.sanin-chuo.co.jp/
-  articles: []
-
-- media: デジタル人材共創連盟（デジ連）
-  url: https://dle.or.jp/
-  articles: []
-
-- media: EdTechZine
-  articles: []
-  note: 2026年5月にサービスを終了

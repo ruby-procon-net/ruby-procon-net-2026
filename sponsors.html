@@ -67,7 +67,7 @@ permalink: /sponsors/
 
     {%- comment -%}
       掲載実績は媒体ごとに記事本数の偏りが大きく、昨年開催実績カードの中には収まらないため
-      全幅で置く。データは _data/media_coverage.yml。記事URLが未特定の媒体は媒体名だけが出る。
+      全幅で置く。データは _data/media_coverage.yml。
     {%- endcomment -%}
     <div class="a--media-coverage bg-white border border-gray-200 rounded-2xl p-6 mb-10">
       <h3 class="text-lg font-bold text-gray-900 mb-2">掲載メディア</h3>
@@ -76,20 +76,13 @@ permalink: /sponsors/
         {% for media in site.data.media_coverage %}
         <li>
           <p class="a--media-name text-gray-900 font-bold text-sm mb-2">
-            {% if media.url %}
             <a href="{{ media.url }}" target="_blank" rel="noopener" class="hover:text-grape transition-colors">{{ media.media }}</a>
-            {% else %}
-            {{ media.media }}
-            {% endif %}
-            {% if media.note %}<span class="text-gray-500 font-normal">（{{ media.note }}）</span>{% endif %}
           </p>
-          {% if media.articles.size > 0 %}
           <ul class="list-disc list-outside pl-5 space-y-1 marker:text-gray-300 text-sm">
             {% for article in media.articles %}
             <li><a href="{{ article.url }}" target="_blank" rel="noopener" class="text-grape underline underline-offset-2 hover:text-grape-dark transition-colors">{{ article.title }}</a></li>
             {% endfor %}
           </ul>
-          {% endif %}
         </li>
         {% endfor %}
       </ul>
