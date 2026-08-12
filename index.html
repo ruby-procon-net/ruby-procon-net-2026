@@ -201,6 +201,31 @@ layout: default
 </section>
 {% endcomment %}
 
+<!-- メディアスポンサー -->
+{% assign media_sponsor_group = site.data.sponsors | where: "tier", "メディアスポンサー" | first %}
+{% if media_sponsor_group and media_sponsor_group.sponsors.size > 0 %}
+<section class="l--media-sponsors bg-white border-t border-gray-200">
+  <div class="l--media-sponsors-inner max-w-5xl mx-auto px-6 py-12">
+    <h2 class="text-sm font-bold text-gray-500 tracking-widest uppercase mb-8">メディアスポンサー</h2>
+    <ul class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 list-none">
+      {% for sponsor in media_sponsor_group.sponsors %}
+      <li class="a--media-sponsor-card flex items-center justify-center rounded-2xl border border-gray-200 bg-white p-2 hover:border-grape transition-colors">
+        <a href="{{ sponsor.url }}" target="_blank" rel="noopener" class="flex h-full w-full items-center justify-center">
+          {% if sponsor.logo %}
+          <img src="{{ "/assets/images/sponsors/" | append: sponsor.logo | relative_url }}"
+               alt="{{ sponsor.name }}"
+               class="aspect-square w-full object-contain">
+          {% else %}
+          <span class="flex aspect-square w-full items-center justify-center px-4 text-center text-2xl font-black text-gray-700">{{ sponsor.name }}</span>
+          {% endif %}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endif %}
+
 <!-- 主催・共催・後援 -->
 <section class="l--organizers bg-white border-t border-gray-200">
   <div class="l--organizers-inner max-w-5xl mx-auto px-6 py-12 space-y-8">

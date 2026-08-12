@@ -132,23 +132,23 @@
 
 - tier: メディアスポンサー
   sponsors:
-    - name: EdTechZine
-      logo: edtechzine.webp
-      url: https://edtechzine.jp/
-      message:
-    - name: Qiita
-      logo: qiita.webp
-      url: https://qiita.com/
-      message:
-    - name: 技術評論社
+    - name: gihyo.jp
       logo: gihyou.webp
       url: https://gihyo.jp/
       message:
-    - name: 子供の科学
+    - name: 子供の科学（コカネット）
       logo: kodomonokagaku.webp
       url: https://www.kodomonokagaku.com/
       message:
-    - name: J:COM武蔵野・三鷹
+    - name: Qiita Zine
+      logo: qiita.webp
+      url: https://qiita.com/
+      message:
+    - name: JCOM
       logo: jcom.webp
-      url: http://www.jcom.co.jp/
+      url: https://www.jcom.co.jp/
+      message:
+    - name: CodeZine
+      logo: codezine.webp
+      url: https://codezine.jp/
       message:
