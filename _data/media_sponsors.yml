@@ -1,0 +1,20 @@
+# 2026年度のメディアスポンサー。後援を承諾いただき、ロゴをお預かりできた社を載せる。
+# logo は assets/images/sponsors/ 配下のファイル名。
+#
+# 載せていない社
+#   株式会社翔泳社（CodeZine） … 承諾済みだがロゴが未入手。入手し次第ここに足す
+#   JCOMマーケティング株式会社 … 依頼済みで承諾待ち
+- name: 株式会社技術評論社
+  media: gihyo.jp
+  url: https://gihyo.jp/
+  logo: gihyou.webp
+
+- name: 株式会社誠文堂新光社
+  media: 子供の科学（コカネット）
+  url: https://www.kodomonokagaku.com/
+  logo: kodomonokagaku.webp
+
+- name: Qiita株式会社
+  media: Qiita Zine
+  url: https://qiita.com/
+  logo: qiita.webp

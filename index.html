@@ -239,6 +239,30 @@ layout: default
   </div>
 </section>
 
+{%- comment -%}
+  メディアスポンサーは後援を承諾いただき、ロゴをお預かりできた社だけを
+  _data/media_sponsors.yml に置く。
+  協賛金スポンサーのロゴ掲載は募集期間中のため、揃ってから別途出す。
+{%- endcomment -%}
+<!-- メディアスポンサー -->
+<section class="l--media-sponsors bg-white border-t border-gray-200">
+  <div class="l--media-sponsors-inner max-w-5xl mx-auto px-6 py-12">
+    <h2 class="a--media-sponsors-title text-sm font-bold text-gray-500 tracking-widest uppercase mb-6">メディアスポンサー</h2>
+    <ul class="a--media-sponsors-list grid grid-cols-2 md:grid-cols-4 gap-4 list-none">
+      {% for sponsor in site.data.media_sponsors %}
+      <li class="a--media-sponsor-card bg-white border border-gray-200 rounded-2xl p-3 md:p-6 flex items-center justify-center hover:border-grape transition-colors">
+        <a href="{{ sponsor.url }}" target="_blank" rel="noopener" class="block w-full">
+          <img src="{{ "/assets/images/sponsors/" | append: sponsor.logo | relative_url }}"
+               alt="{{ sponsor.media }}"
+               loading="lazy"
+               class="a--media-sponsor-logo w-full aspect-square object-contain rounded-lg">
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
 <!-- 関連リンク -->
 <section class="l--related-links bg-white border-t border-gray-100">
   <div class="l--related-links-inner max-w-5xl mx-auto px-6 py-12">
