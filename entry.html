@@ -6,13 +6,28 @@ content_width: max-w-4xl
 entry_form_url: https://ruby-jr-procon-2026-b33e1909e9eb.herokuapp.com/users/sign_up
 ---
 
+{% capture entry_cta %}
+<div class="a--entry-cta overflow-hidden rounded-3xl border border-ruby/20 bg-ruby/5">
+  <div class="flex flex-col items-center gap-6 px-6 py-8 sm:flex-row sm:justify-between sm:px-10 sm:py-10">
+    <div class="flex flex-col items-center gap-4 text-center sm:flex-row sm:text-left">
+      <span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-ruby text-white" aria-hidden="true">
+        <span class="material-symbols-outlined text-3xl leading-none">edit_square</span>
+      </span>
+      <div>
+        <p class="mb-1 text-sm font-bold tracking-widest text-ruby">作品募集中</p>
+        <p class="text-xl font-black leading-snug text-gray-900 sm:text-2xl">作品の応募を受け付けています</p>
+        <p class="mt-2 text-base leading-relaxed text-gray-600">募集期間は<span class="font-bold text-gray-900">2026年9月30日（水）まで</span>です。</p>
+      </div>
+    </div>
+    <a href="{{ page.entry_form_url }}" target="_blank" rel="noopener" class="inline-flex w-full shrink-0 items-center justify-center gap-1 rounded-full bg-ruby px-10 py-4 text-lg font-bold text-white transition-opacity hover:opacity-90 sm:w-auto">応募する<span class="material-symbols-outlined text-xl" aria-hidden="true">chevron_right</span></a>
+  </div>
+</div>
+{% endcapture %}
+
 <div class="l--entry space-y-12">
 
   <!-- 応募フォームへの導線 -->
-  <div class="a--entry-cta bg-ruby/5 border border-ruby/20 rounded-2xl py-8 px-8 text-center">
-    <p class="text-gray-700 text-base leading-relaxed mb-6">作品の応募を受け付けています。募集期間は2026年9月30日（水）までです。</p>
-    <a href="{{ page.entry_form_url }}" target="_blank" rel="noopener" class="inline-flex items-center gap-1 bg-ruby text-white font-bold text-lg px-10 py-4 rounded-full hover:opacity-90 transition-opacity">応募する<span class="material-symbols-outlined text-xl" aria-hidden="true">chevron_right</span></a>
-  </div>
+  {{ entry_cta }}
 
   <!-- 1. 目的・主旨 -->
   <section class="a--entry-section">
@@ -432,5 +447,8 @@ entry_form_url: https://ruby-jr-procon-2026-b33e1909e9eb.herokuapp.com/users/sig
       </p>
     </div>
   </section>
+
+  <!-- 応募フォームへの導線 -->
+  {{ entry_cta }}
 
 </div>

@@ -1,7 +1,7 @@
 ---
 title: "プログラム作品の応募受付を開始しました"
-date: 2026-08-15
-thumbnail: /assets/images/home/key-visual.webp
+date: 2026-08-16
+thumbnail: /assets/images/articles/thumbnails/2026-08-16-entry-open.jpg
 excerpt: "「ゲーム部門」「アプリ部門」「クリエイティブコーディング部門」の3部門で、プログラム作品の応募受付を開始しました。応募締め切りは2026年9月30日（水）です。"
 ---
 
