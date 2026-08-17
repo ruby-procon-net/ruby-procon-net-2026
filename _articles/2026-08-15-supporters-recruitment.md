@@ -1,7 +1,7 @@
 ---
 title: "個人協賛（ルビコンサポーターズ）を募集しています"
 date: 2026-08-15
-thumbnail: /assets/images/common/ogp.jpg
+thumbnail: /assets/images/articles/thumbnails/2026-08-15-supporters-recruitment.jpg
 excerpt: "個人でコンテストを応援してくださる「ルビコンサポーターズ」の募集を開始しました。一口5,000円から受け付けています。"
 ---
 
