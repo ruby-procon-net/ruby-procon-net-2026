@@ -252,30 +252,21 @@ layout: default
     <div class="a--organizers-group">
       <h2 class="a--organizers-title text-sm font-bold text-gray-500 tracking-widest uppercase mb-4">共催</h2>
       <p class="a--organizers-name text-gray-500 text-sm">
-        <a href="https://www.ruby.or.jp/" target="_blank" rel="noopener" class="hover:text-grape transition-colors">一般財団法人Rubyアソシエーション</a>
+        <a href="https://www.ruby.or.jp/" target="_blank" rel="noopener" class="hover:text-grape hover:underline underline-offset-2 transition-colors">一般財団法人Rubyアソシエーション</a>
       </p>
     </div>
 
-    {% comment %} 後援は未確定のため一時的に非表示。確定後にこのcommentタグを外す。 {% endcomment %}
-    {% comment %}
     <div class="a--organizers-group">
       <h2 class="a--endorsements-title text-sm font-bold text-gray-500 tracking-widest uppercase mb-4">後援</h2>
       <ul class="a--endorsements-list flex flex-wrap gap-x-0 gap-y-1 text-gray-500 text-sm list-none">
-        {% assign endorsers = "経済産業省|https://www.meti.go.jp/,文部科学省|https://www.mext.go.jp/,総務省|https://www.soumu.go.jp/,デジタル庁|https://www.digital.go.jp/,独立行政法人情報処理推進機構（IPA）|https://www.ipa.go.jp/,Rubyプログラミング教育を実施する地域の自治体、公的機関、大学等|" | split: "," %}
-        {% for item in endorsers %}
-          {% assign parts = item | split: "|" %}
+        {% for endorser in site.data.endorsers %}
           <li class="flex items-center">
-            {% if parts[1] %}
-            <a href="{{ parts[1] }}" target="_blank" rel="noopener" class="hover:text-grape transition-colors">{{ parts[0] }}</a>
-            {% else %}
-            <span>{{ parts[0] }}</span>
-            {% endif %}
+            <a href="{{ endorser.url }}" target="_blank" rel="noopener" class="hover:text-grape hover:underline underline-offset-2 transition-colors">{{ endorser.name }}</a>
             {% unless forloop.last %}<span class="mx-2 text-gray-300" aria-hidden="true">／</span>{% endunless %}
           </li>
         {% endfor %}
       </ul>
     </div>
-    {% endcomment %}
   </div>
 </section>
 
