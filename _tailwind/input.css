@@ -256,6 +256,15 @@ button:focus-visible {
   object-fit: cover;
 }
 
+.l--interview blockquote p:first-of-type::before,
+.l--interview blockquote p:last-of-type::after {
+  content: none;
+}
+
+.l--interview blockquote {
+  border-color: var(--color-gray-200);
+}
+
 /* 白背景の画像も本文との境界が分かるよう、お知らせ記事内だけ薄い枠を付ける */
 .l--article-content .prose img {
   border: 1px solid var(--color-gray-200);
