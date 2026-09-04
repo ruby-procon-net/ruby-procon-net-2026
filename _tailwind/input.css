@@ -234,6 +234,28 @@ button:focus-visible {
   border-radius: 0.5rem;
 }
 
+/* インタビュー本文の長いタイトルは、複数行でもゆったり読める行間にする */
+.l--interview > h1 {
+  line-height: 1.4;
+}
+
+.l--interview .a--interview-speaker {
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-right: 0.15rem;
+  vertical-align: middle;
+}
+
+.l--interview .a--interview-speaker img {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  margin: 0;
+  border-radius: 9999px;
+  object-fit: cover;
+}
+
 /* 白背景の画像も本文との境界が分かるよう、お知らせ記事内だけ薄い枠を付ける */
 .l--article-content .prose img {
   border: 1px solid var(--color-gray-200);
