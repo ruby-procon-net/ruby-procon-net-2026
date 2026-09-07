@@ -8,6 +8,7 @@
 @source "../_layouts/**/*.html";
 @source "../_includes/**/*.html";
 @source "../*.html";
+@source "../interview.md";
 @source "../_articles/**/*.md";
 
 @theme {

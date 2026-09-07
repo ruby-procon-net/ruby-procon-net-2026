@@ -145,6 +145,13 @@ AIがあることで、「技術的には誰でも作れる」範囲はものす
 
 そこで今回は、みんなのコードさんの協力で、応募者が無償で生成AIを利用できる環境も用意しています。同じ土俵で、使いたい人にはぜひ使ってほしいと思っています。
 
+<p class="not-prose my-10">
+  <a href="{{ "/ai-policy/" | relative_url }}" target="_blank" rel="noopener noreferrer" class="group relative flex w-full items-center justify-center rounded-xl border border-grape/20 bg-grape/10 px-12 py-5 text-center font-bold text-grape no-underline shadow-sm transition-colors hover:border-grape hover:text-grape-dark">
+    <span>AI利用について・AI利用の申請はこちら</span>
+    <span class="material-symbols-outlined absolute right-5 shrink-0 transition-transform group-hover:translate-x-0.5" aria-hidden="true">arrow_forward</span>
+  </a>
+</p>
+
 <span class="a--interview-speaker"><img src="/assets/images/interview/koichi-sasada.webp" alt=""><strong>笹田：</strong></span> AIを使わないとダメ、ということではない？
 
 <span class="a--interview-speaker"><img src="/assets/images/interview/yuki-torii.webp" alt=""><strong>鳥井：</strong></span> そうではありません。
