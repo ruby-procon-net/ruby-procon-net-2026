@@ -15,19 +15,7 @@ layout: default
       <p class="a--hero-lead text-lg font-semibold text-gray-100 leading-relaxed mb-8" style="text-shadow: 0 1px 8px rgba(0,0,0,0.5);">
         Rubyで作った「自分の作品」を、全国の仲間と審査委員に。中学生・高校生のための、つくる楽しさを発表する舞台です。
       </p>
-      <div class="a--hero-actions flex flex-col sm:flex-row gap-4">
-        <a href="{{ "/entry/" | relative_url }}"
-           class="a--cta-primary a--button a--button--primary a--button--large"
-           style="box-shadow: 0 0 70px #ffffff;">
-          応募する<span class="material-symbols-outlined text-xl" aria-hidden="true">chevron_right</span>
-        </a>
-        {% comment %} 最終審査結果ページ非公開のため一時コメントアウト
-        <a href="{{ "/results/" | relative_url }}"
-           class="a--cta-secondary a--button a--button--inverse a--button--large">
-          前回の結果を見る
-        </a>
-        {% endcomment %}
-      </div>
+      <p class="text-lg font-bold leading-relaxed text-white">作品の応募受付を締め切りました。<br>たくさんのご応募ありがとうございました。</p>
     </div>
   </div>
 </section>
@@ -79,39 +67,8 @@ layout: default
   </div>
 </section>
 
-<!-- 募集部門 -->
-<section class="l--categories bg-gray-50 py-20">
-  <div class="l--categories-inner max-w-5xl mx-auto px-6">
-    <div class="a--section-header text-center mb-14">
-      <span class="text-ruby font-bold text-sm tracking-widest uppercase mb-3 block">Categories</span>
-      <h2 class="text-5xl font-black text-gray-900">募集部門</h2>
-    </div>
-    <div class="l--categories-grid grid md:grid-cols-3 gap-6">
-      <div class="a--category-card bg-white rounded-2xl p-6 border border-gray-200">
-        <img src="{{ "/assets/images/common/game.webp" | relative_url }}" alt="" aria-hidden="true" class="w-28 h-28 mb-6 object-contain mx-auto rounded-2xl">
-        <h3 class="text-2xl font-bold text-gray-900 mb-4">ゲーム部門</h3>
-        <p class="text-gray-500 leading-relaxed">Rubyで作成したゲーム作品。発想力と技術力を駆使したオリジナルゲームを募集します。</p>
-      </div>
-      <div class="a--category-card bg-white rounded-2xl p-6 border border-gray-200">
-        <img src="{{ "/assets/images/common/application.webp" | relative_url }}" alt="" aria-hidden="true" class="w-28 h-28 mb-6 object-contain mx-auto rounded-2xl">
-        <h3 class="text-2xl font-bold text-gray-900 mb-4">アプリ部門</h3>
-        <p class="text-gray-500 leading-relaxed">ゲーム以外のアプリケーション作品。Webアプリ（Rails / Sinatra 等）、mruby を使った組込み、AI用MCPサーバーなど。</p>
-      </div>
-      <div class="a--category-card bg-white rounded-2xl p-6 border border-gray-200">
-        <img src="{{ "/assets/images/common/creative-coding.webp" | relative_url }}" alt="" aria-hidden="true" class="w-28 h-28 mb-6 object-contain mx-auto rounded-2xl">
-        <h3 class="text-2xl font-bold text-gray-900 mb-4">クリエイティブコーディング部門</h3>
-        <p class="text-gray-500 leading-relaxed">2026年新設。rbCanvas/p5 を使ったビジュアル作品。今年度のテーマは「ルビー」。</p>
-        <a href="{{ "/creative-coding/" | relative_url }}" class="a--button a--button--secondary a--button--small mt-5 w-full">募集のご案内<span class="material-symbols-outlined" aria-hidden="true">chevron_right</span></a>
-      </div>
-    </div>
-    <div class="text-center mt-10">
-      <a href="{{ "/entry/" | relative_url }}" class="a--button a--button--primary">募集要項を見る<span class="material-symbols-outlined" aria-hidden="true">chevron_right</span></a>
-    </div>
-  </div>
-</section>
-
 <!-- 協賛募集 -->
-<section class="l--sponsor-cta max-w-5xl mx-auto px-6 pt-20 pb-10">
+<section class="l--sponsor-cta max-w-5xl mx-auto px-6 pb-10">
   <div class="a--sponsor-cta-inner rounded-3xl border border-gray-200 bg-gray-50 px-6 py-10 md:px-12 md:py-14 text-center">
     <span class="text-ruby font-bold text-sm tracking-widest uppercase mb-3 block">For Sponsors</span>
     <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">企業・個人からの協賛を募集しています</h2>
@@ -298,7 +255,7 @@ layout: default
 <section class="l--related-links bg-white border-t border-gray-100">
   <div class="l--related-links-inner max-w-5xl mx-auto px-6 py-12">
     <h2 class="a--related-links-title text-sm font-bold text-gray-500 tracking-widest uppercase mb-4">関連リンク</h2>
-    <ul class="a--related-links-list flex flex-wrap items-center gap-6 list-none">
+    <ul class="a--related-links-list flex flex-wrap items-center gap-5 list-none">
       <li><a href="https://u22procon.com/" target="_blank" rel="noopener"><img src="{{ "/assets/images/related-links/u22-2026.webp" | relative_url }}" alt="U-22 プログラミング・コンテスト2026" class="h-12 w-auto object-contain"></a></li>
       <li><a href="https://pckoshien.u-aizu.ac.jp/" target="_blank" rel="noopener"><img src="{{ "/assets/images/related-links/pckoshien-2026.webp" | relative_url }}" alt="パソコン甲子園2026" class="h-12 w-auto object-contain"></a></li>
       <li><a href="https://gp-award.jp/" target="_blank" rel="noopener"><img src="{{ "/assets/images/related-links/gpa-2026.webp" | relative_url }}" alt="GPA 2026（ぐんまプログラミングアワード2026）" class="h-12 w-auto object-contain"></a></li>
