@@ -24,10 +24,10 @@ content_width: max-w-4xl
 
   {% for group in site.data.committee %}
   <section class="a--committee-section">
-    <h2 class="a--committee-name text-xl font-black text-grape mb-6 pb-2 border-b border-grape/20">{{ group.section }}</h2>
-    <ul class="l--committee-members divide-y divide-gray-200 border border-gray-200 rounded-2xl bg-white list-none">
+    <h2 class="a--committee-name text-xl font-black text-grape mb-2 pb-2 border-b border-grape/20">{{ group.section }}</h2>
+    <ul class="l--committee-members rounded-2xl bg-white list-none">
       {% for member in group.members %}
-      <li class="a--committee-member flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-6 px-6 py-4">
+      <li class="a--committee-member flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-6 py-4">
         <p class="a--member-role text-grape font-semibold text-sm sm:w-32 sm:shrink-0">{{ member.role }}</p>
         <p class="a--member-name text-gray-900 font-bold text-lg sm:w-48 sm:shrink-0">{{ member.name }}</p>
         <p class="a--member-affiliation text-gray-600 text-sm leading-relaxed">{{ member.affiliation }}</p>
