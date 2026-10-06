@@ -1,0 +1,72 @@
+<div class="space-y-10">
+  {% for group in site.data.sponsors_2026 %}
+  {% case group.tier %}
+    {% when "Ruby" %}
+      {% assign logo_grid = "grid-cols-1 max-w-md" %}
+      {% assign member_grid = "md:grid-cols-[336px_minmax(0,1fr)]" %}
+      {% assign detail_logo = "w-full max-w-xs md:max-w-none" %}
+      {% assign company_size = "text-2xl md:text-3xl" %}
+      {% assign message_size = "text-lg" %}
+    {% when "Platinum" %}
+      {% assign logo_grid = "grid-cols-1 max-w-sm" %}
+      {% assign member_grid = "md:grid-cols-[288px_minmax(0,1fr)]" %}
+      {% assign detail_logo = "w-full max-w-[280px] md:max-w-none" %}
+      {% assign company_size = "text-xl md:text-2xl" %}
+      {% assign message_size = "text-[17px]" %}
+    {% when "Gold" %}
+      {% assign logo_grid = "grid-cols-2 md:grid-cols-3" %}
+      {% assign member_grid = "md:grid-cols-[240px_minmax(0,1fr)]" %}
+      {% assign detail_logo = "w-full max-w-[240px] md:max-w-none" %}
+      {% assign company_size = "text-xl" %}
+      {% assign message_size = "text-base" %}
+    {% else %}
+      {% assign logo_grid = "grid-cols-2 sm:grid-cols-3 md:grid-cols-4" %}
+      {% assign member_grid = "md:grid-cols-[192px_minmax(0,1fr)]" %}
+      {% assign detail_logo = "w-full max-w-[192px] md:max-w-none" %}
+      {% assign company_size = "text-lg" %}
+      {% assign message_size = "text-sm" %}
+  {% endcase %}
+  {% if group.tier == "メディアスポンサー" %}
+    {% assign logo_grid = "grid-cols-2 sm:grid-cols-3 lg:grid-cols-5" %}
+  {% endif %}
+  <div class="a--sponsor-tier">
+    <div class="a--tier-heading flex items-center gap-4 mb-6">
+      <h3 class="text-xl font-black text-grape">{{ group.tier }}{% unless group.tier == "メディアスポンサー" %} PARTNER{% endunless %}</h3>
+      <div class="flex-1 h-px bg-gray-200" aria-hidden="true"></div>
+    </div>
+    {% assign show_group_messages = false %}
+    {% if include.show_messages and group.tier != "メディアスポンサー" %}
+      {% assign show_group_messages = true %}
+      {% assign logo_grid = "grid-cols-1" %}
+      {% if group.tier == "Silver" %}
+        {% assign logo_grid = "grid-cols-1 md:grid-cols-2" %}
+        {% assign member_grid = "grid-cols-[128px_minmax(0,1fr)] lg:grid-cols-[168px_minmax(0,1fr)] content-start" %}
+        {% assign detail_logo = "w-full max-w-[192px]" %}
+      {% endif %}
+    {% endif %}
+    <ul class="grid {{ logo_grid }} gap-4 mx-auto list-none">
+      {% for sponsor in group.sponsors %}
+      <li{% if show_group_messages %} class="grid {{ member_grid }} items-start gap-6 py-4"{% endif %}>
+        <a href="{{ sponsor.url }}" target="_blank" rel="noopener" class="a--current-sponsor-logo {% if show_group_messages %}{{ detail_logo }}{% endif %} flex items-center justify-center aspect-[2/1] bg-white border border-gray-200 rounded-2xl {% if group.tier == "メディアスポンサー" %}p-5{% elsif group.tier == "Ruby" or group.tier == "Platinum" or group.tier == "Gold" %}px-6 py-4{% else %}p-4{% endif %} hover:border-grape transition-colors">
+          <img src="{{ "/assets/images/sponsors/" | append: sponsor.logo | relative_url }}" alt="{{ sponsor.name }}" loading="lazy" class="w-full h-full object-contain">
+        </a>
+        {% if show_group_messages %}
+        <div>
+          <h4 class="{{ company_size }} font-bold text-gray-900 mb-3">{{ sponsor.name }}</h4>
+          {% if sponsor.message and sponsor.message != "" %}
+          {% assign message_html = sponsor.message | escape | newline_to_br %}
+          {% for link in sponsor.message_links %}
+            {% assign link_label = link.label | escape %}
+            {% capture message_link %}<a href="{{ link.url | escape }}" target="_blank" rel="noopener noreferrer" class="text-grape underline">{{ link_label }}</a>{% endcapture %}
+            {% assign message_html = message_html | replace: link_label, message_link %}
+          {% endfor %}
+          <p class="a--sponsor-message text-gray-700 {{ message_size }} leading-relaxed">{{ message_html }}</p>
+          {% endif %}
+        </div>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endfor %}
+</div>

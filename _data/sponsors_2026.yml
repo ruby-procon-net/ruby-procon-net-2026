@@ -1,0 +1,117 @@
+# Source: https://docs.google.com/spreadsheets/d/1qcxKEWDzFBRHYDJjui-2VvHigpAlNav2lvLmWJTbVPg/edit#gid=0
+# 社名が空欄の5行目と、ランク未記入のSTORESは確認待ち。
+---
+- tier: Ruby
+  sponsors:
+  - name: 株式会社ソニックガーデン
+    logo: 2026/sonic-garden.webp
+    url: https://www.sonicgarden.jp/
+    message_links:
+    - label: セタプロ
+      url: https://setapro.club/
+    message: ソニックガーデンは、Rubyを中心とするソフトウェア開発の会社です。プログラミングの楽しさを伝えるべく、昨年から小中学生向けプログラミング部「セタプロ」に全面協力しています。皆さんもぜひ楽しみながら作品をつくってください。
+- tier: Platinum
+  sponsors:
+  - name: 株式会社SmartHR
+    logo: 2026/smart-hr.svg
+    url: https://smarthr.co.jp/
+    message: みなさんがコードを書き、動かす瞬間には、大きな発見と可能性が広がっています。その感動や経験を積み重ねることは、好奇心を育み、未来の夢を形づくる力になるでしょう。SmartHRは、「well-working
+      労働にまつわる社会課題をなくし、誰もがその人らしく働ける社会をつくる」ことを目指しています。みなさんがRubyの「楽しさ」とともにプログラミングを通じて新しい世界を切りひらき、自分らしく可能性を広げていくことを、心から応援しています。
+- tier: Gold
+  sponsors:
+  - name: フィヨルドブートキャンプ
+    logo: 2026/fbc.webp
+    url: https://bootcamp.fjord.jp/
+    message: |-
+      フィヨルドブートキャンプは、プロのエンジニアを目指す仲間が集まり、互いに助け合い、切磋琢磨しながら学ぶオンラインのプログラミングスクールです。
+      受講生たちは、Rubyを楽しみつつ、日々の開発や学習に取り組んでいます。
+      今回のコンテストでも、みなさんがRubyを楽しんで形にしたアイデアに出会えることを、心から楽しみにしています。
+  - name: 株式会社永和システムマネジメント
+    logo: 2026/esm.webp
+    url: https://agile.esm.co.jp
+    message: プログラミングを楽しくするRubyを通じて実現される、みなさんの作品を楽しみにしています！
+  - name: ピクシブ株式会社
+    logo: 2026/pixiv.webp
+    url: https://www.pixiv.co.jp/
+    message: |-
+      「好き」を形にするワクワク感、失敗すら楽しむ熱量、すべてが最高のコードになります。
+      あふれる想いをRubyに込めて、あなたにしか作れない世界を魅せてください！
+      挑戦するすべてのクリエイターを全力で応援しています！
+  - name: 一般社団法人日本Rubyの会
+    logo: 2026/rubynokai.webp
+    url: https://ruby-no-kai.org/
+  - name: 株式会社エス・エム・エス
+    logo: 2026/sms.webp
+    url: https://www.bm-sms.co.jp/
+    message: みなさんのアイディアがアプリケーションとして形になることが、世界とみなさん自身の可能性を広げます。Rubyはみなさんにとっての心強い味方になってくれるはずです！
+  - name: セコム株式会社
+    logo: 2026/secom.webp
+    url: https://www.secom.co.jp/
+- tier: Silver
+  sponsors:
+  - name: 株式会社ウィルネット
+    logo: 2026/willnet.webp
+    url: https://willnet.jp/
+    message: みなさんの成果を見るのを楽しみにしています。
+  - name: 株式会社ネットワーク応用通信研究所
+    logo: 2026/nacl.webp
+    url: https://www.netlab.jp/
+    message: 私たちはずっと前からRubyを使って、たのしくプログラミングをしています。プログラムを書く楽しさは、きっと長く続けるほど大きくなります。NaClはみなさんのRubyプログラミングによる挑戦を応援し続けます。
+  - name: YassLab 株式会社 (Railsチュートリアル)
+    logo: 2026/rails-tutorial.webp
+    url: https://railstutorial.jp/
+    message: 作りたいものを描いて、AI でどんどんカタチにしていきましょう！
+  - name: 合同会社Naptime
+    logo: 2026/naptime.webp
+    url: https://naptime.jp/
+  - name: 株式会社 万葉
+    logo: 2026/ever-leaf.webp
+    url: https://everyleaf.com/
+    message: 今年もみなさんがたのしくプログラミングされた作品をたのしみにしています！
+  - name: 株式会社フィルイン
+    logo: 2026/fillin.webp
+    url: https://www.fillin-inc.com
+    message: 当社にとってRubyは、事業を支えてくれただけでなく「プログラミングの楽しさ」を教えてくれた言語です。ぜひ楽しくプログラミングに取り組んでください。皆さんの作品に出会えることを楽しみにしています！
+  - name: 株式会社コードタクト
+    logo: 2026/code-takt.webp
+    url: https://codetakt.com/
+  - name: 株式会社まちづくり三鷹
+    logo: 2026/mitaka.webp
+    url: https://www.mitaka.ne.jp/
+    message: 皆さんの自由な発想から生まれた作品を楽しみにお待ちしています。
+  - name: 宇宙海賊合同会社
+    logo: 2026/space-pirates.svg
+    url: https://space-pirates.co.jp/
+    message: 物事の働きや動きの理由や仕組みを知ると、世界が少し広がります。プログラミングという入口を通じて皆さんの世界がより広がって、出来ることやチャレンジすること、楽しむことが増えれば幸いです。
+  - name: 一畑電気鉄道株式会社
+    logo: 2026/ichibata.webp
+    url: https://www.ichibata.co.jp/
+  - name: 株式会社エクシード
+    logo: 2026/exceed.webp
+    url: https://www.exceed-net.co.jp/
+  - name: ガーネットテック373株式会社
+    logo: 2026/gaenet-tech.webp
+    url: https://www.garnettech373.com
+  - name: 株式会社コミクリ
+    logo: 2026/comcre.webp
+    url: https://www.comcre.co.jp/
+  - name: NCD株式会社
+    logo: 2026/ncd.webp
+    url: https://www.ncd.co.jp/
+- tier: メディアスポンサー
+  sponsors:
+  - name: gihyo.jp
+    logo: 2026/gihyou.webp
+    url: https://gihyo.jp/
+  - name: 子供の科学（コカネット）
+    logo: 2026/kodomonokagaku.webp
+    url: https://www.kodomonokagaku.com/
+  - name: Qiita Zine
+    logo: 2026/qiita.webp
+    url: https://qiita.com/
+  - name: JCOM
+    logo: 2026/jcom.webp
+    url: https://www.jcom.co.jp/
+  - name: CodeZine
+    logo: 2026/codezine.webp
+    url: https://codezine.jp/
