@@ -2,9 +2,9 @@
   {% for group in site.data.sponsors_2026 %}
   {% case group.tier %}
     {% when "Ruby" %}
-      {% assign logo_grid = "grid-cols-1 max-w-md" %}
-      {% assign member_grid = "md:grid-cols-[336px_minmax(0,1fr)]" %}
-      {% assign detail_logo = "w-full max-w-xs md:max-w-none" %}
+      {% assign logo_grid = "grid-cols-1 max-w-lg" %}
+      {% assign member_grid = "md:grid-cols-[384px_minmax(0,1fr)]" %}
+      {% assign detail_logo = "w-full max-w-sm md:max-w-none" %}
       {% assign company_size = "text-2xl md:text-3xl" %}
       {% assign message_size = "text-lg" %}
     {% when "Platinum" %}
@@ -47,7 +47,7 @@
     <ul class="grid {{ logo_grid }} gap-4 mx-auto list-none">
       {% for sponsor in group.sponsors %}
       <li{% if show_group_messages %} class="grid {{ member_grid }} items-start gap-6 py-4"{% endif %}>
-        <a href="{{ sponsor.url }}" target="_blank" rel="noopener" class="a--current-sponsor-logo {% if show_group_messages %}{{ detail_logo }}{% endif %} flex items-center justify-center aspect-[2/1] bg-white border border-gray-200 rounded-2xl {% if group.tier == "メディアスポンサー" %}p-5{% elsif group.tier == "Ruby" or group.tier == "Platinum" or group.tier == "Gold" %}px-6 py-4{% else %}p-4{% endif %} hover:border-grape transition-colors">
+        <a href="{{ sponsor.url }}" target="_blank" rel="noopener" class="a--current-sponsor-logo {% if show_group_messages %}{{ detail_logo }}{% endif %} flex items-center justify-center aspect-[2/1] bg-white border border-gray-200 rounded-2xl {% if show_group_messages and group.tier == "Silver" %}p-4{% elsif group.tier == "メディアスポンサー" %}px-6 py-8{% elsif group.tier == "Ruby" or group.tier == "Platinum" or group.tier == "Gold" %}px-8 py-7{% else %}px-5 py-7{% endif %} hover:border-grape transition-colors">
           <img src="{{ "/assets/images/sponsors/" | append: sponsor.logo | relative_url }}" alt="{{ sponsor.name }}" loading="lazy" class="w-full h-full object-contain">
         </a>
         {% if show_group_messages %}
