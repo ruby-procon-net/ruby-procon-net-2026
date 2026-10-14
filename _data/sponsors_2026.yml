@@ -1,4 +1,5 @@
 # Source: https://docs.google.com/spreadsheets/d/1qcxKEWDzFBRHYDJjui-2VvHigpAlNav2lvLmWJTbVPg/edit#gid=0
+# 昨年と同じ指定のメッセージ・追加企業の出典: https://www.ruby-procon.net/corp-message/
 # 社名が空欄の5行目と、ランク未記入のSTORESは確認待ち。
 ---
 - tier: Ruby
@@ -29,7 +30,8 @@
   - name: 株式会社永和システムマネジメント
     logo: 2026/esm.webp
     url: https://agile.esm.co.jp
-    message: プログラミングを楽しくするRubyを通じて実現される、みなさんの作品を楽しみにしています！
+    message: |-
+      アジャイルと Ruby が実現するソフトウェア開発は、開発者が「楽しさ」を感じられる開発であり、そこにはきっとビジネス価値がある――私たちはそう信じて行動を続けています。同じように、プログラミングを楽しくする Ruby を通じて実現される、みなさんの作品を楽しみにしています！
   - name: ピクシブ株式会社
     logo: 2026/pixiv.webp
     url: https://www.pixiv.co.jp/
@@ -47,12 +49,23 @@
   - name: セコム株式会社
     logo: 2026/secom.webp
     url: https://www.secom.co.jp/
+    message: |-
+      私たちは、皆さんが安心して様々なことにチャレンジできる社会の実現に向けて常に革新的なサービスの創造に挑戦しています。このコンテストで、皆さんが自身の可能性に挑戦した素晴らしい作品に出会えることを楽しみにしています！
+  - name: サイトブリッジ株式会社
+    logo: 2026/site-bridge.jpg
+    url: https://www.sitebridge.co.jp/
+    message: |-
+      ソフトウエアのプロダクトを開発するには、どんなものを作るかというアイディアと、そのアイディアを実現するプログラミング力が必要です。
+      プログラミングを理解していると、アイディアをより緻密でリアルなものにブラッシュアップしていけます。
+      プログラミングに卓越していると、アイディアを直接プログラムコードで記述することができます。
+      このコンテストをきっかけとして、自由で可能性に満ちた、プログラムによる表現の世界を感じてもらえればと思います。
 - tier: Silver
   sponsors:
   - name: 株式会社ウィルネット
     logo: 2026/willnet.webp
     url: https://willnet.jp/
-    message: みなさんの成果を見るのを楽しみにしています。
+    message: |-
+      株式会社ウィルネットでは、毎日とても楽しくRubyを書いています。みなさんもきっと工夫を凝らして作品を作るのを楽しく感じているのではないかと思います。私達はそんなみなさんの成果を見るのを楽しみにしています。
   - name: 株式会社ネットワーク応用通信研究所
     logo: 2026/nacl.webp
     url: https://www.netlab.jp/
@@ -67,7 +80,10 @@
   - name: 株式会社 万葉
     logo: 2026/ever-leaf.webp
     url: https://everyleaf.com/
-    message: 今年もみなさんがたのしくプログラミングされた作品をたのしみにしています！
+    message: |-
+      私達はアプリケーション開発が好きで、Rubyが好きです。
+      かれこれ10年以上、Rubyのおかげでたのしくコードを書いています。
+      今年もみなさんがたのしくプログラミングされた作品をたのしみにしています！
   - name: 株式会社フィルイン
     logo: 2026/fillin.webp
     url: https://www.fillin-inc.com
@@ -78,7 +94,8 @@
   - name: 株式会社まちづくり三鷹
     logo: 2026/mitaka.webp
     url: https://www.mitaka.ne.jp/
-    message: 皆さんの自由な発想から生まれた作品を楽しみにお待ちしています。
+    message: |-
+      2011年から始まったコンテストも、今年で15回目を迎えます。毎年、個性豊かな作品が届き、その若い力には驚かされるばかりです。皆さんの自由な発想から生まれた作品を楽しみにお待ちしています。
   - name: 宇宙海賊合同会社
     logo: 2026/space-pirates.svg
     url: https://space-pirates.co.jp/
@@ -86,18 +103,33 @@
   - name: 一畑電気鉄道株式会社
     logo: 2026/ichibata.webp
     url: https://www.ichibata.co.jp/
+    message: |-
+      Ruby を活用した、皆さんの自由な発想力・アイディアとプログラミング力で作られた作品を楽しみにしています。そしてこのコンテストでの経験が皆さんの将来に繋がっていく事を願っています！
   - name: 株式会社エクシード
     logo: 2026/exceed.webp
     url: https://www.exceed-net.co.jp/
+    message: |-
+      プログラムには無限の可能性が広がっています。作成時の苦労、動いた時の感動体験は確実に中高生の皆さんの将来に繋がっていくと思います。
+      頑張って下さい。
   - name: ガーネットテック373株式会社
     logo: 2026/gaenet-tech.webp
     url: https://www.garnettech373.com
+    message: |-
+      Rubyを書いて、たのしい時間を過ごしています。みなさんもぜひプログラミングの時間をたのしんでください。
   - name: 株式会社コミクリ
     logo: 2026/comcre.webp
     url: https://www.comcre.co.jp/
+    message: |-
+      社会のデジタル化は加速し、ICTは進歩し続け、より身近なものとなりました。
+      プログラミングを学ぶことは、その仕組みを知ることができるとともに、自分も社会も豊かにすることができます。
+      プログラミングへのチャレンジは、未来をよくすることに繋がっていきます。
+      チャレンジ、待ってます！
   - name: NCD株式会社
     logo: 2026/ncd.webp
     url: https://www.ncd.co.jp/
+    message: |-
+      私たちNCDは「ユニークな技術とサービスにより、明るい未来に貢献する。」ことを経営理念としております。
+      コンテストを通じて皆様の新しい発想とユニークな作品に出合えることを楽しみにしております！
 - tier: メディアスポンサー
   sponsors:
   - name: gihyo.jp
