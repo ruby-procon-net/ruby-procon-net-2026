@@ -1,12 +1,28 @@
 ---
 layout: page
-title: 個人協賛（ルビコンサポーターズ）の募集
+title: 個人協賛（ルビコンサポーターズ）
 permalink: /supporters/
 content_width: max-w-4xl
 form_url: https://docs.google.com/forms/d/e/1FAIpQLSfHxcc73_FZSL6w0GYFWaIo0vxiCkUJCefBbfGN3_7x6cALLg/viewform
 ---
 
 <div class="l--supporters space-y-16">
+
+  <section class="a--supporters-section" aria-labelledby="current-supporters-title">
+    <h2 id="current-supporters-title" class="a--supporters-heading text-xl font-black text-grape mb-6 pb-2 border-b border-grape/20">2026年度のルビコンサポーターズ</h2>
+    <p class="text-gray-700 text-base leading-relaxed mb-6">中高生の挑戦を支えてくださる皆様に、心より感謝申し上げます。</p>
+    <ul class="grid grid-cols-2 sm:grid-cols-3 gap-4 list-none">
+      {% for supporter in site.data.supporters_2026 %}
+      <li>
+        {% if supporter.url and supporter.url != "" %}
+        <a href="{{ supporter.url | escape }}" target="_blank" rel="noopener noreferrer" class="flex h-full items-center justify-center bg-white border border-gray-200 rounded-2xl px-4 py-5 text-center font-bold text-grape underline underline-offset-2 hover:text-grape-dark hover:border-grape hover:bg-gray-50 transition-colors">{{ supporter.name | escape }}</a>
+        {% else %}
+        <span class="flex h-full items-center justify-center bg-white border border-gray-200 rounded-2xl px-4 py-5 text-center font-bold text-gray-900">{{ supporter.name | escape }}</span>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
 
   <section class="a--supporters-section">
     <p class="text-gray-700 text-base leading-relaxed">当コンテストは、開催を支援してくださる個人ならびに企業の皆様からの協賛金等で運営しています。中高生がRubyでプログラムを作り、それを見てもらえる場を続けていくために、個人の皆様からのご協賛をお願いしています。</p>

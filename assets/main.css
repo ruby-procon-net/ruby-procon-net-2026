@@ -1731,6 +1731,13 @@
       }
     }
   }
+  .hover\:bg-gray-50 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-gray-50);
+      }
+    }
+  }
   .hover\:text-grape {
     &:hover {
       @media (hover: hover) {
