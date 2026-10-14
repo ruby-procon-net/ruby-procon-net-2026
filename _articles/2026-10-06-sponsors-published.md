@@ -1,8 +1,8 @@
 ---
 title: "協賛企業一覧を掲載しました"
 date: 2026-10-06
-thumbnail: /assets/images/articles/thumbnails/2026-10-06-sponsors-published.png
-og_image: /assets/images/articles/thumbnails/2026-10-06-sponsors-published.png
+thumbnail: /assets/images/articles/thumbnails/2026-10-06-sponsors-published-v2.png
+og_image: /assets/images/articles/thumbnails/2026-10-06-sponsors-published-v2.png
 excerpt: "中高生Rubyプログラミングコンテスト2026を支えてくださる協賛企業・メディアスポンサーの一覧を掲載しました。協賛企業のみなさまからの応援メッセージもご紹介しています。"
 ---
 
