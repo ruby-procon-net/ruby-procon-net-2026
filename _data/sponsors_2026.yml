@@ -13,6 +13,9 @@
     message: ソニックガーデンは、Rubyを中心とするソフトウェア開発の会社です。プログラミングの楽しさを伝えるべく、昨年から小中学生向けプログラミング部「セタプロ」に全面協力しています。皆さんもぜひ楽しみながら作品をつくってください。
 - tier: Platinum
   sponsors:
+  - name: 株式会社セールスフォース・ジャパン
+    logo: salesforce.webp
+    url: https://www.salesforce.com/jp/
   - name: 株式会社SmartHR
     logo: 2026/smart-hr.svg
     url: https://smarthr.co.jp/
