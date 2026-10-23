@@ -9,6 +9,7 @@
 @source "../_includes/**/*.html";
 @source "../*.html";
 @source "../interview.md";
+@source "../smarthr-interview.md";
 @source "../_articles/**/*.md";
 
 @theme {
