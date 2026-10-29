@@ -6,20 +6,22 @@ permalink: /interviews/sonic-garden/
 content_width: max-w-3xl
 content_class: l--interview
 prose: true
+og_image: /assets/images/interview/sonic-garden-ogp.jpg
+thumbnail: /assets/images/interview/sonic-garden-ogp.jpg
 description: "ソニックガーデンの藤原士朗さんに、職人としてのプログラマ育成、高卒採用、セタプロの取り組み、AI時代の学びと中高生への期待を伺いました。"
 ---
 
 # AI時代だからこそ、プログラマを育てたい。ソニックガーデンが取り組む「職人の育成」と若い世代への期待
 
-<div class="a--sonic-interview-visual not-prose" role="group" aria-label="ソニックガーデン 藤原士朗さんインタビュー">
-  <div class="a--sonic-interview-visual-copy">
-    <p class="a--sonic-interview-visual-label">INTERVIEW</p>
-    <p class="a--sonic-interview-visual-title">AI時代だからこそ、<br>プログラマを育てたい。</p>
-    <p class="a--sonic-interview-visual-name">株式会社ソニックガーデン<br>取締役副社長 <strong>藤原士朗さん</strong></p>
+<div class="a--interview-visual not-prose" role="group" aria-label="ソニックガーデン 藤原士朗さんインタビュー">
+  <div class="a--interview-visual-copy">
+    <p class="a--interview-visual-label">INTERVIEW</p>
+    <p class="a--interview-visual-title">AI時代だからこそ、<br>プログラマを育てたい。</p>
+    <p class="a--interview-visual-name">株式会社ソニックガーデン<br>取締役副社長 <strong>藤原士朗さん</strong></p>
   </div>
-  <div class="a--sonic-interview-visual-images">
-    <img class="a--sonic-interview-visual-portrait" src="/assets/images/interview/shiro-fujiwara.png" alt="藤原士朗さん" width="497" height="500">
-    <img class="a--sonic-interview-visual-logo" src="/assets/images/sponsors/2026/sonic-garden.webp" alt="SonicGarden">
+  <div class="a--interview-visual-images">
+    <img class="a--interview-visual-portrait" src="/assets/images/interview/shiro-fujiwara.png" alt="藤原士朗さん" width="497" height="500">
+    <img class="a--interview-visual-logo" src="/assets/images/sponsors/2026/sonic-garden.webp" alt="SonicGarden">
   </div>
 </div>
 

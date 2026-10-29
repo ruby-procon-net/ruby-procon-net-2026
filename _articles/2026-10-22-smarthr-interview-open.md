@@ -1,12 +1,12 @@
 ---
-title: "SmartHR・斎藤亮一さんのインタビューを公開しました"
-date: 2026-10-22
+title: "SmartHR・齋藤諒一さんのインタビューを公開しました"
+date: 2026-10-30
 thumbnail: /assets/images/interview/smarthr-ogp.jpg
 og_image: /assets/images/interview/smarthr-ogp.jpg
-excerpt: "株式会社SmartHRのVP of Engineering・斎藤亮一さんに、Rubyを使い続ける理由、AI時代のエンジニアの仕事、そして中高生のものづくりに期待することを聞きました。"
+excerpt: "株式会社SmartHRのVP of Engineering・齋藤諒一さんに、Rubyを使い続ける理由、AI時代のエンジニアの仕事、そして中高生のものづくりに期待することを聞きました。"
 ---
 
-本コンテストの協賛企業である**株式会社SmartHRのVP of Engineering・斎藤亮一さんのインタビュー**を公開しました。聞き手は、実行委員長の鳥井雪と実行委員の笹田耕一です。
+本コンテストの協賛企業である**株式会社SmartHRのVP of Engineering・齋藤諒一さんのインタビュー**を公開しました。聞き手は、実行委員長の鳥井雪と実行委員の笹田耕一です。
 
 SmartHRのバックエンドの9割以上で使われているRuby。新しい技術が次々と登場する中で、Rubyを使い続けるのはなぜなのか。AIがコードを書く時代に、エンジニアの仕事はどう変わっていくのか。SmartHRのプロダクトづくりを通して、お話を伺いました。
 
