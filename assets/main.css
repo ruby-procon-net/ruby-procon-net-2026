@@ -47,6 +47,7 @@
     --text-5xl--line-height: 1;
     --text-6xl: 3.75rem;
     --text-6xl--line-height: 1;
+    --font-weight-normal: 400;
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
@@ -822,6 +823,9 @@
   .h-8 {
     height: calc(var(--spacing) * 8);
   }
+  .h-9 {
+    height: calc(var(--spacing) * 9);
+  }
   .h-10 {
     height: calc(var(--spacing) * 10);
   }
@@ -878,6 +882,9 @@
   }
   .w-8 {
     width: calc(var(--spacing) * 8);
+  }
+  .w-9 {
+    width: calc(var(--spacing) * 9);
   }
   .w-10 {
     width: calc(var(--spacing) * 10);
@@ -995,6 +1002,9 @@
   }
   .items-center {
     align-items: center;
+  }
+  .items-end {
+    align-items: flex-end;
   }
   .items-start {
     align-items: flex-start;
@@ -1283,6 +1293,12 @@
   .object-\[72\%_center\] {
     object-position: 72% center;
   }
+  .p-2 {
+    padding: calc(var(--spacing) * 2);
+  }
+  .p-3 {
+    padding: calc(var(--spacing) * 3);
+  }
   .p-4 {
     padding: calc(var(--spacing) * 4);
   }
@@ -1477,6 +1493,10 @@
     --tw-font-weight: var(--font-weight-medium);
     font-weight: var(--font-weight-medium);
   }
+  .font-normal {
+    --tw-font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-normal);
+  }
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
@@ -1655,13 +1675,6 @@
       }
     }
   }
-  .group-hover\:text-grape-dark {
-    &:is(:where(.group):hover *) {
-      @media (hover: hover) {
-        color: var(--color-grape-dark);
-      }
-    }
-  }
   .marker\:text-gray-900 {
     & *::marker {
       color: var(--color-gray-900);
@@ -1772,9 +1785,19 @@
       margin-inline: calc(var(--spacing) * 0);
     }
   }
+  .sm\:h-9 {
+    @media (width >= 40rem) {
+      height: calc(var(--spacing) * 9);
+    }
+  }
   .sm\:h-16 {
     @media (width >= 40rem) {
       height: calc(var(--spacing) * 16);
+    }
+  }
+  .sm\:w-9 {
+    @media (width >= 40rem) {
+      width: calc(var(--spacing) * 9);
     }
   }
   .sm\:w-16 {
@@ -1995,6 +2018,16 @@
       line-height: var(--tw-leading, var(--text-xl--line-height));
     }
   }
+  .lg\:hidden {
+    @media (width >= 64rem) {
+      display: none;
+    }
+  }
+  .lg\:inline {
+    @media (width >= 64rem) {
+      display: inline;
+    }
+  }
   .lg\:grid-cols-5 {
     @media (width >= 64rem) {
       grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -2003,16 +2036,6 @@
   .lg\:grid-cols-\[168px_minmax\(0\,1fr\)\] {
     @media (width >= 64rem) {
       grid-template-columns: 168px minmax(0,1fr);
-    }
-  }
-  .lg\:grid-cols-\[minmax\(0\,1fr\)_minmax\(360px\,0\.8fr\)\] {
-    @media (width >= 64rem) {
-      grid-template-columns: minmax(0,1fr) minmax(360px,0.8fr);
-    }
-  }
-  .lg\:gap-16 {
-    @media (width >= 64rem) {
-      gap: calc(var(--spacing) * 16);
     }
   }
   .lg\:text-6xl {
@@ -2175,8 +2198,68 @@ a:focus-visible, button:focus-visible {
 .prose img {
   border-radius: 0.5rem;
 }
+.a--interview-visual {
+  display: flex;
+  align-items: center;
+  gap: 3%;
+  aspect-ratio: 16 / 9;
+  margin: 2rem 0 2.5rem;
+  padding: 4%;
+  border-radius: 1rem;
+  background: url('/assets/images/common/background.webp') center / cover;
+  container-type: inline-size;
+}
+.a--interview-visual-copy {
+  flex: 1;
+  padding: 5%;
+  border-radius: 0.75rem;
+  background: rgb(255 255 255 / 94%);
+}
+.a--interview-visual-label {
+  margin: 0 0 1em;
+  color: var(--color-ruby);
+  font-size: 2.5cqw;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+.a--interview-visual-title {
+  margin: 0;
+  color: var(--color-gray-900);
+  font-size: 4cqw;
+  font-weight: 700;
+  line-height: 1.6;
+}
+.a--interview-visual-name {
+  margin: 1em 0 0;
+  padding-top: 0.8em;
+  border-top: 1px solid var(--color-ruby-light);
+  font-size: 2.3cqw;
+  line-height: 1.7;
+}
+.a--interview-visual-images {
+  width: 31%;
+  flex-shrink: 0;
+}
+.l--interview .a--interview-visual-portrait {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  border: 3px solid white;
+  border-radius: 50%;
+}
+.l--interview .a--interview-visual-logo {
+  width: 100%;
+  height: auto;
+  margin: 12% 0 0;
+  padding: 6%;
+  border-radius: 0.5rem;
+  background: white;
+}
 .l--interview > h1 {
   line-height: 1.4;
+}
+img[src$="/interview/ryoichi-saito.png"] {
+  filter: brightness(1.18);
 }
 .l--interview .a--interview-speaker {
   display: inline-flex;

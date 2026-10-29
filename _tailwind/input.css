@@ -9,6 +9,8 @@
 @source "../_includes/**/*.html";
 @source "../*.html";
 @source "../interview.md";
+@source "../smarthr-interview.md";
+@source "../sonic-garden-interview.md";
 @source "../_articles/**/*.md";
 
 @theme {
@@ -236,8 +238,71 @@ button:focus-visible {
 }
 
 /* インタビュー本文の長いタイトルは、複数行でもゆったり読める行間にする */
+.a--interview-visual {
+  display: flex;
+  align-items: center;
+  gap: 3%;
+  aspect-ratio: 16 / 9;
+  margin: 2rem 0 2.5rem;
+  padding: 4%;
+  border-radius: 1rem;
+  background: url('/assets/images/common/background.webp') center / cover;
+  container-type: inline-size;
+}
+.a--interview-visual-copy {
+  flex: 1;
+  padding: 5%;
+  border-radius: 0.75rem;
+  background: rgb(255 255 255 / 94%);
+}
+.a--interview-visual-label {
+  margin: 0 0 1em;
+  color: var(--color-ruby);
+  font-size: 2.5cqw;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+.a--interview-visual-title {
+  margin: 0;
+  color: var(--color-gray-900);
+  font-size: 4cqw;
+  font-weight: 700;
+  line-height: 1.6;
+}
+.a--interview-visual-name {
+  margin: 1em 0 0;
+  padding-top: 0.8em;
+  border-top: 1px solid var(--color-ruby-light);
+  font-size: 2.3cqw;
+  line-height: 1.7;
+}
+.a--interview-visual-images {
+  width: 31%;
+  flex-shrink: 0;
+}
+.l--interview .a--interview-visual-portrait {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  border: 3px solid white;
+  border-radius: 50%;
+}
+.l--interview .a--interview-visual-logo {
+  width: 100%;
+  height: auto;
+  margin: 12% 0 0;
+  padding: 6%;
+  border-radius: 0.5rem;
+  background: white;
+}
+
 .l--interview > h1 {
   line-height: 1.4;
+}
+
+/* 逆光で暗めの齋藤さんの写真は、元画像を保ったまま表示時に明るさを補正する。 */
+img[src$="/interview/ryoichi-saito.png"] {
+  filter: brightness(1.18);
 }
 
 .l--interview .a--interview-speaker {

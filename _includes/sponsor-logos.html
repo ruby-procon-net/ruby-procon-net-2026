@@ -62,6 +62,9 @@
           {% endfor %}
           <p class="a--sponsor-message text-gray-700 {{ message_size }} leading-relaxed">{{ message_html }}</p>
           {% endif %}
+          {% if sponsor.interview_url %}
+          <a href="{{ sponsor.interview_url | relative_url }}" class="a--button a--button--secondary a--button--small mt-6">インタビューを読む<span class="material-symbols-outlined" aria-hidden="true">chevron_right</span></a>
+          {% endif %}
         </div>
         {% endif %}
       </li>
