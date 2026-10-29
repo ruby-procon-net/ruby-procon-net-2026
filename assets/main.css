@@ -1675,13 +1675,6 @@
       }
     }
   }
-  .group-hover\:text-grape-dark {
-    &:is(:where(.group):hover *) {
-      @media (hover: hover) {
-        color: var(--color-grape-dark);
-      }
-    }
-  }
   .marker\:text-gray-900 {
     & *::marker {
       color: var(--color-gray-900);
