@@ -1,6 +1,6 @@
 ---
 title: "SmartHR・齋藤諒一さんのインタビューを公開しました"
-date: 2026-10-30
+date: 2026-10-29
 thumbnail: /assets/images/interview/smarthr-ogp.jpg
 og_image: /assets/images/interview/smarthr-ogp.jpg
 excerpt: "株式会社SmartHRのVP of Engineering・齋藤諒一さんに、Rubyを使い続ける理由、AI時代のエンジニアの仕事、そして中高生のものづくりに期待することを聞きました。"

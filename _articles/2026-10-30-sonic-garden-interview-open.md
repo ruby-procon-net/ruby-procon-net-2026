@@ -1,6 +1,6 @@
 ---
 title: "ソニックガーデン・藤原士朗さんのインタビューを公開しました"
-date: 2026-10-30
+date: 2026-10-29
 thumbnail: /assets/images/interview/sonic-garden-ogp.jpg
 og_image: /assets/images/interview/sonic-garden-ogp.jpg
 excerpt: "株式会社ソニックガーデンの取締役副社長・藤原士朗さんに、プログラマを職人として育てる取り組み、AI時代の学び、そして中高生の皆さんへの期待を聞きました。"
