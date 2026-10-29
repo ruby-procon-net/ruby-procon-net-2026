@@ -47,6 +47,7 @@
     --text-5xl--line-height: 1;
     --text-6xl: 3.75rem;
     --text-6xl--line-height: 1;
+    --font-weight-normal: 400;
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
@@ -822,6 +823,9 @@
   .h-8 {
     height: calc(var(--spacing) * 8);
   }
+  .h-9 {
+    height: calc(var(--spacing) * 9);
+  }
   .h-10 {
     height: calc(var(--spacing) * 10);
   }
@@ -878,6 +882,9 @@
   }
   .w-8 {
     width: calc(var(--spacing) * 8);
+  }
+  .w-9 {
+    width: calc(var(--spacing) * 9);
   }
   .w-10 {
     width: calc(var(--spacing) * 10);
@@ -1289,6 +1296,9 @@
   .p-2 {
     padding: calc(var(--spacing) * 2);
   }
+  .p-3 {
+    padding: calc(var(--spacing) * 3);
+  }
   .p-4 {
     padding: calc(var(--spacing) * 4);
   }
@@ -1482,6 +1492,10 @@
   .font-medium {
     --tw-font-weight: var(--font-weight-medium);
     font-weight: var(--font-weight-medium);
+  }
+  .font-normal {
+    --tw-font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-normal);
   }
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
@@ -2190,6 +2204,63 @@ a:focus-visible, button:focus-visible {
 }
 .prose img {
   border-radius: 0.5rem;
+}
+.a--sonic-interview-visual {
+  display: flex;
+  align-items: center;
+  gap: 3%;
+  aspect-ratio: 16 / 9;
+  margin: 2rem 0 2.5rem;
+  padding: 4%;
+  border-radius: 1rem;
+  background: url('/assets/images/common/background.webp') center / cover;
+  container-type: inline-size;
+}
+.a--sonic-interview-visual-copy {
+  flex: 1;
+  padding: 5%;
+  border-radius: 0.75rem;
+  background: rgb(255 255 255 / 94%);
+}
+.a--sonic-interview-visual-label {
+  margin: 0 0 1em;
+  color: var(--color-ruby);
+  font-size: 2.5cqw;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+.a--sonic-interview-visual-title {
+  margin: 0;
+  color: var(--color-gray-900);
+  font-size: 4cqw;
+  font-weight: 700;
+  line-height: 1.6;
+}
+.a--sonic-interview-visual-name {
+  margin: 1em 0 0;
+  padding-top: 0.8em;
+  border-top: 1px solid var(--color-ruby-light);
+  font-size: 2.3cqw;
+  line-height: 1.7;
+}
+.a--sonic-interview-visual-images {
+  width: 31%;
+  flex-shrink: 0;
+}
+.l--interview .a--sonic-interview-visual-portrait {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  border: 3px solid white;
+  border-radius: 50%;
+}
+.l--interview .a--sonic-interview-visual-logo {
+  width: 100%;
+  height: auto;
+  margin: 12% 0 0;
+  padding: 6%;
+  border-radius: 0.5rem;
+  background: white;
 }
 .l--interview > h1 {
   line-height: 1.4;
