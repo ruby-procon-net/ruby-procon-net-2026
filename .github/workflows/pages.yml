@@ -17,7 +17,7 @@ concurrency:
 
 jobs:
   build:
-    # Ruby 3.3.5 is available on this image; avoid ubuntu-latest OS upgrades.
+    # Pin the runner image to avoid unexpected OS upgrades.
     runs-on: ubuntu-24.04
     steps:
       - name: Checkout
