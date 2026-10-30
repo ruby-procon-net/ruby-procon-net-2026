@@ -3,6 +3,7 @@ layout: page
 title: '「作ること」を楽しみ、その先の誰かに届ける — SmartHRがRubyプログラミングコンテストに期待すること'
 hero_title: SmartHR 齋藤諒一
 permalink: /interviews/smarthr/
+og_image: /assets/images/interview/smarthr-ogp.jpg
 content_width: max-w-3xl
 content_class: l--interview
 prose: true
