@@ -17,7 +17,7 @@ description: "ソニックガーデンの藤原士朗さんに、職人として
   <div class="a--interview-visual-copy">
     <p class="a--interview-visual-label">INTERVIEW</p>
     <p class="a--interview-visual-title">AI時代だからこそ、<br>プログラマを育てたい。</p>
-    <p class="a--interview-visual-name">株式会社ソニックガーデン<br>取締役副社長 <strong>藤原士朗さん</strong></p>
+    <p class="a--interview-visual-name">株式会社ソニックガーデン<br>代表取締役副社長 <strong>藤原士朗さん</strong></p>
   </div>
   <div class="a--interview-visual-images">
     <img class="a--interview-visual-portrait" src="/assets/images/interview/shiro-fujiwara.png" alt="藤原士朗さん" width="497" height="500">
@@ -29,13 +29,13 @@ description: "ソニックガーデンの藤原士朗さんに、職人として
 
 AIの進化によってソフトウェア開発の在り方が大きく変わる中、同社は若手の育成に力を入れ、高卒採用や<a href="https://setapro.club/" target="_blank" rel="noopener noreferrer">小中学生向けプログラミング部「セタプロ」</a>にも取り組んでいます。
 
-今回は、同社の取締役副社長・藤原士朗さんに、独自の開発スタイルや人材育成の考え方、AI時代のプログラマに求められるもの、そして中高生Rubyプログラミングコンテストへの期待についてお話を伺いました。
+今回は、同社の代表取締役副社長・藤原士朗さんに、独自の開発スタイルや人材育成の考え方、AI時代のプログラマに求められるもの、そして中高生Rubyプログラミングコンテストへの期待についてお話を伺いました。
 
 <section class="l--interview-profiles not-prose my-10 flex flex-col items-center gap-8 rounded-2xl border border-gray-200 bg-gray-50 p-5 text-center sm:flex-row sm:text-left">
   <img src="/assets/images/interview/shiro-fujiwara.png" alt="藤原士朗さん" class="h-28 w-28 shrink-0 rounded-full object-cover" width="497" height="500">
   <div>
   <h2 class="text-xl font-bold text-gray-900">藤原士朗</h2>
-  <p class="mt-1 text-sm font-semibold leading-relaxed text-grape">株式会社ソニックガーデン 取締役副社長</p>
+  <p class="mt-1 text-sm font-semibold leading-relaxed text-grape">株式会社ソニックガーデン 代表取締役副社長</p>
   </div>
 </section>
 
