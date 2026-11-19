@@ -4,7 +4,10 @@ Jekyll + Tailwind CSS を使ったコンテストサイトです。
 
 ## 開発環境のセットアップ
 
+Ruby は `.ruby-version` に指定した 4.0.10、Bundler は 4.1.0 を使用します。
+
 ```bash
+gem install bundler -v 4.1.0
 bundle install
 npm install
 ```
@@ -51,6 +54,12 @@ bundle exec jekyll build        # Jekyll をビルド
 `main` への push で GitHub Actions（`.github/workflows/pages.yml`）が動き、
 GitHub Pages へ公開されます。CI 側で `npm run build` → `bundle exec jekyll build` を
 実行するため、`assets/main.css` は CI で生成し直されます。
+
+PR でも同じビルドを実行します。PR からはデプロイしません。
+
+`@tailwindcss/typography` が固定している `postcss-selector-parser` には既知の脆弱性
+（GHSA-rj75-hqrm-r3gf）があるため、`package.json` の `overrides` で修正済みの
+6.1.6 以降の 6.x を使用しています。上流の依存指定が修正されたら、この指定を削除できます。
 
 ### 記事サムネイル生成
 
@@ -135,11 +144,9 @@ RPC2026/
 
 ## 除外している gem
 
-以下の gem は `.bundle/config` の `exclude_gems` で除外しています。
+`--livereload` は使わないため、Gemfile の Bundler 4.1 の `override` で
+Jekyll の `em-websocket` 依存を除外しています。これにより、その依存先の
+`eventmachine` もインストールされません。ブラウザは手動で再読み込みしてください。
 
-| gem | 理由 |
-|-----|------|
-| `eventmachine` / `em-websocket` | 長期メンテナンス停止。`--livereload` は使わない方針 |
-| `sass-embedded` / `jekyll-sass-converter` | SCSS を使わないため。Jekyll 本体の依存のため Gemfile.lock には残るが無効化 |
-
-`--livereload` は使いません。ブラウザは手動で再読み込みしてください。
+従来の `.bundle/config` の `exclude_gems` は Bundler がサポートしていない設定のため
+削除しました。`jekyll-sass-converter` と `sass-embedded` は Jekyll の読み込みに必要なので保持します。
