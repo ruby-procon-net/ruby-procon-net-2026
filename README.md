@@ -135,7 +135,7 @@ RPC2026/
 
 ### 非公開中のページ
 
-`final.html` / `results.html` は未公開のため、`_includes/header.html` のナビリンクを
+`results.html` は未公開のため、`_includes/header.html` のナビリンクを
 `{% comment %}` でコメントアウトしています。`sponsors.html` も同様です。
 公開時は該当の `{% comment %}` / `{% endcomment %}` を外します。
 
