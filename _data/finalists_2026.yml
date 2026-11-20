@@ -1,0 +1,43 @@
+# 各部門内はエントリー順。
+- name: ゲーム部門
+  entries:
+    - creator: 滝沢市立滝沢第二中学校 チーム （有）水路修理屋本舗
+      region: 岩手
+      work: 水路修理屋本舗
+    - creator: おかやま山陽高等学校 チーム Morihara Digital
+      region: 岡山
+      work: NEON STRIKE
+    - creator: 愛媛県立松山工業高等学校　長井一起
+      region: 愛媛
+      work: Intercept Invader
+    - creator: 池上巧
+      region: 兵庫
+      work: GOOPA ―手で撃ち抜け！世界とも戦えるモーションバトル―
+- name: アプリ部門
+  entries:
+    - creator: 茨城県立ＩＴ未来高等学校　チーム そうだ、空を見よう
+      region: 茨城
+      work: 湿度推定システム・灌水装置2026
+    - creator: 茨城県立ＩＴ未来高等学校　チーム Paisyalu AI
+      region: 茨城
+      work: RubyだってPhysical AIできるんだ
+    - creator: 石井杏奈
+      region: 愛知
+      work: ManaRelay
+    - creator: 小林武和
+      region: 東京
+      work: HarmoniX
+    - creator: 一関工業高等専門学校　チーム ドラゴンフルーツ
+      region: 岩手
+      work: Stario
+    - creator: 小峯圭也
+      region: 栃木
+      work: Rubernetes
+- name: クリエイティブコーディング部門
+  entries:
+    - creator: 茨城県立ＩＴ未来高等学校　中村隼大
+      region: 茨城
+      work: 始まりと回帰
+    - creator: 小林武和
+      region: 東京
+      work: 進化のルビー
