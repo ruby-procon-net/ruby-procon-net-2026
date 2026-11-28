@@ -15,7 +15,7 @@ layout: default
       <p class="a--hero-lead text-lg font-semibold text-gray-100 leading-relaxed mb-8" style="text-shadow: 0 1px 8px rgba(0,0,0,0.5);">
         Rubyで作った「自分の作品」を、全国の仲間と審査委員に。中学生・高校生のための、つくる楽しさを発表する舞台です。
       </p>
-      <p class="text-lg font-bold leading-relaxed text-white">作品の応募受付を締め切りました。<br>たくさんのご応募ありがとうございました。</p>
+      <p class="text-lg font-bold leading-relaxed text-white">本イベントは終了しました。<br>ご応募・ご参加いただいた皆さま、ありがとうございました。</p>
     </div>
   </div>
 </section>
@@ -25,6 +25,9 @@ layout: default
   <div class="a--section-header text-center mb-14">
     <span class="text-ruby font-bold text-sm tracking-widest uppercase mb-3 block">About</span>
     <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">第16回<br>中高生Rubyプログラミング<br>コンテスト 2026</h2>
+    <p class="mt-6 text-xl font-bold text-grape">本コンテストは終了しました。</p>
+    <p class="mt-3 text-base leading-relaxed text-gray-600">ご応募・ご参加いただいた皆さま、<br class="sm:hidden">応援してくださった皆さま、<br>ありがとうございました。</p>
+    <a href="{{ "/final/" | relative_url }}" class="a--button a--button--primary mt-6">最終審査結果を見る<span class="material-symbols-outlined" aria-hidden="true">chevron_right</span></a>
   </div>
   <div class="l--about-inner grid md:grid-cols-2 gap-16 items-center">
     <div class="a--about-text">
@@ -91,11 +94,6 @@ layout: default
       </div>
     </a>
   </div>
-</section>
-
-<!-- 最終審査会の一般観覧募集 -->
-<section class="l--final-event-cta max-w-5xl mx-auto px-6 pb-10" aria-labelledby="final-event-title">
-  {% include final-event-cta.html %}
 </section>
 
 <!-- 審査委員 -->

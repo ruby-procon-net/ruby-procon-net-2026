@@ -1,71 +1,170 @@
 ---
 layout: page
-title: 最終審査会
+title: 最終審査会・結果
 permalink: /final/
+og_image: /assets/images/results/results-2026-ogp.jpg
 ---
 
-<div class="l--final space-y-12">
+<figure class="mb-10">
+  <img src="{{ "/assets/images/results/results-2026.webp" | relative_url }}" alt="中高生Rubyプログラミングコンテスト2026 最終審査会の集合写真" width="1920" height="1137" class="w-full h-auto rounded-2xl">
+</figure>
 
-  <!-- 開催概要 -->
+<div class="a--results-summary mb-10 space-y-4 text-gray-700 leading-relaxed">
+  <p>2026年11月28日（土）、三鷹産業プラザで中高生Rubyプログラミングコンテスト2026の最終審査会を開催しました。各部門の受賞作品をご紹介します。</p>
+  <p class="text-sm">受賞者名・制作者名は敬称略。※エントリー順</p>
+</div>
+
+<div class="l--results space-y-16">
+  {% for group in site.data.results %}
+  <section class="a--result-category">
+
+    <!-- カテゴリ見出し -->
+    <div class="a--category-heading flex items-center gap-4 mb-8">
+      <h2 class="a--category-name text-2xl sm:text-3xl font-black text-gray-900">{{ group.category }}</h2>
+      <div class="flex-1 h-px bg-gray-200" aria-hidden="true"></div>
+    </div>
+
+    <ul class="l--award-list grid grid-cols-1 sm:grid-cols-2 gap-4 list-none">
+      {% for entry in group.entries %}
+
+      <!-- 最優秀賞 -->
+      {% if entry.award == "最優秀賞" %}
+      <li class="min-w-0 sm:col-span-2">
+        <article class="a--award-grand relative bg-grape text-white rounded-2xl px-8 py-5 overflow-hidden">
+          <div class="absolute top-0 right-0 w-48 h-48 opacity-10" aria-hidden="true"
+               style="background: radial-gradient(circle, white, transparent);">
+          </div>
+          <div class="relative">
+            <span class="a--award-badge inline-block bg-white text-grape text-xs font-black tracking-widest uppercase px-3 py-1 rounded-full mb-4">
+              🏆 {{ entry.award }}
+            </span>
+            <h3 class="a--award-work text-3xl font-black mb-1">{{ entry.work }}</h3>
+            <p class="a--award-name text-xl text-red-200 mb-1">{{ entry.name }}</p>
+            {% if entry.school %}
+            <p class="a--award-school text-red-200/70 text-sm">{{ entry.school }}</p>
+            {% endif %}
+          </div>
+        </article>
+      </li>
+
+      <!-- 優秀賞 -->
+      {% elsif entry.award == "優秀賞" %}
+      <li class="min-w-0 sm:col-span-2">
+        <article class="a--award-excellent relative bg-gray-700 text-white rounded-2xl px-8 py-5 overflow-hidden">
+          <div class="absolute top-0 right-0 w-48 h-48 opacity-10" aria-hidden="true"
+               style="background: radial-gradient(circle, white, transparent);">
+          </div>
+          <div class="relative">
+            <span class="a--award-badge inline-block bg-white text-gray-700 text-xs font-black tracking-widest uppercase px-3 py-1 rounded-full mb-4">{{ entry.award }}</span>
+            <h3 class="a--award-work text-3xl font-black mb-1">{{ entry.work }}</h3>
+            <p class="a--award-name text-xl text-gray-300 mb-1">{{ entry.name }}</p>
+            {% if entry.school %}
+            <p class="a--award-school text-gray-300/70 text-sm">{{ entry.school }}</p>
+            {% endif %}
+          </div>
+        </article>
+      </li>
+
+      <!-- その他 -->
+      {% else %}
+      <li class="min-w-0{% unless entry.award == "審査員特別賞" or entry.award == "クリエイティブ未来賞" or group.category == "スポンサー賞" %} sm:col-span-2{% endunless %}">
+        <article class="a--award-other h-full {% if entry.award == "Matz賞" %}bg-red-50 border-red-200{% elsif entry.logo or entry.award == "審査員特別賞" %}bg-gray-50 border-gray-200{% else %}bg-white border-gray-200{% endif %} border rounded-2xl p-6 {% if entry.logo %}flex flex-col sm:flex-row gap-6 sm:items-center{% endif %}">
+          {% if entry.logo %}
+          <img src="{{ "/assets/images/sponsors/" | append: entry.logo | relative_url }}" alt="{{ entry.award }}" class="a--award-logo w-24 h-24 object-contain rounded-lg shrink-0">
+          <div>
+            <span class="a--award-badge inline-block bg-gray-700 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">{{ entry.award }}</span>
+            <h3 class="a--award-work text-xl font-bold text-gray-900">{{ entry.work }}</h3>
+            <p class="a--award-name text-gray-800 font-semibold">{{ entry.name }}</p>
+            {% if entry.school %}
+            <p class="a--award-school text-gray-500 text-sm mt-1">{{ entry.school }}</p>
+            {% endif %}
+          </div>
+          {% else %}
+          <span class="a--award-badge inline-block {% if entry.award == "Matz賞" %}bg-red-700 text-white{% elsif entry.award == "審査員特別賞" %}bg-gray-700 text-white{% else %}bg-gray-100 text-gray-600{% endif %} text-xs font-bold px-3 py-1 rounded-full mb-3">{{ entry.award }}</span>
+          <h3 class="a--award-work text-xl font-bold text-gray-900">{{ entry.work }}</h3>
+          <p class="a--award-name text-gray-800 font-semibold">{{ entry.name }}</p>
+          {% if entry.school %}
+          <p class="a--award-school text-gray-500 text-sm mt-1">{{ entry.school }}</p>
+          {% endif %}
+          {% endif %}
+        </article>
+      </li>
+      {% endif %}
+
+      {% endfor %}
+    </ul>
+  </section>
+  {% endfor %}
+</div>
+
+<div class="l--final space-y-12 mt-16">
+
   <section class="l--final-overview">
-    <dl class="a--overview-info flex flex-col sm:flex-row bg-white border border-gray-200 rounded-2xl overflow-hidden">
-      <div class="a--overview-date flex-1 p-8 sm:border-r border-gray-200">
-        <dt class="text-grape text-xs font-bold tracking-widest uppercase mb-3">Date & Time</dt>
-        <dd class="a--date text-3xl font-black text-gray-900 leading-tight">
-          <time datetime="2026-11-28">2026年11月28日（土）</time>
-        </dd>
-        <dd class="a--time text-gray-500 mt-2">11:45開場／12:00開会〜17:00閉会（予定）</dd>
+    <h2 class="text-xl font-black text-gray-900 mb-3">開催概要</h2>
+    <dl class="text-sm leading-relaxed text-gray-700 space-y-2">
+      <div class="flex gap-4">
+        <dt class="shrink-0 font-bold">日時</dt>
+        <dd><time datetime="2026-11-28">2026年11月28日（土）</time><br class="sm:hidden"> 11:45開場／12:00〜17:05</dd>
       </div>
-      <div class="a--overview-venue flex-1 p-8">
-        <dt class="text-grape text-xs font-bold tracking-widest uppercase mb-3">Venue</dt>
-        <dd class="a--venue-name text-3xl font-black text-gray-900 leading-tight">三鷹産業プラザ</dd>
-
-        <dd class="text-gray-500 mt-2">東京都三鷹市下連雀3-38-4</dd>
-        <dd class="mt-3">
-          <a href="https://maps.google.com/?q=三鷹産業プラザ" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-grape text-sm font-semibold hover:underline">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-            Google マップで見る
-          </a>
-        </dd>
+      <div class="flex gap-4">
+        <dt class="shrink-0 font-bold">会場</dt>
+        <dd>三鷹産業プラザ <span class="text-gray-500">（東京都三鷹市下連雀3-38-4）</span> <a href="https://maps.google.com/?q=三鷹産業プラザ" target="_blank" rel="noopener" class="text-grape underline underline-offset-2">地図</a></dd>
       </div>
     </dl>
   </section>
 
-  <section class="l--finalists" aria-labelledby="finalists-heading">
-    <h2 id="finalists-heading" class="text-3xl font-black text-gray-900 mb-3">最終審査会進出者リスト</h2>
-    <p class="text-gray-500 text-sm mb-8">※エントリー順</p>
-    <div class="space-y-10">
-      {% for category in site.data.finalists_2026 %}
-      <section class="a--finalist-category" aria-labelledby="finalists-{{ forloop.index }}">
-        <h3 id="finalists-{{ forloop.index }}" class="text-2xl font-black text-gray-900 mb-4">{{ category.name }}</h3>
-        <ol class="grid md:grid-cols-2 gap-3 list-none">
-          {% for entry in category.entries %}
-          <li class="min-w-0">
-            <article class="a--finalist-card h-full bg-white border border-gray-200 rounded-2xl p-5 break-words">
-              <p class="text-grape text-sm font-bold mb-2">{{ forloop.index }}<span class="text-gray-500 font-medium"> ／ {{ entry.region | escape }}</span></p>
-              <h4 class="a--finalist-work font-bold text-gray-900 mb-2">{{ entry.work | escape }}</h4>
-              <p class="a--finalist-name text-gray-600 text-base">{{ entry.creator | escape }}</p>
-            </article>
-          </li>
-          {% endfor %}
-        </ol>
-      </section>
-      {% endfor %}
-    </div>
-  </section>
-
   <section class="l--final-program">
-    <h2 class="text-3xl font-black text-gray-900 mb-6">当日の内容</h2>
-    <ul class="list-disc pl-6 space-y-3 text-gray-700">
-      <li>応募者によるプレゼンテーション・作品デモ（ゲーム部門・アプリ部門）</li>
-      <li>クリエイティブコーディング部門の作品上映</li>
-      <li>審査結果発表・表彰式</li>
-      <li>審査委員長 まつもとゆきひろ氏による講評</li>
-    </ul>
+    <h2 class="text-xl font-black text-gray-900 mb-3">当日のプログラム</h2>
+    <table class="w-full text-sm text-left text-gray-700">
+      <thead>
+        <tr class="border-b border-gray-200">
+          <th scope="col" class="py-2 pr-4 font-bold">時刻</th>
+          <th scope="col" class="py-2 font-bold">内容</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-gray-100">
+        <tr>
+          <th scope="row" class="py-2 pr-4 whitespace-nowrap align-top font-normal">12:00〜12:25</th>
+          <td class="py-2">開会式（開会挨拶・祝辞紹介・審査委員紹介）</td>
+        </tr>
+        <tr>
+          <th scope="row" class="py-2 pr-4 whitespace-nowrap align-top font-normal">12:25〜14:35</th>
+          <td class="py-2">作品発表・質疑応答（ゲーム部門4組・アプリ部門6組）</td>
+        </tr>
+        <tr>
+          <th scope="row" class="py-2 pr-4 whitespace-nowrap align-top font-normal">14:35〜14:45</th>
+          <td class="py-2">クリエイティブコーディング部門の紹介</td>
+        </tr>
+        <tr>
+          <th scope="row" class="py-2 pr-4 whitespace-nowrap align-top font-normal">14:45〜14:50</th>
+          <td class="py-2">休憩</td>
+        </tr>
+        <tr>
+          <th scope="row" class="py-2 pr-4 whitespace-nowrap align-top font-normal">14:50〜15:35</th>
+          <td class="py-2">審査会・作品体験</td>
+        </tr>
+        <tr>
+          <th scope="row" class="py-2 pr-4 whitespace-nowrap align-top font-normal">15:35〜15:40</th>
+          <td class="py-2">休憩</td>
+        </tr>
+        <tr>
+          <th scope="row" class="py-2 pr-4 whitespace-nowrap align-top font-normal">15:40〜16:30</th>
+          <td class="py-2">審査結果発表</td>
+        </tr>
+        <tr>
+          <th scope="row" class="py-2 pr-4 whitespace-nowrap align-top font-normal">16:30〜17:00</th>
+          <td class="py-2">全体講評（まつもとゆきひろ審査委員長）</td>
+        </tr>
+        <tr>
+          <th scope="row" class="py-2 pr-4 whitespace-nowrap align-top font-normal">17:00〜17:05</th>
+          <td class="py-2">閉会式</td>
+        </tr>
+        <tr>
+          <th scope="row" class="py-2 pr-4 whitespace-nowrap align-top font-normal">17:15〜18:00</th>
+          <td class="py-2">記念撮影・懇談等（予定）</td>
+        </tr>
+      </tbody>
+    </table>
   </section>
 
-  <section class="l--final-audience" aria-labelledby="final-event-title">
-    {% include final-event-cta.html %}
-    <p class="text-gray-600 text-sm mt-6">協賛企業・個人協賛の方も、上記からお申し込みいただけます。コンテストの応募者、付き添いの方、応募者の学校関係者の方には、当日の参加方法を別途ご案内します。</p>
-  </section>
 </div>
